@@ -1,32 +1,34 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Mecha Documentation",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/dark.png",
+    "light": "/logo/light.png"
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#12A7D3",
-    "light": "#81D7F7",
-    "dark": "#004E7A"
+    "primary": "#4595F9",
+    "light": "#4595F9",
+    "dark": "#3283e8",
+    "background": {
+      "dark": "#05070a",
+      "light": "#fdfdfd"
+    }
   },
   "topbarLinks": [
     {
-      "name": "Documentation",
-      "url": "https://mintlify.com/docs"
+      "name": "Community",
+      "url": "https://discourse.v1.dev.mecha.build/"
+    },
+    {
+      "name": "Discord",
+      "url": "https://website.v1.dev.mecha.build/contact"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Go to Console",
+    "url": "https://app.v1.dev.mecha.build/"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "navigation": [
     {
       "group": "Get Started",
@@ -50,10 +52,22 @@
       ]
     }
   ],
+  "anchors": [{
+    "icon": "comments",
+    "name": "Community",
+    "url": "https://discourse.v1.dev.mecha.build/",
+    "iconType": "duotone"
+  }],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "github": "https://github.com/mecha-org",
+    "linkedin": "https://www.mechasystems.com/",
+    "twitter": "https://twitter.com/mecha_systems"
   },
-  "backgroundImage": "/background.png"
+  "feedback": {
+    "suggestEdit": true,
+    "raiseIssue": true
+  },
+  "modeToggle": {
+    "default": "light"
+  }
 }
