@@ -10,7 +10,9 @@ import { defineConfig} from 'vitepress'
     { 
       href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap',
       rel: 'stylesheet' 
-    }]
+    }],
+    ['link', { rel: "icon", type: "image/svg", href: "/icons/favicon.svg"}],
+    
   
   ],
   themeConfig: {
@@ -20,7 +22,7 @@ import { defineConfig} from 'vitepress'
       alt: 'Mecha'
       
     },
-    siteTitle: 'Documentation',
+    siteTitle: false,
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Console', link: 'https://console.mecha.so/' },
