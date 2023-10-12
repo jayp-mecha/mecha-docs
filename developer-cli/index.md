@@ -46,3 +46,4 @@ Now that the CLI is installed, next time just launch a new terminal window and s
 Check out our different **guides** on the sidebar for different things you can do with the Developer CLI.
 
 You can also check the **Command Reference** section for detailed syntax, argument definition and examples for every command.
+

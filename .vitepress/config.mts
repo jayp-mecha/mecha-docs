@@ -1,10 +1,26 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+  export default defineConfig({
+  
   title: "Mecha Documentation",
   description: "Explore guides, tutorials and references to start building on Mecha platform",
+  head:[
+    ['link',
+    { 
+      href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap',
+      rel: 'stylesheet' 
+    }]
+  
+  ],
   themeConfig: {
+    logo: {
+      light:'/images/logo.svg',
+      dark:'/images/logo-dark.svg',
+      alt: 'Mecha'
+      
+    },
+    siteTitle: 'Documentation',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Console', link: 'https://console.mecha.so/' },
@@ -53,9 +69,7 @@ export default defineConfig({
       '/': [],
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/mecha-org' },
-      { icon: 'discord', link: '#' },
-      { icon: 'x', link: '#' }
+      { icon: 'github', link: 'https://github.com/mecha-org' }
     ]
   }
 })
