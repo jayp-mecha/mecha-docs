@@ -169,8 +169,8 @@
 /* header links */
 :is(.vp-external-link-icon, .vp-doc a[href*='://'], .vp-doc a[target='_blank']):not(.no-icon)::after{
   --icon: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.41054 5H15.1378M15.1378 5V13.7273M15.1378 5L7.13782 13L5.13782 15' stroke-width='1.66667' stroke-linecap='round' stroke='white' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-  width: 20px;
-  height: 20px;
+  width: 20px !important;
+  height: 20px !important;
 }
 
 .VPSocialLink {
@@ -180,25 +180,35 @@
   border-radius: 8px;
   padding: 5px !important;
   color: var(--vp-c-text-1);
+  fill: var(--vp-c-text-1);
+
 }
 
+.VPNavBarTitle .logo{
+  height: 38px !important;
+}
 /* Hero compnent */
 .tagline[data-v-8e40f6fa] {
   line-height: 28px;
   font-size: 20px;
 }
 @media (min-width: 960px){
-  [data-v-8e40f6fa] .image-src {
-      max-width: 100%;
+  .VPHero .image-src {
+      max-width: 100% !important;
       max-height: 320px;
   }
 }
 
 /* Feature boxes */
-.VPFeature[data-v-717a4025] {
-  border: 1px solid var(--feature-c-border);
-  background-color: var(--feature-c-bg);
+.VPFeature {
+  border: 1px solid var(--feature-c-border) !important;
+  background-color: var(--feature-c-bg) !important;
 }
+.VPFeature .title {
+  font-size: 18px !important;
+}
+
+
 
 .container{
   max-width: 1300px !important;

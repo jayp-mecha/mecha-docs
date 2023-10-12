@@ -2,7 +2,7 @@
 import VPImage from 'vitepress/dist/client/theme-default/components/VPImage.vue'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
 import IconLogoMark from '../components/icons/LogoMark.vue';
-
+import { icons } from './icons/SocialIcons'
 
 const footerLinks= [[
     {
@@ -81,6 +81,7 @@ const footerLinks= [[
 const socialLinks = [
     {
         alt:"github",
+        key:"github",
         link:"https://github.com/mecha-org",
         image:{
             dark:"/icons/github.svg",
@@ -89,6 +90,7 @@ const socialLinks = [
     },
     {
         alt:"discord",
+        key:"discord",
         image:{
             dark:"/icons/discord.svg",
             light: ""
@@ -96,6 +98,7 @@ const socialLinks = [
     },
     {
         alt:"reddit",
+        key:"reddit",
         image:{
             dark:"/icons/reddit.svg",
             light: ""
@@ -103,6 +106,7 @@ const socialLinks = [
     },
     {
         alt:"linkedin",
+        key:"linkedin",
         link:"https://www.linkedin.com/company/mecha-systems",
         image:{
             dark:"/icons/linkedin.svg",
@@ -111,6 +115,7 @@ const socialLinks = [
     },
     {
         alt:"twitter",
+        key:"x",
         link: "https://x.com/mecha_systems",
         image:{
             dark:"/icons/twitter.svg",
@@ -181,13 +186,20 @@ const socialLinks = [
         </div>
         <div class="third-box">
                 <div class="social ">
-                    <a class="social-link" :href="link.link" v-for="link in socialLinks">
-                        <VPImage 
+                       <!-- <VPImage 
                             :image = "link.image"
                             :alt="link.alt"
 
-                        />
-                    </a>
+                        /> -->
+                        <a
+                            class="VPSocialLink no-icon"
+                            :href="link.link" v-for="link in socialLinks"
+                            :aria-label="'icon'"
+                            target="_blank"
+                            rel="noopener"
+                            v-html="icons[link.key]"
+                        >
+                        </a>
                 </div>
                 <div class="footer-address">
                     @2023 Mecha Systems, Inc.
