@@ -22,7 +22,7 @@ defineProps<{
 
 <style scoped>
 .feature-group {
-  margin-top: 36px;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
 }
