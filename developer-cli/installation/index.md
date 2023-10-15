@@ -64,9 +64,9 @@ $ npm install -g @mecha-org/mechactl
 
 ## Installing in a CI Environment
 
-You can install the `mechactl` in any CI environment, and also authenticate via environment variables. Check out our example below for Github Workflow.
+You can install the `mechactl` in any CI environment, and also authorize via environment variables. Check out our example below for Github Workflow.
 
-For additional instructions around authenticating the CLI using Environment Variables - [Authenticating the CLI](/developer-cli/authentication/)
+For additional instructions around authorizing the CLI using Environment Variables - [Authorize the CLI](/developer-cli/authorization/)
 
 ### Github Workflow
 
