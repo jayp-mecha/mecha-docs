@@ -70,6 +70,140 @@ import { defineConfig} from 'vitepress'
           ]
         }
       ],
+      '/hardware/comet-m-gen1': [
+        {
+          text: 'Hardware',
+          items: [
+            { 
+              text: 'Mecha Comet-M',
+              items: [
+                { text: 'Overview', link: '/hardware/comet-m-gen1/overview' },
+                { text: 'Specifications', link: '/hardware/comet-m-gen1/specifications' },
+                { 
+                  text: 'User Guide',
+                  collapsed: true,
+                  items: [
+                    { text: 'Operating Instructions', link: '/hardware/comet-m-gen1/user-guide/operating-instructions' },
+                    { text: 'Wireless Setup', link: '/hardware/comet-m-gen1/user-guide/wireless-setup' },
+                    { text: 'Connect to SSH', link: '/hardware/comet-m-gen1/user-guide/connect-to-ssh' },
+                    { text: 'Connect to VNC', link: '/hardware/comet-m-gen1/user-guide/connect-to-vnc' },
+                    { text: 'Connect to Mecha', link: '/hardware/comet-m-gen1/user-guide/connect-to-mecha' },
+                    { text: 'Access the CLI', link: '/hardware/comet-m-gen1/user-guide/device-cli' },
+                  ]
+                },
+                {
+                  text: 'Installing Apps',
+                  collapsed: true,
+                  items: [
+                    { text: 'APT Repository', link: '/hardware/comet-m-gen1/installing-apps/apt-debian-repository' },
+                    { text: 'Flatpak Apps', link: '/hardware/comet-m-gen1/installing-apps/flatpak-apps' },
+                    { text: 'Docker Images', link: '/hardware/comet-m-gen1/installing-apps/docker-images' },
+                  ]
+                },
+                {
+                  text: 'Tutorials',
+                  collapsed: true,
+                  items: [],
+                },
+                {
+                  text: 'Peripherals',
+                  collapsed: true,
+                  items: [
+                    { text: 'CPU', link: '/hardware/comet-m-gen1/peripherals/cpu' },
+                    { text: 'Wireless', link: '/hardware/comet-m-gen1/peripherals/wireless' },
+                    { text: 'Bluetooth', link: '/hardware/comet-m-gen1/peripherals/bluetooth' },
+                    { text: 'Video', link: '/hardware/comet-m-gen1/peripherals/Video' },
+                    { text: 'Audio', link: '/hardware/comet-m-gen1/peripherals/audio' },
+                    { text: 'Camera', link: '/hardware/comet-m-gen1/peripherals/camera' },
+                    { text: 'Motion', link: '/hardware/comet-m-gen1/peripherals/motion' },
+                    { text: 'Display', link: '/hardware/comet-m-gen1/peripherals/display' },
+                    { text: 'Trust', link: '/hardware/comet-m-gen1/peripherals/trust' },
+                    { text: 'RTC', link: '/hardware/comet-m-gen1/peripherals/rtc' },
+                    { text: 'ADC', link: '/hardware/comet-m-gen1/peripherals/adc' },
+                    { text: 'LED', link: '/hardware/comet-m-gen1/peripherals/led' },
+                    { text: 'GPIO', link: '/hardware/comet-m-gen1/peripherals/gpio' },
+                  ]
+                },
+                { 
+                  text: 'Benchmarks',
+                  collapsed: true,
+                  items: [
+                    { text: 'CPU', link: '/hardware/comet-m-gen1/benchmarks/cpu' },
+                    { text: 'Disk', link: '/hardware/comet-m-gen1/benchmarks/disk' },
+                    { text: 'Wireless', link: '/hardware/comet-m-gen1/benchmarks/wireless' },
+                    { text: 'Ethernet', link: '/hardware/comet-m-gen1/benchmarks/ethernet' },
+                    { text: 'Crypto', link: '/hardware/comet-m-gen1/benchmarks/crypto' },
+                    { text: 'Power', link: '/hardware/comet-m-gen1/benchmarks/power' },
+                    { text: 'Temperature', link: '/hardware/comet-m-gen1/benchmarks/temperature' },
+                  ]
+                },
+                { 
+                  text: 'Developer Guide',
+                  collapsed: true,
+                  items: [
+                    {
+                      text: 'Working with Yocto',
+                      collapsed: true,
+                      items: [
+                        { text: 'Setting up', link: '/hardware/comet-m-gen1/developer-guide/working-with-yocto/setting-up' },
+                        { text: 'Build Images', link: '/hardware/comet-m-gen1/developer-guide/working-with-yocto/build-images' },
+                        { text: 'Adding a layer', link: '/hardware/comet-m-gen1/developer-guide/working-with-yocto/adding-a-layer' },
+                        { text: 'Managing recipes', link: '/hardware/comet-m-gen1/developer-guide/working-with-yocto/managing-recipes' },
+                        { text: 'Using Extensible SDK', link: '/hardware/comet-m-gen1/developer-guide/working-with-yocto/using-esdk' },
+                        { text: 'Creating images', link: '/hardware/comet-m-gen1/developer-guide/working-with-yocto/creating-images' },
+                        { text: 'Customizing Kernel', link: '/hardware/comet-m-gen1/developer-guide/customizing-kernel' },
+                        { text: 'Customizing Bootloader', link: '/hardware/comet-m-gen1/developer-guide/customizing-booatloader' },
+                        { text: 'Building Device Tree', link: '/hardware/comet-m-gen1/developer-guide/building-device-tree' },
+                        { text: 'Storage Strategy', link: '/hardware/comet-m-gen1/developer-guide/storage-strategy' },
+                        { text: 'Testing with QEMU', link: '/hardware/comet-m-gen1/developer-guide/testing-with-qemu' },
+                        { text: 'Building on CI / CD', link: '/hardware/comet-m-gen1/developer-guide/building-on-ci-cd' },
+                      ]
+                    },
+                    { text: 'Flashing Images', link: '/hardware/comet-m-gen1/developer-guide/flashing-images' },
+                    { text: 'Editing the Pinmux', link: '/hardware/comet-m-gen1/developer-guide/crypto-trust-zone' },
+                    { text: 'Device Tree Overlay', link: '/hardware/comet-m-gen1/developer-guide/device-tree-overlay' },
+                    { text: 'Crypto & Trustzone', link: '/hardware/comet-m-gen1/developer-guide/crypto-trust-zone' },
+                    { text: 'Secure Boot', link: '/hardware/comet-m-gen1/developer-guide/secure-boot' },
+                    { text: 'FUSE', link: '/hardware/comet-m-gen1/developer-guide/fuse' },
+                    { text: 'OTA Updates', link: '/hardware/comet-m-gen1/developer-guide/ota-update' },
+                    { text: 'Disk Encryption', link: '/hardware/comet-m-gen1/developer-guide/disk-encryption' },
+                    { text: 'Security', link: '/hardware/comet-m-gen1/developer-guide/security' },
+                    { text: 'Running on QEMU', link: '/hardware/comet-m-gen1/developer-guide/running-on-qemu' },
+                    { text: 'Testing Tools', link: '/hardware/comet-m-gen1/developer-guide/testing-tools' },
+                  ],
+                },
+                { 
+                  text: 'Repair Guide',
+                  collapsed: true,
+                  items: [
+                    { text: 'Tools required', link: '/hardware/comet-m-gen1/repair-guide/tools-required' },
+                    { text: 'Disassembly', link: '/hardware/comet-m-gen1/repair-guide/disassembly' },
+                    { text: 'Battery', link: '/hardware/comet-m-gen1/repair-guide/battery' },
+                    { text: 'RTC Battery', link: '/hardware/comet-m-gen1/repair-guide/rtc-battery' },
+                    { text: 'Display', link: '/hardware/comet-m-gen1/repair-guide/rtc-cell-replacement' },
+                    { text: 'System Module', link: '/hardware/comet-m-gen1/repair-guide/system-module' },
+                    { text: 'Base Board', link: '/hardware/comet-m-gen1/repair-guide/base-board' },
+                  ]
+                },
+                {
+                  text: 'Hardware Extensions',
+                  collapsed: true,
+                  items: [
+                    { text: 'Overview', link: '/hardware/comet-m-gen1/hardware-extensions/overview' },
+                    { text: 'Mikroebus Clicks', link: '/hardware/comet-m-gen1/hardware-extensions/mikroebus-clicks' },
+                    { text: 'Design extension', link: '/hardware/comet-m-gen1/hardware-extensions/design-extension' },
+                  ]
+                },
+                { text: 'Safety Instructions', link: '/hardware/comet-m-gen1/safety-instructions' },
+                { text: 'OS Images', link: '/hardware/comet-m-gen1/operating-system' },
+                { text: 'Downloads', link: '/hardware/comet-m-gen1/downloads' }
+              ]
+            }
+          ]
+        },
+        { text: 'Developer CLI', link: '/developer-cli/' },
+        { text: 'Building Apps', link: '/building-apps/' },
+      ],
       '/': [],
     },
     socialLinks: [

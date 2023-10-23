@@ -1,5 +1,5 @@
 ---
-title: mechactl auth login
+title: mechactl auth login - Developer CLI
 ---
 
 # mechactl auth login
