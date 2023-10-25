@@ -3,17 +3,19 @@ title: Specifications - Comet-M
 
 ---
 
-# Comet-M Specifications
+# Specifications
 
 
-## System-on-Chip
+## CPU, Memory & Disk
 
 | Specification  | Description                                                             
 | -------------  | -------------------------------------------------------------------------------------------- |
-| CPU            | NXP i.MX 8M Mini (64-bit)<br/>Quad-Core Cortex-A53 (1.8 GHz per core)                        |
+| CPU            | NXP i.MX 8M Mini (64-bit)<br/>Quad-Core ARM Cortex-A53 (1.8 GHz per core)                    |
 | Cache          | 32KB L1 Cache<br/>512 kB L2 Cache                                                            |
 | Secondary      | Cortex-M4 core up to 400MHz                                                                  |
 | GPU            | Vivante GC NanoUltra 3D (1 shader), GC30 2D                                                  |
+| RAM            | 4GB DDR4 LPDDR4 (3200 MHz)                                                                   |
+| Disk           | 32 GB eMMC NAND Flash (110 MB/s write)                                                       |
 
 ## Wireless
 | Specification  | Description                                                             
