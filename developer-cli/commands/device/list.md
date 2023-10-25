@@ -6,7 +6,7 @@ title: mechactl device list
 
 ## Name
 
-> **Command Syntax** > **mechactl device list [options]** - list devices from `mechactl` CLI for your [Mecha](https://console.mecha.so/) account
+> **Command Syntax** > **mechactl device list [options]** - List user devices from `mechactl` CLI for your [Mecha](https://console.mecha.so/) account
 
 ## Usage
 
