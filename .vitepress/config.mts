@@ -77,18 +77,17 @@ import { defineConfig} from 'vitepress'
             { 
               text: 'Mecha Comet-M',
               items: [
-                { text: 'Overview', link: '/hardware/comet-m-gen1/overview' },
+                { text: 'introduction', link: '/hardware/comet-m-gen1/Introduction' },
                 { text: 'Specifications', link: '/hardware/comet-m-gen1/specifications' },
                 { 
                   text: 'User Guide',
                   collapsed: true,
                   items: [
-                    { text: 'Operating Instructions', link: '/hardware/comet-m-gen1/user-guide/operating-instructions' },
+                    { text: 'Booting Up', link: '/hardware/comet-m-gen1/user-guide/booting-up' },
                     { text: 'Wireless Setup', link: '/hardware/comet-m-gen1/user-guide/wireless-setup' },
                     { text: 'Connect to SSH', link: '/hardware/comet-m-gen1/user-guide/connect-to-ssh' },
                     { text: 'Connect to VNC', link: '/hardware/comet-m-gen1/user-guide/connect-to-vnc' },
                     { text: 'Connect to Mecha', link: '/hardware/comet-m-gen1/user-guide/connect-to-mecha' },
-                    { text: 'Access the CLI', link: '/hardware/comet-m-gen1/user-guide/device-cli' },
                   ]
                 },
                 {
@@ -194,6 +193,7 @@ import { defineConfig} from 'vitepress'
                     { text: 'Design extension', link: '/hardware/comet-m-gen1/hardware-extensions/design-extension' },
                   ]
                 },
+                { text: 'Troubleshooting', link: '/hardware/comet-m-gen1/troubleshooting' },
                 { text: 'Safety Instructions', link: '/hardware/comet-m-gen1/safety-instructions' },
                 { text: 'OS Images', link: '/hardware/comet-m-gen1/operating-system' },
                 { text: 'Downloads', link: '/hardware/comet-m-gen1/downloads' }
