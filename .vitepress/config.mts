@@ -42,7 +42,7 @@ import { defineConfig} from 'vitepress'
             { text: 'Commands', items: [
               { text: 'auth', items: [
                 { text: 'login', link: '/developer-cli/commands/auth/login.md' },
-                { text: 'logout', link: '/developer-cli/commands/auth/whoami.md' },
+                { text: 'logout', link: '/developer-cli/commands/auth/logout.md' },
                 { text: 'whoami', link: '/developer-cli/commands/auth/whoami.md' },
               ] },
               { text: 'device', items: [
