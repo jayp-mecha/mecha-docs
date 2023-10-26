@@ -2,11 +2,16 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "documate:upload": "documate upload"
   },
   "packageManager": "yarn@3.6.3",
   "devDependencies": {
+    "@documate/documate": "latest",
     "vitepress": "^1.0.0-rc.12",
     "vue": "^3.3.4"
+  },
+  "dependencies": {
+    "@documate/vue": "latest"
   }
 }
