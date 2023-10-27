@@ -100,11 +100,6 @@ import { defineConfig} from 'vitepress'
                   ]
                 },
                 {
-                  text: 'Tutorials',
-                  collapsed: true,
-                  items: [],
-                },
-                {
                   text: 'Peripherals',
                   collapsed: true,
                   items: [
@@ -196,7 +191,12 @@ import { defineConfig} from 'vitepress'
                 { text: 'Troubleshooting', link: '/hardware/comet-m-gen1/troubleshooting' },
                 { text: 'Safety Instructions', link: '/hardware/comet-m-gen1/safety-instructions' },
                 { text: 'OS Images', link: '/hardware/comet-m-gen1/operating-system' },
-                { text: 'Downloads', link: '/hardware/comet-m-gen1/downloads' }
+                { text: 'Downloads', link: '/hardware/comet-m-gen1/downloads' },
+                {
+                  text: 'Tutorials',
+                  collapsed: true,
+                  items: [],
+                },
               ]
             }
           ]
