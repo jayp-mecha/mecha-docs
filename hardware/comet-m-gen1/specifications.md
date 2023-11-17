@@ -3,7 +3,7 @@ title: Specifications - Comet-M
 
 ---
 
-# Specifications
+# 📒 Specifications
 
 
 ## CPU, Memory & Disk

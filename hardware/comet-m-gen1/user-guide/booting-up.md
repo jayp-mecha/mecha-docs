@@ -2,7 +2,7 @@
 title: Booting Up - Comet-M
 ---
 
-# Booting Up
+# ⚡️ Booting Up
 
 Getting started with the Comet-M is as familiar as starting your Smartphone for the first time. Follow the sections for a quick walkthrough.
 

@@ -2,9 +2,9 @@
 title: Wireless Setup - Comet-M
 ---
 
-# Wireless Setup
+# 🗼 Wireless Setup
 
-## Using the Settings App
+## Option 1: Using the Settings App
 
 To get your Comet connected to a wireless access point, just follow the quick steps mentioned below -
 
@@ -37,13 +37,40 @@ That's it you are now connected.
 > 💡 In the same **Wireless** section of the Settings App you can also check the IP address assigned to your device, useful if you want to connect via `SSH` or `VNC`.
 
 
-## Using Serial Console
+## Option 2: Using the `mctl` commands
 
-> Difficulty: Moderate
+1. You will first need access to the device's terminal, either using SSH via Ethernet (run the command below) or you can connect to the device using [Serial Console](/hardware/comet-m-gen1/developer-guide/serial-console)
 
-In case you are not able to use the Settings App, you can connect the device using Serial Console, check this [guide](/hardware/comet-m-gen1/developer-guide/serial-console) to first connect your device via Serial Console `via Debug UART`.
+```bash
+# When connected to ethernet
+$ ssh mecha@mecha-comet-m-gen1.local 
 
+# or if you know the IP address
+$ ssh mecha@your-ip-address
+```
 
-### Using the `mecha` CLI
+2. On the Serial Console, run the below command to scan for wireless networks around you.
 
-1. On the serial console, 
+```bash
+$ mctl wifi scan
+```
+
+3. Pick one of the available wireless networks you want to connect to and run the command below
+
+```bash
+$ mctl wifi connect --ssid mecha-wlan
+
+Enter password to connect to **mecha-wlan**: __________
+Connected
+```
+
+4. Check status of your connection or print the connection information below
+
+```bash
+$ mctl wifi status          # To print wireless connection status
+$ mctl wifi info            # To print the wireless connection info
+```
+
+## Option 3: Manually using Linux Tools
+
+Follow the guide below to connect to a wireless network using the **NetworkManager** `(nmcli)` service in Linux.
