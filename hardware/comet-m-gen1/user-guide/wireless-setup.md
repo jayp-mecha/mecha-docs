@@ -39,7 +39,7 @@ That's it you are now connected.
 
 ## Option 2: Using the `mctl` commands
 
-1. You will first need access to the device's terminal, either using SSH via Ethernet (run the command below) or you can connect to the device using [Serial Console](/hardware/comet-m-gen1/developer-guide/serial-console)
+1. You will first need access to the device's terminal, either using SSH via Ethernet (run the command below) or you can connect to the device using [Serial Console](#)
 
 ```bash
 # When connected to ethernet
