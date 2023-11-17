@@ -70,14 +70,14 @@ import { defineConfig} from 'vitepress'
           ]
         }
       ],
-      '/hardware/comet-m-gen1': [
+      '/hardware': [
         {
           text: 'Hardware',
           items: [
             { 
               text: 'Mecha Comet-M',
               items: [
-                { text: 'introduction', link: '/hardware/comet-m-gen1/Introduction' },
+                { text: 'Introduction', link: '/hardware/comet-m-gen1/introduction' },
                 { text: 'Specifications', link: '/hardware/comet-m-gen1/specifications' },
                 { 
                   text: 'User Guide',
@@ -85,8 +85,8 @@ import { defineConfig} from 'vitepress'
                   items: [
                     { text: 'Booting Up', link: '/hardware/comet-m-gen1/user-guide/booting-up' },
                     { text: 'Wireless Setup', link: '/hardware/comet-m-gen1/user-guide/wireless-setup' },
-                    { text: 'Connect to SSH', link: '/hardware/comet-m-gen1/user-guide/connect-to-ssh' },
-                    { text: 'Connect to VNC', link: '/hardware/comet-m-gen1/user-guide/connect-to-vnc' },
+                    { text: 'Connect using SSH', link: '/hardware/comet-m-gen1/user-guide/connect-using-ssh' },
+                    { text: 'Remote Access via VNC', link: '/hardware/comet-m-gen1/user-guide/remote-access-via-vnc' },
                     { text: 'Connect to Mecha', link: '/hardware/comet-m-gen1/user-guide/connect-to-mecha' },
                   ]
                 },
@@ -98,11 +98,6 @@ import { defineConfig} from 'vitepress'
                     { text: 'Flatpak Apps', link: '/hardware/comet-m-gen1/installing-apps/flatpak-apps' },
                     { text: 'Docker Images', link: '/hardware/comet-m-gen1/installing-apps/docker-images' },
                   ]
-                },
-                {
-                  text: 'Tutorials',
-                  collapsed: true,
-                  items: [],
                 },
                 {
                   text: 'Peripherals',
@@ -196,7 +191,12 @@ import { defineConfig} from 'vitepress'
                 { text: 'Troubleshooting', link: '/hardware/comet-m-gen1/troubleshooting' },
                 { text: 'Safety Instructions', link: '/hardware/comet-m-gen1/safety-instructions' },
                 { text: 'OS Images', link: '/hardware/comet-m-gen1/operating-system' },
-                { text: 'Downloads', link: '/hardware/comet-m-gen1/downloads' }
+                { text: 'Downloads', link: '/hardware/comet-m-gen1/downloads' },
+                {
+                  text: 'Tutorials',
+                  collapsed: true,
+                  items: [],
+                },
               ]
             }
           ]

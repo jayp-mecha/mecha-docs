@@ -2,7 +2,7 @@
 title: Introduction - Comet-M
 ---
 
-# Introduction
+# ☄️ Introduction
 
 The Mecha Comet-M device is a programmable handheld computer with focus on its multimedia abilities and software support that enables you to build applications levaraging the onboard rich multimedia, sensors and interfaces for building edge-connect applications.
 
