@@ -100,35 +100,26 @@ import { defineConfig} from 'vitepress'
                   ]
                 },
                 {
-                  text: 'Peripherals',
+                  text: 'Components',
                   collapsed: true,
                   items: [
-                    { text: 'CPU', link: '/hardware/comet-m-gen1/peripherals/cpu' },
-                    { text: 'Wireless', link: '/hardware/comet-m-gen1/peripherals/wireless' },
-                    { text: 'Bluetooth', link: '/hardware/comet-m-gen1/peripherals/bluetooth' },
-                    { text: 'Video', link: '/hardware/comet-m-gen1/peripherals/Video' },
-                    { text: 'Audio', link: '/hardware/comet-m-gen1/peripherals/audio' },
-                    { text: 'Camera', link: '/hardware/comet-m-gen1/peripherals/camera' },
-                    { text: 'Motion', link: '/hardware/comet-m-gen1/peripherals/motion' },
-                    { text: 'Display', link: '/hardware/comet-m-gen1/peripherals/display' },
-                    { text: 'Trust', link: '/hardware/comet-m-gen1/peripherals/trust' },
-                    { text: 'RTC', link: '/hardware/comet-m-gen1/peripherals/rtc' },
-                    { text: 'ADC', link: '/hardware/comet-m-gen1/peripherals/adc' },
-                    { text: 'LED', link: '/hardware/comet-m-gen1/peripherals/led' },
-                    { text: 'GPIO', link: '/hardware/comet-m-gen1/peripherals/gpio' },
-                  ]
-                },
-                { 
-                  text: 'Benchmarks',
-                  collapsed: true,
-                  items: [
-                    { text: 'CPU', link: '/hardware/comet-m-gen1/benchmarks/cpu' },
-                    { text: 'Disk', link: '/hardware/comet-m-gen1/benchmarks/disk' },
-                    { text: 'Wireless', link: '/hardware/comet-m-gen1/benchmarks/wireless' },
-                    { text: 'Ethernet', link: '/hardware/comet-m-gen1/benchmarks/ethernet' },
-                    { text: 'Crypto', link: '/hardware/comet-m-gen1/benchmarks/crypto' },
-                    { text: 'Power', link: '/hardware/comet-m-gen1/benchmarks/power' },
-                    { text: 'Temperature', link: '/hardware/comet-m-gen1/benchmarks/temperature' },
+                    { text: 'CPU', link: '/hardware/comet-m-gen1/components/cpu' },
+                    { text: 'GPU', link: '/hardware/comet-m-gen1/components/gpu' },
+                    { text: 'Video Encoder', link: '/hardware/comet-m-gen1/components/video-encoder' },
+                    { text: 'Video Decoder', link: '/hardware/comet-m-gen1/components/video-decoder' },
+                    { text: 'Wireless', link: '/hardware/comet-m-gen1/components/wireless' },
+                    { text: 'Bluetooth', link: '/hardware/comet-m-gen1/components/bluetooth' },
+                    { text: 'Video', link: '/hardware/comet-m-gen1/components/Video' },
+                    { text: 'Audio', link: '/hardware/comet-m-gen1/components/audio' },
+                    { text: 'Camera', link: '/hardware/comet-m-gen1/components/camera' },
+                    { text: 'Motion', link: '/hardware/comet-m-gen1/components/motion' },
+                    { text: 'Display', link: '/hardware/comet-m-gen1/components/display' },
+                    { text: 'Trust', link: '/hardware/comet-m-gen1/components/trust' },
+                    { text: 'GPIO', link: '/hardware/comet-m-gen1/components/gpio' },
+                    { text: 'Mikroe', link: '/hardware/comet-m-gen1/components/mikroe' },
+                    { text: 'RTC', link: '/hardware/comet-m-gen1/components/rtc' },
+                    { text: 'ADC', link: '/hardware/comet-m-gen1/components/adc' },
+                    { text: 'LED', link: '/hardware/comet-m-gen1/components/led' },
                   ]
                 },
                 { 
@@ -165,6 +156,19 @@ import { defineConfig} from 'vitepress'
                     { text: 'Running on QEMU', link: '/hardware/comet-m-gen1/developer-guide/running-on-qemu' },
                     { text: 'Testing Tools', link: '/hardware/comet-m-gen1/developer-guide/testing-tools' },
                   ],
+                },
+                { 
+                  text: 'Benchmarks',
+                  collapsed: true,
+                  items: [
+                    { text: 'CPU', link: '/hardware/comet-m-gen1/benchmarks/cpu' },
+                    { text: 'Disk', link: '/hardware/comet-m-gen1/benchmarks/disk' },
+                    { text: 'Wireless', link: '/hardware/comet-m-gen1/benchmarks/wireless' },
+                    { text: 'Ethernet', link: '/hardware/comet-m-gen1/benchmarks/ethernet' },
+                    { text: 'Crypto', link: '/hardware/comet-m-gen1/benchmarks/crypto' },
+                    { text: 'Power', link: '/hardware/comet-m-gen1/benchmarks/power' },
+                    { text: 'Temperature', link: '/hardware/comet-m-gen1/benchmarks/temperature' },
+                  ]
                 },
                 { 
                   text: 'Repair Guide',
