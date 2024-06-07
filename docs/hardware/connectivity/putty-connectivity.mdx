@@ -1,0 +1,39 @@
+---
+sidebar_position: 2
+---
+
+# Using PuTTY on Windows
+
+- First, you need to download and install PuTTY. You can download it from the official PuTTY download page.
+    
+    [Download PuTTY - a free SSH and telnet client for Windows](https://www.putty.org/)
+    
+- After installation, open PuTTY application.
+
+## Connecting via SSH
+
+- In the 'Host Name (or IP address)' field, enter the `mecha-comet-m.local` (default) or IP address or hostname of the device. By default, the SSH protocol is on port 22.
+- Ensure that the **'SSH'** option is selected under 'Connection type'.
+- If you want to save this session for future use, type a name under 'Saved Sessions' and click 'Save'.
+- Click **'Open'** to start the SSH session. If this is your first time connecting to the server from this computer, you will see a security alert. Accept it by clicking 'Yes'.
+- A new window will open asking for a username and password. Enter the credentials for your user.
+- The default credentials for the Comet-M are
+    
+    ```bash
+    username: mecha
+    password: mecha
+    ```
+    
+
+You are now connected to your server via SSH using PuTTY!
+
+## Connecting to the Debug Console via UART
+
+- Connect your Comet-M to your computer using a UART cable. Follow this [guide](https://www.notion.so/Connecting-via-Serial-Console-7127aa108fce4a18bb7440c9bd8f9cda?pvs=21).
+
+- Open the **Device Manager** on your Windows machine. You can do this by typing 'Device Manager' into the search bar and clicking on the application.
+- Within the Device Manager, expand the "Ports (COM & LPT)" list. Here, you should see a device named 'USB Serial Port', followed by a COM number. This COM number is what you'll use to connect to the device using PuTTY.
+- Open PuTTY and select the '**Serial**' option under '**Connection type**'.
+- Enter the COM number you found earlier into the 'Serial line' field. Set the speed (baud rate) to **115200**.
+- Click the 'Open' button to start the session.
+- If everything is set up correctly, a new window should open where you can interact with your device via the UART connection.

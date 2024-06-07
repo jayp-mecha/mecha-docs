@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Footer";
+import InformationTile from "../Shared/InformationTile";
 
 const CometM = () => {
   const specArr = [
@@ -108,6 +108,7 @@ const CometM = () => {
       description: "Beginner | 5min",
     },
   ];
+
   return (
     <div>
       <div className="mt-20 py-5 flex flex-col md:items-center gap-20 md:gap-5 md:grid grid-cols-2 justify-between">
@@ -126,25 +127,14 @@ const CometM = () => {
       </div>
       <div className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-4">
         {specArr.map((spec, index) => (
-          <div className="py-10 px-5 rounded-md border-2 border-[#202431] bg-[#15171D] flex flex-col gap-2">
-            <img className="w-[60px] h-[60px]" src={spec.icon} />
-            <h1 className="text-white font-medium text-2xl mt-3">
-              {spec.title}
-            </h1>
-          </div>
+          <InformationTile spec={spec} key={index} />
         ))}
       </div>
       <div className="mt-20">
         <h1 className="text-[36px] font-bold text-[#A4A7B4]">Things to do</h1>
         <div className="mt-5 grid grid-cols-1 md:grid-cols-4 gap-4">
           {thingsArr.map((spec, index) => (
-            <div className="py-10 px-5 rounded-md border-2 border-[#202431] bg-[#15171D] flex flex-col gap-2">
-              <img className="w-[60px] h-[60px]" src={spec.icon} />
-              <h1 className="text-white font-medium text-2xl mt-3">
-                {spec.title}
-              </h1>
-              <p className="text-[#B7BBC8]">{spec.description}</p>
-            </div>
+            <InformationTile spec={spec} key={index} />
           ))}
         </div>
       </div>
@@ -164,14 +154,6 @@ const CometM = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="mt-20 py-14 px-5 rounded-md border-2 border-[#202431] bg-[#15171D] flex flex-row items-center gap-2">
-        <h1 className="text-[36px] font-bold text-white">
-          Looking for docs on Mecha CLoud?
-        </h1>
-      </div>
-      <div className="mt-20">
-        <Footer/>
       </div>
     </div>
   );

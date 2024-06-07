@@ -1,7 +1,7 @@
 import LandingPage from "../components/LandingPage";
 
 
-export default function Home(): JSX.Element {
+export default function Hardware(): JSX.Element {
 
   return (
     <LandingPage slug="comet-m" />

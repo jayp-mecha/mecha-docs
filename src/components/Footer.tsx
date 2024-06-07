@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-import Icon from "./icons/Icons";
+import Icon from "./Icons/Icons";
 import { cn } from "../utils/tailwindHelper";
 
 
@@ -198,26 +198,18 @@ const Footer = () => {
               {value.links.map((link, innerIndex) => {
                 if (link.name === "Pilot") {
                   return (
-                    <a
-                      key={`pilot-${innerIndex}`}
-                      href="/pilot"
-                      className="group w-full flex flex-row  lg:justify-center lg:w-max   lg:rounded-2xl  flex lg:items-center gap-1 dark:text-custom-50 text-sm md:text-base  text-custom-410"
-                    >
-                      <span>Pilot Program </span>
-                      <i className="group-hover:-translate-y-1 group-hover:translate-x-1 transform transition duration-200">
-                        🚀
-                      </i>
-                    </a>
-                  );                
+                    <CustomLink href={link.href}>
+                      <div className="group w-full flex-row lg:justify-center lg:w-max lg:rounded-2xl no-underline flex lg:items-center gap-1 text-sm md:text-base">
+                        <span>Pilot Program </span>
+                        <i className="group-hover:-translate-y-1 group-hover:translate-x-1 transform transition duration-200">
+                          🚀
+                        </i>
+                      </div>
+                    </CustomLink>
+                  );
                 } else {
                   return (
-                    <a
-                      href={link.href}
-                      key={`${innerIndex}`}
-                      className="dark:text-custom-50 text-sm md:text-base  text-custom-410"
-                    >
-                      {link.name}
-                    </a>
+                    <CustomLink href={link.href} > {link.name}</CustomLink>
                   );
                 }
               })}
@@ -292,3 +284,20 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+const CustomLink = ({ href, children }) => {
+  const linkStyles = {
+    textDecoration: 'none',
+    fontSize: '16px',
+    fontWeight: "500"    
+  };
+
+  return (
+    <a href={href} style={linkStyles} className="text-[#15171D] dark:text-white hover:text-[#3283E8FF]">
+      {children}
+    </a>
+  );
+};
+
