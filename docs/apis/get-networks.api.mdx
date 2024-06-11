@@ -1,0 +1,173 @@
+---
+id: get-networks
+title: "Get list of networks"
+description: "Get paginated result of list of networks"
+sidebar_label: "Get list of networks"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVEuP2zYQ/ivEnLXrR4oi4KnbJF0sgt0acXMy9jCmRhYTSmTI0cauof9eDCXZ3gcC1D5Q5Ly++eZxBMZdAr2Blvinj9/hsYCSkok2sPUtaLglVgF3tkWmUkVKnWPlK+VsyudomKAAHyiimN2VoGFH/HCWBYzYEFOUaEdosSHQgM6tRCAaVqL96Cge4CWGk5q6Eiz04It8ru2/VKjkI/95GM6PNpIRq0IRm2soINKPzkYqQXPsqIBkamoQ9BH4EASD334jw1AAlqUVU3SrKKmwpXShlzjadgd93z+K1xR8mwaF5Xwux3PM684YSklNmlCA8S1Ty6KLIThrMlmzb0kMjr9AFp7hoRh9vKeUcEdv4XvJ3jr7VZWPKjG2JcZSZR/qnEUBbNmJm/Wo8mWUfRJN6AugPTbBDRD+Ijb1qfRDL4zynEnXNBgPoN9UnKKeLF4C/pX3Ap7QdWOUzPBU2GZiBKa2U5U4olKNmlXnnDRXYuQugYa/P59uH3xJoJfzeTHwO9xB5N02c5AbV2of8OA8lgLhVFFp6SFq7v39fvv7O1oiUrm/ClVlrhbLd0Mhn2xJEfT5swAb1t22JQYNi/l1/s+WvwktbXoYBoUp8VXZpuFx3VWV3YOGhsx1qqGYgl9oi9/0kSrsHE8U2TRS85kO99jibhoLSYs9o1vhTiq8HK9fyPhYfvCd5LiU1IehA73ox58Qz7UfJz5POtegYYbBzp4Ws4v9kCg+TQugiw401MxBz2bOG3S1T6zfz9/PX/XDLbWyWKSQ2YMSY4Fs28rnCRh7955Mjco435XqZnWXXnm6cc7/TKqR3G27U81rAykpmjyk45K6Wd2pdReCj5IeNWgzdHLhj2x/nbzMh6Q2RFlIBeUp+MQNthe+ZJu+sTmfobxoq/+zfcc1wLTnWXBoW0GQaT6ONdkABisTtDh3TJKNL9SL+HjcYqKv0fW9PA/LWG8eZeiixa2QvHnsC6gJcxdvjvCdZM5vjKHA5+l8veCkXqdOuf30D/T9f5BsPpw=
+sidebar_class_name: "get api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get list of networks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/networks"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get paginated result of list of networks
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Query Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"allParams","in":"query","description":"allParams - pageNo, pageSize, sortBy, sortDirection, etc.","required":true,"schema":{"type":"object","additionalProperties":{"type":"string"}}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch networks list example"}
+                  value={"Fetch networks list example"}
+                >
+                  <Markdown>
+                     Fetch networks list response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Networks fetched successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": {\n    \"content\": [\n      {\n        \"networkId\": \"xxb63e2aaedx-pffc-123\",\n        \"provider\": \"provider\",\n        \"ipSubnet\": \"10.0.0.0/24\",\n        \"dnsName\": \"test-dns\",\n        \"dnsSuffix\": \"mec.sh\",\n        \"networkName\": \"test\",\n        \"isDefault\": true,\n        \"isNetworkKeyManaged\": true\n      }\n    ],\n    \"totalPages\": 2,\n    \"totalRecordCount\": 2,\n    \"pageSize\": 1\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

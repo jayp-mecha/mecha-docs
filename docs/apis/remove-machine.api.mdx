@@ -1,0 +1,173 @@
+---
+id: remove-machine
+title: "Remove machine"
+description: "Remove machine with given machineId or machine alias"
+sidebar_label: "Remove machine"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMFu2zAM/RWBpw1wa7enwqcFXTAEW9Ci6U5BDozNxOpkSZXktIHhfx8oO0kbFxuw+WJbpB4fyUe2EHDrIV9CjUUlNXlYJVCSL5y0QRoNOTxQbXYkBgfxIkMltnJH+nA0K4VxRzsqiR4SMJYcMsSshBxcBJn3PpCARYc1BXIcvAWNNUEOR8A7NxlgJFOwGCo45/VY0RsGF6LR8rkhIUthNiKcjElPSVyMKDp6bqSjEvLgGkrAFxXVCHkLYW+Zjw9O6i103YqdvTXak2f7dZbx6z2hRVMU5L04eEIChdGBdGBftFbJIlYkffJ8oR0HNOsnKgLXx3H9guzDkXPGzcl73NJH9M5Ls4i4YmOc8AF1ia4UEUOcskggyKAYZjG4PAy2KXtClwC9Ym1VT+FMBYMpJtHUNbr9WCmHWEfnvyjr5LZD1QzYsaSHBtWHEsD8GIMhSjE4bhql9pCADxgaDzncfT/+3ZqSIL/OsqSvZ/8PbG/WMeeoRe61xb0yOOii6x+OHirDYi5JUehVHCrIIUUr091VepihtGeVtud67jgYud1B9o1TkEMVgs3TVJkCVWV8yG+ym2xUrG+keaA414gg+DKTlXpjoiiGds6pqFAUyjSlmNzP/AhpopR58aJGjVupt6IeX2DdYhF1O4zm5H4mFo21xrE8qUYZqZOyX+L9S29YMpxaH+XqMrvM+MgaH2rUb7De9/2cX3uamn/dPcN8BHoNqVUoNfOIxW6Hni0BrWSlXUFy2n3JsKcggXy0i1YJcHf4btuu0dNPp7qOj58bYv0vV6xcJ3HNfVi2UErP3yXkG1Se/pDnp4dhFX0W/7/WPsx+OES9P80Xa/8X7T9avN2qS6AiLMnFVHq3SVGQDW8ARkuNBXmck6/TH9PHKXTdbyp5Nmo=
+sidebar_class_name: "delete api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove machine"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/v1/machines/remove/{machineIdOrAlias}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Remove machine with given machineId or machine alias
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"machineIdOrAlias","in":"path","description":"The machineId - unique id of the machine, alias - machine alias","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Remove machine example"}
+                  value={"Remove machine example"}
+                >
+                  <Markdown>
+                     Remove machine response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Machine removed successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": true\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

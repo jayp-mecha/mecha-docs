@@ -1,0 +1,173 @@
+---
+id: get-network-by-network-id
+title: "Get network details"
+description: "Get network details with given networkId"
+sidebar_label: "Get network details"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVNuO2zYQ/RVinlpAu76kKAI+ddsGi0Ww2yBOngw/jKWRxYQiueTIa0PQvxejy9qxtwViPVji3M+cwxYYdwn0Ghzxi4/fYZNBQSmPJrDxDjTcE6vRqApiNDapF8OV2pk9ucn0UEAGPlBECXsoQMOO+Gkw/nl8OvMKGLEmpih1W3BYE2g4z2OkbkCu4LKZLxWdKqob1Tjz3JAyhfKl4pMRMoj03JhIBWiODWWQ8opqBN0CH4NUTByN20HXbcQ5Be8SJbEv53P5+7HyqslzSklNnpBB7h2TY/HFEKzJ+9ln35IEtNcF/fYb5SwIREGKzVCOYvTxkVLCHb3V3iUGqz6vKn1UidEVGAvV51CnKTJgw1bSrEaXz6Ptg3hClwEdsA52aOHpYr+jrZ+iqWuMR9BXTlO1V+/LRv8rawZ7tM2YvUd12lE9oXAVWxLnFRVqDCgba4+QQWLkJoGGfz6+fv3lCwK9nM+zAdrhG8TebPvxe+LJ2gMercdCOjnxT8PhsP39HS0RqTjchLLMbxbLd8Pe9qagKOycXjMwYdVsHTFoWMxv+2e2/E3QcOlpIDdT4pvCpeFw1ZSlOYCGmvLbJCQfi595S970N5XYWJ7QMWlE5SMdH9HhbiJ3N/4EQK78KL5ealyBhhkGM9svZmOZNGtfp+0EFor7SY1NtKChYg56NrM+R1v5xPr9/P38ar/35ETvspU+g5JggdW40vdMHjn4SHmFKre+KdTdp4d0lenOWv+SVC1DGbdT9XWAiA3zXmzjjXH36UGtmhB8lFGpRtO3Tjb80cffJi88l9GGKgtZjRwFn7hGd5brjUvussn2pPefuRNHNTMdeBYsGicN9Ci343rWgMGIKBYnJkh1fUqzyUDWIL5tu8VEX6PtOjl+bkjEud6IqKLBrQC+bqEwSd4L0CXaRP8zyy+fx4vyV/UTt+ubY42H6I4njYvuvtPxhxu+23QZVIS9lNbtaL/Lcwp8Fnl1qQq3Xhl+/+ELdN2/yRtV8Q==
+sidebar_class_name: "get api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get network details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/networks/{networkId}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get network details with given networkId
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"networkId","in":"path","description":"The networkId - unique id of the network","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Network details example"}
+                  value={"Network details example"}
+                >
+                  <Markdown>
+                     Network details response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Network details fetched successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": {\n    \"networkId\": \"xxb63e2aaedx-pffc-123\",\n    \"provider\": \"provider\",\n    \"ipSubnet\": \"10.0.0.0/24\",\n    \"dnsName\": \"test-dns\",\n    \"dnsSuffix\": \"mec.sh\",\n    \"networkName\": \"test\",\n    \"isDefault\": true,\n    \"isNetworkKeyManaged\": true\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

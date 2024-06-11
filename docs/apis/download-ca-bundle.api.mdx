@@ -1,0 +1,173 @@
+---
+id: download-ca-bundle
+title: "Download CA-Bundle certificates"
+description: "Download CA-Bundle certificates"
+sidebar_label: "Download CA-Bundle certificates"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VVtz4jYU/iua89TOGGySTpvxUw12qLMY1sGQZhMeFFmxzdqSI8kQYPzfOzImYROmdGanvABH5/Kd23d2oHAiwX6AApM0Y7RDqFDZc0aworAwIKaSiKxUGWdgg8vXLOc4RgOn069YnFN0pC/BAF5SgbW2H4MNcas/wHttMKDEAhdUUaGj7oDhgoJ9iO7HE+HkGdaeMh2wxCqFjyiilKI3A9RBFcteKoqyGPFnpN4fDYS1L9Q5CPb/wQBBX6pM0BhsJSpqgCQpLTDYO1CbUuORSmQsgbpeaGVZciap1O8XlqW/fgQ0rQihUqKDJhhAOFOUqcYlfVVmmWOd0O5zKP60pETpyghdPJXtA1EhuAiolDihp4B9LMq08YueuUBSYRZjEaPGB3rHb4DKVK7dTFuV2/bN05pQG0BfcVHmewjnuq2zqYoCi8350XhDgdoIn7p6frZWOK80+E6n0+l7Q3+MBt5t5F/7AyfytLDzyALfd3/fDgaOmiTO2u87iT/727+6fl2J2eXImVjTIrqajTbWNiaTP8jaDe9vvvBvfroiYyf0Ro+sHzrrL65XBINw6PRmnrNex9HdfImHXjK7zLfxcK7Ipu+G0/50ZnnJbOkld9bt9Ty31n+lZPzIgmW4DpbOZeDOtsHWf71LyThYftey3l42e71bOjyY3q9vnHt3Hoau2++Nv92N+f20H6Fut9t9ZE1G3tg9keW5CoTRYOBkxVsFIjKZjEJz1JvPV+61RxI1+i292TiW7/2fFbgIonATRN5FU4FtI9vuZWHvZyoAdfMxoKAq5ZppEtqskKYLG0xcZuaqZ7ZrL83dR36pzaPZMgnuPDUTZx4ICwyQVKwOLFWJHGxIlSpt08w5wXnKpbKvrCvr0xwPKdMUSGO094C0seaRjD3zZpPbHQwoSTEiOa9i5Hz15SdPTp7ztUQFZjjJWIKKzwaaZjBpaKZlUuerj6ZVWXKhC0ILnDXQaV7+2dh3Jdd7rlPbR+l1ra6lRSWXqsDsyNf5lfwB8O6d9f6DaUtoR+xYG/tC79o+PgAuM733PTAOF0Jb2ieuxfHZMuCtoRrioaULA3TXtN/d7glLOhN5XWvxS0U1hz0sNMeIDD/p/jzsIM6k/h2D/YxzSf8l3V9u24vyK/r563SyMq0Qs80RE4IB3+nm1P2sF7UBKcUxFU0qezWHEFqqIwfHMRZH6zT0IqjrfwBSHLtC
+sidebar_class_name: "get api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download CA-Bundle certificates"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/machines/{machineIdOrAlias}/certificate/ca-bundle/download"}
+>
+  
+</MethodEndpoint>
+
+
+
+Download CA-Bundle certificates
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"machineIdOrAlias","in":"path","description":"The machineId - unique id of the machine, alias - machine alias","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"text/plain"}
+              value={"text/plain"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Download CA-Bundle certificates"}
+                  value={"Download CA-Bundle certificates"}
+                >
+                  <Markdown>
+                     Download CA-Bundle certificates response example
+                  </Markdown><ResponseSamples
+                    responseExample={"----BEGIN CERTIFICATE-----\nMIID6zCCAtOgAwIBAgIUXI8FxvrU3LAO0SmT8ULy0zdcO7cwDQYJKoZIhvcNAQEL\nBQAwKDEmMCQGA1UEAwwdTWVjaGEgU3lzdGVtcyBDQSBSU0EgUjEgW0RFVl0wHhcN\nMjQwMjA3MDUzMzIxWhcNMjkwMjA1MDUzMzUxWjAoMSYwJAYDVQQDDB1NZWNoYSBT ....\n-----END CERTIFICATE-----\n----BEGIN CERTIFICATE-----\nMIIDQTCCAimgAwIBAgIUTcOOLQ/L1VVvDFEcgtL4hJyA0IEwDQYJKoZIhvcNAQEL\nBQAwKDEmMCQGA1UEAwwdTWVjaGEgU3lzdGVtcyBDQSBSU0EgUjEgW0RFVl0wHhcN\nMjQwMjA2MTQyMTE2WhcNMzQwMjAzMTQyMTQ1WjAoMSYwJAYDVQQDDB1NZWNoYSBT ....\n-----END CERTIFICATE-----"}
+                    language={"shell"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,173 @@
+---
+id: re-provision-certificate
+title: "Re-Provision certificate"
+description: "Re-Provision machine certificate with given machineId or machine alias"
+sidebar_label: "Re-Provision certificate"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVk1vIjkQ/StWnXYlA92dhBCfFkWzu9EoM1HIXBZxKLoL8KS73bHdDEyL/76qxhA+klGk3RwSsKtePdfHqzTgce5AjaHAdKFL6qRkvZ7pFD3BREJGLrW68tqUoOCROg/WLLXTphTBQxx4iB/aL8RcL2l/fZcJY/e2mGt0IMFUZJFB7zJQYGmPensQXkKFFgvyZJliAyUWBAr2yF/tMOBpZlehX8Ap5acFHVDpiLrULzUJnQkzE/71Um65ic4ZV0svtbaUgfK2JgkuXVCBoBrw64r5OG91OYfNZsLGrjKlI8f3SRTxn2NCozpNyTmxswQJqSk9lZ5tsapyfr02Ze+7Y4fmPKCZfqfUc34sJ9LrbTiy1th7cg7n9Ba909SMWlwxM1Y4j2WGNhMthnh9hQSvfc4wo2DyGO4+sSVsJNAKiyrfUjhqkMPGCEbtc+qiQLs+badD6138vdsvG/GtOBKWmNchXpvwXfmKXYLgPhTaUqfagVEmgv2szvM1SHAefe1AwdfP+2+3JiNQSRTJbdK334Hv62mbmLZhuSEqXOcGMyayb0NQsFpN+xeUIFK26qxWq1UnTi7aiuolevpM62E+N/zS0fDoeKR/cqgkuhzweT0d6XkZbEd/D5OrPjcUWT8iqzH/UhdTsqCgf6XiG5WQwr5KMxUPVHSjLm8UTvl3HCtCNe2rC1LptUqjbrcbcP7U5ZxsZTU3KIwTkiKLpSCUgqRIZ1JMUymSWIq+FHQtxQyluLmQ4jqTgm6kSCIpMJHiMpOi2+1OAu7Ds/6ynefQoNvjW0voKRv69pHJZSfqd6Lrp6ivkkRdDbpxPPgnmH5aVdqS+4jprSkKU4Z47+WeDe+cq3U5/2bzc2L5yane2t7iSarPDY7Cn19/8CHWGP8e1vbug0DaPdLSPLOkzTB3tAk/PBx+Ybg/K+NagWFJVdDDSveWcS90sOs1pxq86R1MYe9wongoyC53Gl63OVx4X6leLzcp5gvjvBpEg+hsyv+iktcEz2SLINiZh0qXM9MqXNCme0oXKNLc1JkYPty5M6RhnpsfThRY4lyXc1GcO7AIY9qKcNgzw4c7MaqrylhOBRWoW+qUV3+0/l1nWP/4adsocTfqRnzE2SuwPMB6T7BOmTavy+D/27ZhEXha+V6Voy6ZY1uIJlR4DFhpFs0Y5E6n2FO9sWuP2R+VeiKBq8l4TTNFR99svtnw8UtNLPnjCQuz1Tjluo0byLTjz7tO/EU2fnsMe/h38d93+psZCYdYrl/XB2v6M63f+q9jM9lIWBBmPPTjJpgN05QqfwBwttG5gfdz9vB19ASbzb/nKDPB
+sidebar_class_name: "post api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Re-Provision certificate"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/v1/machines/{machineIdOrAlias}/certificate/re-provision"}
+>
+  
+</MethodEndpoint>
+
+
+
+Re-Provision machine certificate with given machineId or machine alias
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"machineIdOrAlias","in":"path","description":"The machineId - unique id of the machine, alias - machine alias","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Re-Provision certificate example"}
+                  value={"Re-Provision certificate example"}
+                >
+                  <Markdown>
+                     Re-Provision certificate response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Machine re-provisioned successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": {\n    \"machineId\": \"xxb63e2aaedx-xxxx-123\",\n    \"privateKeyAlgo\": \"RSA\",\n    \"privateKeySize\": \"2048\",\n    \"pubSignAlgo\": \"SHA256\",\n    \"certSerialNumber\": \"65:19:2e:a6:cd:18:09:49:ab:49:11:ea:b6:3e:c7:c0...\",\n    \"certFingerprint\": \"[2e, d1, ea, e, cf, bc, 21, 6, e7, fa, 93, 7d, e9, 20, a2, 4d, ...]\",\n    \"certPkiName\": \"string\",\n    \"certCreatedAt\": \"2024-06-07T06:22:58.118Z\",\n    \"certExpiresAt\": \"2024-06-07T06:22:58.118Z\",\n    \"certCommonName\": \"xxb63e2aaedx-xxxx-123\",\n    \"certIssuingUrl\": \"string\",\n    \"certCrlUrl\": \"string\",\n    \"issuingCaSerialNumber\": \"string\",\n    \"issuingCaCommonName\": \"string\",\n    \"issuingCaExpiresAt\": \"2024-06-07T06:22:58.118Z\",\n    \"rootCaCommonName\": \"string\",\n    \"rootCaExpiresAt\": \"2024-06-07T06:22:58.118Z\",\n    \"isRevoked\": false\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

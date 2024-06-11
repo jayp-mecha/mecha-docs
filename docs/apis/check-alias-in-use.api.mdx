@@ -1,0 +1,173 @@
+---
+id: check-alias-in-use
+title: "Check alias is already used or not"
+description: "Check given alias is already in used or available to use"
+sidebar_label: "Check alias is already used or not"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMFO4zAQ/RVrTrtSIIETymkrhFC1QosonFAPU2doDI5tbKdLFeXfV+MkbaEVl+2lij3z5o3fm+kg4jpA+QwNyloZCrDMoKIgvXJRWQMlXNck38RabcgI1AqDUEGg9oTVVigj2kCVsF7gBpXGlSYRLR9CBtaRR4aZV1CCZKAZI8zNU7p36LGhSJ4pdGCwISghFYEMFFd/b8lv4Sunx5pGLmdiZC6mNE/vrfJUQRl9SxkEWVODUHYQt47xQ/TKrKHvlxwcnDWBAt9fFgX/fS61aKWkEMQUCRlIayKZyLHonFYy9Zi/Bk7ojgva1SvJyP16fpGohnLkvfV3FAKu6RS9r00vEq54sV6EiKZCX4mEIfZdZBBV1AyzGEMexrsbjoQ+A/rAxumBwqDtqGqSUozXqZG2adBvdx74FDfV3CWc9s1J7Aw2qNuxRnreSaxmeg64O5R1by7IIESMbYAS/vzefV3biqC8LIpseNbhG/i+XaXWk8VYcodbbXG0Rz/8uHCsLbt0TUkpjDWUkKNT+eYin6YjTx4+S5zOlBlcHshvJgu3XkMJdYyuzHNtJerahlheFVfF0QPdkuHxoEoMCIKTmaEyLzYZYpTyjmSNQmrbVmJ2Pw9HSDOt7d8gGjS4VmYtmuME9izK5NlxzGb3c7FonbOeG6YGVaJO2v1K+efBsl24taHKxXlxXvCRsyE2aA6wPmm93w7TajA2fuXc7afofzbMODORPmLuNCrD/JII3ajhM6BT7LgLyPZbLoNjJZcZsFic0nUrDPTkdd/z8bCEWN9KBSZQQfmCOtA3Tf14GPfQT/HdtjrZwBttD/bgOCuQvLFBr9IclM/LPoOasCKfqA1JMynJxYOsow3FKDu33948Qt//A0AREnw=
+sidebar_class_name: "get api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check alias is already used or not"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/machines/check-alias-inuse"}
+>
+  
+</MethodEndpoint>
+
+
+
+Check given alias is already in used or available to use
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Query Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"alias","in":"query","description":"The alias - machine alias","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Check alias in use example"}
+                  value={"Check alias in use example"}
+                >
+                  <Markdown>
+                     Check alias in use response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Machine alias available\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": true\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,173 @@
+---
+id: get-network-node
+title: "Get network node details"
+description: "Get network node details with given nodeId"
+sidebar_label: "Get network node details"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVU1v2zgQ/SvEnHYB2ZZlx5vqtMa2CIIi2aLOXjbIgRJHFluJZEnKsSHovy+GpmI3TouufZDE+Z5589iD51sH+SMo9M/afoWnBAS60krjpVaQww16FoVMaYFMoOeycexZ+ppt5Q5VOL8VkIA2aDkZ3grIYYv+/mh5rwVCAoZb3qJHSyF7ULxFyOHFWlI8w30Nr5N4qDEGYRPWdVIwXTFPh2eZQQIWv3XSooDc2w4TcGWNLYe8B38wFMt5K9UWhuGJlJ3RyqEjeZam9Pg+7KYrS3SOjZqQQKmVR+VJlxvTyDKUO/viyKC/DKiLL1h6qt1Sc7w8hkNrtb1D5/gW30rvdQM2wS+rtGXOcyW4FSz4YKcqEvDSN+RmE1U+R9kH0oQhAdzz1jTHFO7fGmpUCKV0bcvtAfK3Nce4LyavU/6p/wR2vOlinNDkcWTt2JTvHVToyxoFi9pV1zQHSMB57jsHOfz98eXrL8JCnqVpcmzz8RtI3hWhFQF+BAHDD43mgtKIKMyhWmRXV5nAybt0UU2W1zydFEUmJsti8a5I56tigRUVq9z9Eb8enZ8IRQOQZrdcC2FDPTBP0+lqOU2n86NodRLFQSfj3oXI+32xWmDGOYr9xFRVOZlni5NOmNqv6Burd1KgpW0aXymBTVco9CGxafjPsuWPKhHKbbqqknvIocVy6upTImfa5Ne9x4p3jR8nKF2c3Ec83HHFt+M+Dgm0vKylwvfchyWJn5fV7Pf7faxGSGcafrgttbpDIfknIoizDvJGcjcmf/xIRmp5QOdZDAIJNNz5denlDtfUhizNlpN0NUlXD+lVvszyLJ1mf1z/C8P4Izj6WkcyCwwWgs+4kbPdfDZOZkbocbP+CKKBoIZ2N/JcZxvIofbe5LNZo0ve1Nr5/Dq9Ti+25gYVUSghPXhgZExQlarSgSnijt9hWXNWNroTbP3p1l14WjeNfnaspQlItWXtpQGRGS8DmcWGrT/dsk1njLZULbZchtSxMX8G+6nTxCNU2jHKnHBER0Y733J15utHN8frTPsTqf6/2yaSpse9n5mGS0V5hGb3cVCPwI0kspmfr1ESlp2eefT1lACNhAz6vuAO/7HNMNDxtw6JAx+fiLGs5AU1/7EnVNK7gLzijcOflPTb53gp/c5+9Rp7s7B4yNXhxJ5Eal/xcLpEh6chgRp52P7HPgrXZYnGn5ldXF2EsBeo33x4gGH4D1EIvvE=
+sidebar_class_name: "get api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get network node details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/networks/nodes/{nodeId}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get network node details with given nodeId
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"nodeId","in":"path","description":"The nodeId - uuid of the network node","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Network node details example"}
+                  value={"Network node details example"}
+                >
+                  <Markdown>
+                     Network node details response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Network node fetched successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": {\n    \"nodeId\": \"f32552de-903f-48a0-bb2d-4b39b016b3ef\",\n    \"dnsName\": \"test-dns\",\n    \"ipv4Address\": \"100.64.0.1\",\n    \"ipv6Address\": \"string\",\n    \"networkId\": \"xxb63e2aaedx-pffc-123\",\n    \"networks\": {\n      \"networkId\": \"xxb63e2aaedx-pffc-123\",\n      \"provider\": \"provider\",\n      \"ipSubnet\": \"10.0.0.0/24\",\n      \"dnsName\": \"test-dns\",\n      \"dnsSuffix\": \"mec.sh\",\n      \"networkName\": \"test\",\n      \"isDefault\": true,\n      \"isNetworkKeyManaged\": true\n    },\n    \"machineData\": {\n      \"machineId\": \"xxb63e2aaedx-xxxx-123\",\n      \"displayIconMediaPath\": \"string\",\n      \"alias\": \"test-alias\",\n      \"name\": \"Test machine\",\n      \"lastActiveAt\": \"2024-06-06T05:42:20.278Z\"\n    }\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

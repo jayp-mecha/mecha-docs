@@ -1,0 +1,173 @@
+---
+id: generate-ipv-4-address
+title: "Generate IPV4 address"
+description: "Generate IPV4 address within given IPSubnet of network if networkId provided else generate with default network's IPSubnet"
+sidebar_label: "Generate IPV4 address"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVE1v2zAM/SsCL7u4sVMEQ+HTgqEogqFYsGy7FDkwFhOrlSVVktMGhv/7QH8k6dew23JxbD0+PpKPaiDiLkB+B4bik/UPsE5AUii8clFZAznckCGPkcRi+XsmUEpPIYgnFUtlxE7tyYjFclVvDEVht2LgEer4dyGF83avJElBOpDYjYxMIiRtsdZxRH8KRzpIwDpGKmsWEnIYAxduP5v3QiABhx4riuS5jgYMVgQ5oNZLPmCE4joea/IHeF3dESYuzvTmIpYkaqMeaxJKntUFCXh6rJUnCXn0NSUQipIqhLyBeHCc2m7uqWD1KKXiPKiXniuJisIZLkSvzA7atl0za3DWhB5wmWX8eCl1VRcFt35EQgKFNZFMZCw6p1XR9Sq9DxzQ/EWZe6GHvLf+lkLAHb2n73XTVh2v2FovQkQj0UvRcYhTFQlEFTXTrAbIj+HsmpHQJkDPWDndS3jfZQOiq6WuKvSHDw05Zj7G/JuPT+g96nrI1PV5HG819gWU28/E4LujiaUY8Ntaa/ZXiBjrADl8/3Z8+2olQX6ZZUnf6/4d+LzedP3ovMs+cHjQFiULUWc2z2GaZZPPs0k2mbJjuh+Li6XtV6MbK8YSckjRqXQ/TQfPhnQUe8GUnJX8ftyX2mvIoYzR5WmqbYG6tCHmV9lV9mEPpegZBAezamW2tnPOMPNbKkoUhba1FPPlIrxhmmttn4Ko0OBOmZ2o3gawubHozD3s9Hy5EKvaOeu5WKpQddJJuy9d/CRY9hWX1meZTrJJxp+cDbFCc8b1rh1ey2xOG/Z/78FhIyM9x9RpVIaL6ibXDEO/A3SKbTyFZLzMuZ6Xo18nwNNleNNsMNAvr9uWP/fXY3635k3wCjc8x7t1m0BJKMl3XnkgXsB5UZCLp5V5e/ewJY7WvLn+CW37B9HSOcQ=
+sidebar_class_name: "get api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Generate IPV4 address"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/networks/generate-ipv4"}
+>
+  
+</MethodEndpoint>
+
+
+
+Generate IPV4 address within given IPSubnet of network if networkId provided else generate with default network's IPSubnet
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Query Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"allParams","in":"query","description":"allParams - networkId : the unique id of network","required":true,"schema":{"type":"object","additionalProperties":{"type":"string"}}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Generate IPV4 address example"}
+                  value={"Generate IPV4 address example"}
+                >
+                  <Markdown>
+                     Generate IPV4 address response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"ipv4 Address generated successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": {\n    \"ipv4Address\": \"100.64.0.1\"\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

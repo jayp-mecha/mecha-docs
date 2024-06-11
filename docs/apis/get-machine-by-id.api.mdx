@@ -1,0 +1,173 @@
+---
+id: get-machine-by-id
+title: "Get machine details"
+description: "Get machine details of machine with given machineId or machine alias"
+sidebar_label: "Get machine details"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVt+P4jYQ/leieWqlBALLr+apXLs6oXbvVsv2HrraB2MP4Dsn9toOGxTlfz9NcIBd6KlSywtkPJ58M/PNN9Tg2cZB9gQ541tZoIPnGAQ6bqXxUheQwUf0UTiNBHomlYv0+mh6lX4bbeQOi860EJG2x3OmJHMQgzZoGYVcCMhgg/7u4PBhvxAQg2GW5ejREpoaCpYjZHCM+NnOQxxJmAzzW3gP9HGLZxCSqCzkS4mRFATXnw7jA6YoucBo8aWUFgVk3pYYg+NbzBlkNfi9ITzOW1lsoGmeydkZXTh0dD5MU/p6C2hZco7ORZ0nxMB14bHw5MuMUZK3Jel/dXShvnyhXn1F7qk+lgro5eF1aK22d+gc2+A1eO9Ls2zjRmttI+dZIZgVURsjOmURg5deUZhlcHkIZ7fkCU0MWLHcqAOEa7QI520mZZ4zu/8H/nRvPd74N6Q7+e6YKsNb2gp3/cq7ikAgl4vW6PkWRRQ816VSe4jBeeZLBxl8/uP49JsWCNkwTeNDfQ/PQOflqq1By03qvWF7pZkgCEfGQQZVtZrc4JAxFFVSVVWVDIY3EHdsfkR3zIoyls4otl9wXdyhkOyeSJ3B1nuT9fsh2x7XOcRwYGgGHp1POrqG2a3hG+7D2ak47eOX9jch9qgwR08dqY/ZpzFId4feSu5uC7ZSJ+pL96fevDU2MSjm/Jx7ucO5hwyG6XCUpJMknT6m02w8ycbT3nA0+ptSRv+q7TeiY1YDlf33T8tPhzoQsl6bSfDq5ch7jiZamt1oLoRtmwqDNO1NRr20NzhFXJhluSrQnx+n/eHozOPQiqoKrZi9aYUWh17x9VSsRut1MuI4SUY44slqOh4mg8kkHaaTKb8Zn8U8Q96BpoFwe7co1ppS3GrnQ58Hw5vRDZ9O6ZuUz4XbShZl1Rq+oHUHoo97g3Hvl1mybmmp3YdSKnEa5RiMYn6tbX7N9oAKmcOLMMxyYlI1myQTQsA2WPjTOwdUss4csOXItyxpLRBDaQTzKH7c5Kb70OD5rQ663op5y+Q+M7K/G/S73dKv3+t5Q8OFdtfJfmnVaQKU5kxRWbNZOkuvSERBG4Vmu40Q0WWiugwd6eTsjlKLuNKliOb3C3cRaa6UfnVRzgq2kcUmyi8vkG4z3up2aPL8fhEtS2O0pYwxZ7KFjsr82t7vOU0M2b2rehOD0c7nrDiLdUXt3oOsT6vj/9rIYWl4rHzfKCYLAtd2oA4dfAJmJEkKzd/xH0IM2cVefo7bAaArdb1iDv+yqmnI/FIiic7TMymTlaQnbauFdEFb1kw5/EG6Pz2Etfxz9N9X/NWkg5EV+zP9hDjo6kWyzXMTwxaZQHsmv3PO0ZwL8MWCJ3IeJ+Xj7SM0zXd6rjCp
+sidebar_class_name: "get api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get machine details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/machines/{machineIdOrAlias}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get machine details of machine with given machineId or machine alias
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"machineIdOrAlias","in":"path","description":"The machineId - unique id of the machine, alias - machine alias","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get machine details example"}
+                  value={"Get machine details example"}
+                >
+                  <Markdown>
+                     Get machine details response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Machines fetched successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": {\n    \"machineId\": \"xxb63e2aaedx-xxxx-123\",\n    \"name\": \"Test machine\",\n    \"displayIconMediaPath\": \"http://example.com\",\n    \"alias\": \"test-alias\",\n    \"tags\": [\n      {\n        \"key\": \"test\",\n        \"value\": \"testValue\"\n      }\n    ],\n    \"telemetry\": {\n      \"status\": 0,\n      \"isMetricsEnabled\": true,\n      \"isLogsEnabled\": true\n    },\n    \"lastActiveAt\": \"2024-06-07T07:56:57.244Z\",\n    \"networking\": {\n      \"fullDNSName\": \"test.test-network.mec.sh\",\n      \"ipv4Address\": \"100.64.0.1\",\n      \"networkIpSubnet\": \"100.64.0.0/24\",\n      \"networkId\": \"xxxx3e2aaed8-xxxx-123\",\n      \"nodeId\": \"cf7db4ff-4ce6-4e4c-b752-16602067c354\",\n      \"networkName\": \"test-network\"\n    },\n    \"sysInfo\": {\n      \"hostname\": \"12343c771234\",\n      \"osName\": \"linux\",\n      \"osVersion\": \"5.15.98-fly\",\n      \"osBuild\": \"string\",\n      \"platform\": \"string\",\n      \"platformRelease\": \"5.15.98-fly\",\n      \"arch\": \"x86-64\",\n      \"agentVersion\": \"1.0.0\",\n      \"agentName\": \"mecha-agent\",\n      \"updatedAt\": \"2024-06-07T07:56:57.244Z\"\n    }\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

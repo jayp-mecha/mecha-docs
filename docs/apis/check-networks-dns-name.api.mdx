@@ -1,0 +1,173 @@
+---
+id: check-networks-dns-name
+title: "Check DNS name"
+description: "Check DNS name is available or already used within a network"
+sidebar_label: "Check DNS name"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1P5DAM/SuRT7tShxZOqKcdAUJoBYuY3RPi4Gk800CahCQdGFX97yunnYH50HLYXqrW9vOz/ewOIi4DlI9gKL5Z/wJPGUgKlVcuKmughIuaqhdxeTcTBhsSKghcodI41ySsF6g9oVyLNpAUbyrWyggUG7QMrCOPDHUjoYSKwe4GY7g04Q4bggwcemwokmcqHXAiKEFu7YqJvLbk17BP73dNYnQUEzFCb+lCBp5eW+VJQhl9SxmEqqYGoewgrh2nCdErs4S+f2Ln4KwJFNh+VhT82s03a6uKQhAbT8igsiaSieyLzmlVpXrz58AB3WFCO3+mKnLZnrsT1ZCOvLf+lkLAJR2jt1/5LOGKhfUiRDQSvRQJQ3xUkUFUUTPMbHR5GG1X7Al9BvSOjdMDhf1ZGx6rGD1SLW3ToF8fkcXgusm8jflKTbsZMlihbsdMqc+bqTWbvsClCUPshwy5BYvWx5q8cN5yHLcsgxAxtgFK+PVz+3VhJUF5VhTZ0PHhG9jezlNXkghZDQ7X2qKE0rRa98PDVGJtWcxLSkPEWEMJOTqVr07zUfkhT1KfSBMmzHaiTJvEEsivNjpvvYYS6hhdmefaVqhrG2J5XpwXB427JsOLRFIMCIKDmaQyC5vkMg76lqoaRaVtK8X0/iYcIE21tm9BNGhwqcxSNIcBrGiskqLHXZze34hZ65z1XDM1qBJ10u5Hij8JlsXEpQ1ZTk+Kk4J/ORtig+YT1q4G9vl1H/v0v7dn3KBI7zF3GpVhPqnp3Ti2R0CnWHankG1OYGrAseE9ZcDz4aium2OgP173Pf8eThOPVKrA7CSUC9SB/lHbt4fxMH0XX96wo4W80HrnSI6rA0kVK/SKiUD5+NRnUBNK8onhEDatKnLxU9TB5WKUrdSvr35D3/8FTngfCg==
+sidebar_class_name: "get api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check DNS name"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/networks/check-dns-name-inuse"}
+>
+  
+</MethodEndpoint>
+
+
+
+Check DNS name is available or already used within a network
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Query Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"dnsName","in":"query","description":"The dnsName - Network DNS name","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Check DNS name in use example"}
+                  value={"Check DNS name in use example"}
+                >
+                  <Markdown>
+                     Check DNS name in use response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Dns name available for further processing\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": null\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

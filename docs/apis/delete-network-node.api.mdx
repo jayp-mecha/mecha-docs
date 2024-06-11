@@ -1,0 +1,173 @@
+---
+id: delete-network-node
+title: "Delete network node"
+description: "Delete network node with given nodeId"
+sidebar_label: "Delete network node"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1v2zAM/SsCTxvg1W5PhU8L1mAItnZFs52KHBibidXKkirJaQPD/32grCRtkw3NxZHIx8ePJ/YQcO2hvAdN4dm4R1hkUJOvnLRBGg0lXJGiQCLZhTY1iWcZGrGWG9LxPKshA2PJIWNmNZRQR9TNCLoxNUEGFh22FMgxYQ8aW4IS9gEks1kMDbxP4XdDiUd8EV0na2FWIjRvk4IMHD110lENZXAdZeCrhlqEsoewtczlg5N6DcOwYGdvjfbk2X5RFPx5Szvvqoq8FztPyKAyOpAO7IvWKlnFivMHz4D+mNAsH6gKXLvj/gQ50pFzxl2T97imU+m9b8A8xhUr44QPqGt0tYgxxKGKDIIMisPMk8tdsk3ZE4YM6AVbq8YUTo012WMlXdui2/5j/jvWPeIjojn4blB1iSV2eDevdtcRuHkNHLVUi+S96pTaQgY+YOg8lPDrx/70jYVQXhRFNvZ4PAPbu2XsQ9Qez9/iVhlMWhnGH6cQGnMQcFRtaKCEHK3MN+d5KsnnnJrP+1GXAzOQ2+y03TkFJTQh2DLPlalQNcaH8rK4LI569Z00vxwuMEYQDOYMpV6ZqI4012uqGhSVMl0tJrczfxRpopR59qJFjWup16I9BrCAsYoCTu9vcjsT885a41in1KKMqZOyXyP+zBvWDpc2spyfFWcFX1njQ4v6VawTY3+fZH94Qx9eLel5BHoJuVUoNbPHFvdpPPeAVrKyziHbrTIuNw4JMihTrEUGPAgG9P0SPf1xahj4+qkjlvv9guXpJC655fc91NLz/xrKFSpP/6nm011aP5/FRxfWycLSJert4amwgh9pe1iXw2LIoCGsycU0R+OkqsiGV7CjJcW62mv8avpz+nsKw/AXw9MU4A==
+sidebar_class_name: "delete api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete network node"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/v1/networks/nodes/{nodeId}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete network node with given nodeId
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"nodeId","in":"path","description":"The nodeId - uuid of the network node","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Delete network node example"}
+                  value={"Delete network node example"}
+                >
+                  <Markdown>
+                     Delete network node response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Network node deleted successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": true\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

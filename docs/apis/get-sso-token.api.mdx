@@ -1,0 +1,266 @@
+---
+id: get-sso-token
+title: "Get SSO token"
+description: "Get SSO token for grafana login, also get explore URL depending on given dataSource"
+sidebar_label: "Get SSO token"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vl1T2zgU/Sua++zGDrCd1k/LMiyTLDRsHEo7lAfZutiisuRKckjI5L/vXNkhAVI6O7PrJ1s6up/nHmsFnpcO0hvgra9Qe1lwL42G2wgEusLKJnymcIaeZdmEefMdNbszlpWW33HNmTKl1BHjyhlWome4aJSxyK6m50xgg1pIXTKjWSnnqJngnmemtQVCBKZBGxyOBKRQos+cmZEHiMDijxad/8OIJaSrF+HMKmQ9gOVGLFlhtOdSkyvf70mLggn0XCrHfBfcNgWuxW6oEAGZQO3JGW8a1ZcivnfkcQWuqLDm9OaXDUIKJr/HwkMEjaU8vEQXAt0muMU6b6UuYR1BzYtKahyJiT1Wkru9IOe59TNZ75qQ2mOJFiK4M7bmvlt6f0R41OJfoL2scaQ92jlXe90rU2beIq9/tnsua+l/6e3wYGMMuS2qPcbWL2mWhSJ3/HrWrr7ZQNF7hR0js2wS2DLtNmdkfE1GN+2H1NsWw4JrjHZdhw6S5DWjsrYo0Dm2Qf53hEBrjb1A53i5jxJv1cB5rgW3ggUbbJvFtgxZD5n2e6eEDJxY8LpRXQjPp7ffCTm0dc3t8tWAbzw9Yd/Wgy1qzlXbWw717DoQQb3JH8bXs/5UiZrGHwXrwXetUksI9PetgxQmfz19nRiBkB4kSdQVtPsG2m/zkDTp2Gp9G0HDl8pwQVG0VkEKlfeNS+O4l6yB41rkZjGosaj4IG+lElTRIDwp4HJc5WeFnMhxdvU4Gn6S448DXI7br9dDNbo3Mq8/H4ovn1RxfyrPT8Yqv/6zyU9G70d6qorDaSW+TOd/nw3V14OqKg7Vozj77Ivlb/f5QUL4R3E9khM5OrqYDQaDAVCrgg5dhWBjES8W8uhw+VF6sVgsFnEvGe9q9FYWjigeHqqqrwxJZ2PCbDTcV2SCNzKeD2MS9U3SsXOGioV2jl2pdoqTxrEyBVeVcT79kHxI9vT7qVfBAqPDVGyahulWqk+33NoVwg3b9+nfdm9H9pIdUUteStb2xI5SPVvsBSp5Jj87Gib1nQmz2E/RBTGBFcq0gh1fjtyr/I+VMg+O1Vzzkn4y9esD4RdUBLnQnOKG48sRy9qmMZaagzWXoeComt876jlDwVBDOi/DQTJIaIn6WXO9Y+vZwL0Mb7XVqv/pT92LlseFjxvFpaYoA4FWPetugDeSFGAIUbhOQAS9Z2qtM3SpIIIRdLXKuSPCr9e0/KNFEqGbWxIQK3lOTbm5XUdQIRdoA12/I+nUSZfouyD2T3rzWqDX0ebEcVFg49/E3u6M0uUkm0EEeX/vqDudsfyB7iT8AVL4Bt8gXF7IQtDXsL4CxXXZdirX2aXnH5eAPMM=
+sidebar_class_name: "post api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get SSO token"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/v1/auth/grafana/sso"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get SSO token for grafana login, also get explore URL depending on given dataSource
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3><strong
+          className={"openapi-schema__required"}
+        >
+          required
+        </strong>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        <div
+          style={{"marginTop":"1rem","marginBottom":"1rem"}}
+        >
+          
+          
+          The request body containing the required details to get SSO token and explore URL
+          
+          
+        </div>
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"dataSource"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"machineIdOrAlias"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"startTime"}
+          required={false}
+          schemaName={"int64"}
+          qualifierMessage={undefined}
+          schema={{"type":"integer","format":"int64"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endTime"}
+          required={false}
+          schemaName={"int64"}
+          qualifierMessage={undefined}
+          schema={{"type":"integer","format":"int64"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"timeInterval"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"logStream"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"logLimit"}
+          required={false}
+          schemaName={"int32"}
+          qualifierMessage={undefined}
+          schema={{"type":"integer","format":"int32"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"logSearch"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get SSO token example"}
+                  value={"Get SSO token example"}
+                >
+                  <Markdown>
+                     Get SSO token response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"JWT token generated successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": {\n    \"url\": \"https://grafana.sandbox.mecha.build\",\n    \"token\": \"eyJhbGciOiJSUzI1NiJ9.eyJuYW1lIjoibmV3dXNlcjEiLCJlbWFpbCI6InRlc3RhdXRvQG1lY2hhc3lzdGVtcy5jb20iLCJzdWIiOiI4MT....\",\n    \"exploreUrl\": \"/d/xxi43y9itdxxxx/machine-metrics\"\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

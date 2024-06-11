@@ -1,0 +1,173 @@
+---
+id: get-previously-signed-certificates
+title: "Get previously signed certificates"
+description: "Get previously signed certificates with given machineId or machine alias"
+sidebar_label: "Get previously signed certificates"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVt9z4jYQ/lc0+9TOCLCdhBA9lcmk18zN3WVC7qUMD4u9YF1sy5FkDo7x/95ZIxICuTbTlgfA0u6nT/vjW2/B49KBmkKJaa4r6qVkvV7oFD3BTEJGLrW69tpUoOADeVFbWmnTuGIjnF5WlIkDFye+a5+LpV5RJQLkbSaM3T8ILDQ6kGBqssiwtxkoWJK/e8addLDXB6ggoUaLJXmyzHYLFZYECp6P+GLHAVgz0Rp9DsfsH3I64NQTTaWfGhI6E2Yh/Mum3JEUvRPSlp4abSkD5W1DElyaU4mgtuA3NfNx3upqCW07Y2NXm8qR4/0kivjnNaFJk6bknNhbgoTUVJ4qz7ZY1wVfX5tq8M2xw/b0QDP/Rqnn+FiOqNe748haYz+Rc7ikt+gdh2bS4YqFscJ5rDK0megwxMstJHjtC4aZBJP7sHfDltBKoDWWdbGj8I5aCebdxZqyRLt5X43tOT0D/Is6fXFdYdEEDl069skt9+GDT6EMXgEsyKc5ZSJ4LZqi2IAE59E3DhR8+fj8dG0yApVEkdwlZvcMvN/Mu+B1Rc1FU+OmMJh1Nf5cq6BgvZ4PzyhBpGzdW6/X616cnHVp1yv09JE242JpQMH9ZPxqeaJ/8FlJdD7i9WbO3RVsJ3+Mk4shVx1ZPyGrsfjclHOyoGB4oeIrlZDCoUozFY9UdKXOrxTO+TuOFaGaD9UZqfRSpVG/3w84v+tqSba2mqsYpglJkcVSEEpBUqQLKeapFEksxVAKupRigVJcnUlxmUlBV1IkkRSYSHGeSdHv92cB9+5Rf941faji3fK1JfSUjX13yeS8Fw170eVDNFRJoi5G/Tge/RlMb9a1tuTeY3ptytJU4byfxZ4Nb51rdLX8aotTYsXRqt7ZXuNRqE8NXh1/uv3Oi1hj/M+wdnvvBNLunlbmca977azdfbhHfG6CgHci7XNQMMBaD1bxIBSwG2yPdbod2B3i4HDeSHBkV3uJb7ro5d7XajAoTIpFbpxXo2gUvdHwFY8TbscOQbAz95OuFqYTwCBdnyjNUaSFaTIxvrt1J0jjojDfnSixwqWulqI8dWCNxrTT6DCGxne3YtLUtbEcBSpRd9SpqH/r/PvOsDzy1XanxP2oH/FSbZwvsTrA+mftOua8fZka/+eEDjPD09oP6gJ1xXy7pGxDoqeAtWYFjUHu1Yo91RtjOeQ7NMfBGwYnlaG22zk6+mqLtuXlp4Z4HExnLNBW45zTN91Cph3/z0AtsHD0N6H45T5M61/Ff5/8bwYjLGK1eRkjrOqPtHnr3aSdtRJywoy7froNZuM0pdofAJzMfa7j50b7cPMAbfsXOghHTA==
+sidebar_class_name: "get api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get previously signed certificates"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/machines/{machineIdOrAlias}/revoked/certificate"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get previously signed certificates with given machineId or machine alias
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"machineIdOrAlias","in":"path","description":"The machineId - unique id of the machine, alias - machine alias","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get previously signed certificates example"}
+                  value={"Get previously signed certificates example"}
+                >
+                  <Markdown>
+                     Get previously signed certificates response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Machine certificates fetched successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": [\n    {\n      \"machineId\": \"xxb63e2aaedx-xxxx-123\",\n      \"privateKeyAlgo\": \"RSA\",\n      \"privateKeySize\": \"2048\",\n      \"pubSignAlgo\": \"SHA256\",\n      \"certSerialNumber\": \"65:19:2e:a6:cd:18:09:49:ab:49:11:ea:b6:3e:c7:c0...\",\n      \"certFingerprint\": \"[2e, d1, ea, e, cf, bc, 21, 6, e7, fa, 93, 7d, e9, 20, a2, 4d, ...]\",\n      \"certPkiName\": \"string\",\n      \"certCreatedAt\": \"2024-06-07T06:22:58.118Z\",\n      \"certExpiresAt\": \"2024-06-07T06:22:58.118Z\",\n      \"certCommonName\": \"xxb63e2aaedx-xxxx-123\",\n      \"certIssuingUrl\": \"string\",\n      \"certCrlUrl\": \"string\",\n      \"issuingCaSerialNumber\": \"string\",\n      \"issuingCaCommonName\": \"string\",\n      \"issuingCaExpiresAt\": \"2024-06-07T06:22:58.118Z\",\n      \"rootCaCommonName\": \"string\",\n      \"rootCaExpiresAt\": \"2024-06-07T06:22:58.118Z\",\n      \"isRevoked\": true\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

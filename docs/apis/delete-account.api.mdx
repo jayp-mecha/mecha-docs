@@ -1,0 +1,141 @@
+---
+id: delete-account
+title: "Delete an account"
+description: "Soft delete an account"
+sidebar_label: "Delete an account"
+hide_title: true
+hide_table_of_contents: true
+api: eJx1VMFu2zAM/RWBZ6N2eip0WrEGQ7AVK9btFOTA2EzsTpY0ieoaGP73gbKTFMnqiy3r8ZF8fNIAjPsIeg2YuCXLXY3cOQubAhqKdeh8Xmp4djtWDRliUmgV1rVLlqEA5ynkmFUDGibE/Wk3UPTORoqgB7itKnldEKe6phjVEQkF1M4yWRYsem/mmsqXKAEDxLqlHuWLD55Ag9u+UC3ZfJBquJvSUQguPFKMuKd36Mihs3sYx6sWM6/auaAio20wNCpzqHMXBXDHRmieZ8iPeW8pSBgLoDfsvZlKeLgUTM27uY/U9xgOoP8DO2Y84S+L/Zi5gFc0ac6QtQXNIVEB/VELmAc0D7RRM3CXjDlAAZGRUwQN37+eVp9dQ6Bvq6qYhJ3WIPtpm5sXHw3jpgCPB+OwmdKO0yPZuXVnj8i4kFvQUKLvytdFKRYs527KXgCRwitNvJCCAQ0ts9dlaVyNpnWR9V11V12J84WsmFIaywxKgqWyzu5ctsI8xEeqW1S1calR90+reMV0b4z7G1WPFved3av+OkDcinV2q8U+q/u0Us/JexfElNRjl0sn4z/l+JvoxCjS2pRlcVPdVPLLu8g92ndcV3O+LHE4H5ePD+lsfaY3Lr3BzkqyrOgwT2EN6DvxzgKKfBnI6xTfk9wIIrggh2GLkX4FM47y+08icfF6I84LHW5F2vVmLKAlbCjk8f2mw+Q78ny26PX5limdnPKw/Lb8uYRx/Afkr5r/
+sidebar_class_name: "delete api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/v1/auth/account/me"}
+>
+  
+</MethodEndpoint>
+
+
+
+Soft delete an account
+
+<div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Delete an account example"}
+                  value={"Delete an account example"}
+                >
+                  <Markdown>
+                     Delete an account response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Account deleted successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": true\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

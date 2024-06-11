@@ -11,31 +11,40 @@ const config: Config = {
       return {
         name: "docusaurus-tailwindcss",
         configurePostCss(postcssOptions) {
-          // Appends TailwindCSS and AutoPrefixer.
           postcssOptions.plugins.push(require("tailwindcss"));
           postcssOptions.plugins.push(require("autoprefixer"));
           return postcssOptions;
         },
       };
     },
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "console-api",
+        docsPluginId: "console-api",
+        config: {
+          mechaConsole: {
+            specPath: "static/examples/mechaApis.yaml",
+            outputDir: "docs/apis",
+            sidebarOptions: {
+              groupPathsBy: "tag"
+            },
+          },
+        },
+      },
+    ],
   ],
-  // Set the production url of your site here
+
   url: "https://your-docusaurus-site.example.com",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "mecha", // Usually your GitHub org/user name.
-  projectName: "mecha-docs", // Usually your repo name.
+  organizationName: "mecha",
+  projectName: "mecha-docs",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  themes: ["docusaurus-theme-openapi-docs"],
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -44,30 +53,27 @@ const config: Config = {
   presets: [
     [
       "classic",
-      {
+     ( {
         docs: {
-          sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          sidebarCollapsible: true,
+          sidebarPath: require.resolve("./sidebars.js"),
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // docLayoutComponent: "@theme/DocPage",
+          docItemComponent: "@theme/ApiItem" // add @theme/ApiItem here
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
         theme: {
-          customCss: "./src/css/custom.css",
-        },
-      } satisfies Preset.Options,
+          customCss: require.resolve("./src/css/custom.css")
+        }
+      })
     ],
   ],
-
   themeConfig: {
-    // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
       title: "",
@@ -89,6 +95,11 @@ const config: Config = {
           position: "right",
         },
       ],
+    },
+    prism: {
+      theme: prismThemes.vsLight,
+      darkTheme: prismThemes.palenight,
+      additionalLanguages: ["powershell"],
     },
     // footer: {
     //   style: "dark",
@@ -135,17 +146,13 @@ const config: Config = {
     //   ],
     //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     // },
-    // prism: {
-    //   theme: prismThemes.github,
-    //   darkTheme: prismThemes.dracula,
-    //   additionalLanguages: ['powershell'],
-    // },
-    prism: {
-      theme: prismThemes.vsLight,
-      darkTheme: prismThemes.palenight,
-      additionalLanguages: ['powershell'],
-    },
   } satisfies Preset.ThemeConfig,
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap',
+      type: 'text/css',
+    },
+  ],
 };
 
 export default config;

@@ -1,0 +1,203 @@
+---
+id: upload-display-picture
+title: "Update profile picture"
+description: "Update profile picture of logged in user"
+sidebar_label: "Update profile picture"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVdtO20AQ/ZXVPBscUFUhPxUoqlCFGnF5onmYrCfJ0vXushcgsvzv1aydmCZQFal+stdzOXPmzGwLEZcBqntAKW0yMcCsgJqC9MpFZQ1UcOdqjCSctwulSTglY/Ik7EJou1xSLZQRKZCHAqwjj+x2WUMFyWmL9VcVnMb1tHeDAjw9JgrxzNZrqNqdZLcrEoOBmNt6LaQ1EZVRZini8E95qkVNEZUOIlqR3gQIBbAvmchZ0DmtZMZWPgRO1UKQK2qQ3+LaEVRg5w8kIxTgPFcSFYWM8I8KzjDQ50+vvEL0yiyh63aJu8nxxcL69yFGFTVlkve5uu55uOU0HYffFA9V9InyQXDWhB7m8WSyz+dNkpJCEBvL/8cKeW/9FYWAS/ogGyGiqdHXIscQYxUjHzeDyfXw74ItoSuAXrBxuofwjjIHk1xMahr06/dVvMm9dfpH9Y/mT6jTkCtT3TengGZDDQxd3fr2c0G1GDwWSes1FBAixhSggh/ft1/ntiaojieToie8/wb+n+aZFJ7etpsV4HDNcfcVe0W1winGFVSwitFVZTnAP5S2YWnlhyHHleXJdSn3u3cp0any6ajcbIiyoXJIcDAKOZB/oh4MJK/HVNpK1CsbYnUyOZns8fuNDO8MZiNHEOzM5bAer8dVcTE29e153CqvAGUWNktyENMVyRUKqW2qxen0MuyBONXaPgfRoMElb5pm3yHvIZmnxmDDUU+nl+ImOWc9k0UNqlw1afcl+x8Gy2CYlT7L0eHkcMJHzobYoHkV622V7eJsx9n9yFYeJjPSSyydRmUYQ+5RO/T4HtAp1vIRFONNwIJgCDu9nhXA7WSvtp1joDuvu46PHxPxrN3PeCq8wjmzfz/rClgR1uSzOH4Rj+N5X8hBXm7bIdpfSF2x8TiVklz8q+3slYSnd7dQwHy4ZJp+bDw+8wWEz1DBT/gJ+criAHmd5PMWNJpl6ie3D8vPb2lFhO4=
+sidebar_class_name: "put api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update profile picture"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/v1/accounts/me/display-picture"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update profile picture of logged in user
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3><strong
+          className={"openapi-schema__required"}
+        >
+          required
+        </strong>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        <div
+          style={{"marginTop":"1rem","marginBottom":"1rem"}}
+        >
+          
+          
+          The request body containing the required details to update profile picture
+          
+          
+        </div>
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"displayPictureBase64"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Update profile picture example"}
+                  value={"Update profile picture example"}
+                >
+                  <Markdown>
+                     Update profile picture response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Display picture uploaded successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": {\n    \"displayPictureMediaPath\": \"http://example.com\"\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

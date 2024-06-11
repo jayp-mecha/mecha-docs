@@ -1,0 +1,244 @@
+---
+id: get-machines
+title: "Get machines list"
+description: "Get machines paginated list"
+sidebar_label: "Get machines list"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVktz2zYQ/iuYvfRCShQtSy5PVR7T8bRONJabQx0fVuBKQgISDADaVDT8750FSUu2MulMqwsFYLH77etbHMDj1kF2DwXKnSrJwUMEOTlpVeWVKSGD38mL4VRUuFUlesqFVs5DBKYiiyx5nUMGW/I3g6IIKrRYkCfLFg5QYkGQAWq95AOWUGzgW012D6/NPouJmK3SBxOF70p9p0g4Y/2bffd9pyxJvhUJ8nIEEVj6VitLOWTe1hSBkzsqELID+H3FGMz6C0mGj3mu+CrqpWVXvCJ3Iue8VeUW2rZ96LSS829MvmeRl3DvdiR6AbE2+V5IU3pUpSq3wuP2Fye+0l48oq5JeCMcoZU7iIDFqPSsEKtKKxmCOf7iWOvhHDlaixws5alw/8ujtn0dqLDhKlO67kqaJOeOrmopyTkxSP4HH56xVi8QkrXG3pBzuKUfIX5dIaugV2yMFc5jmaPNRdAhjl5E4JXXrGbVi9z2Z+9ZEtoIqMGi0h2EF7XOFS760+BHXRRo969bIogNFp/lf9pFLzRHEKqisxBiO5RtMcQChqYSG/JyR7noJTe11lwNzqOvHWTw8Y/n1VuTE2RpkkRdZLs18Hm9Dt6HtuTKrnCvDeYM4TmX94eBE0JnN816dkEpIuVN3DRNE0/SC4iGpr7juu/l2XflKo37a2nKG8oVLtHvIIOd91U2Hveej6QpuGC1Qobuyfm4W0QDLR3gK+37s2OgwvJT+M/oPWkqyNvQlUMkkgiUuyFvlXTvS1zrIxso96fZvtxsI9Do/EJ69UgLDxmkSTqNk1mczO+SeXY5yy7no3Q6/ZtdJv9k7FcuyuwAnIJ3H1YfujgwslHwpJcaFSRHjjtdVY/TRZ7bkGCYJMloNh0lo8lR43W1qtcl+dPjZJxOTyS6VDRNn4qrF6kweZcruZnn6+lmE08lzeIpTWW8nl+m8WQ2S9JkNpcXlyc6T5APoLkt3N5dlxvDLu6M832eJ+nF9ELO5/xl9nf9ba3Kugkbn8i6ruQvR5PL0a9X8SaUqHFvaqXzY0NHUGn0G2OLH+3dkiZ0dKYm0GYGzdUsnjEC3FLpjzYnHLJhu8dWkNxhHHYggrrKeX79PMmB773xqJe4ZWpI++UtSWPzt6bmFkm5c7qJBNmk7X/ct35n2NPKhLKtuuofY6XGj5PxQAPjfoQ6so/DjKytPvaJNhI1Bz+7Sq6SH1BKybOX2SBoEHyZgTPx3h6H1fuBwrpmV31WB2K84fAIqU2di8Xy2p3ZWWhtnpwosOThvxXF+YUw7GSYAH2hLJbXYlVXlbHsIhWogmOkq9/C/ZEzXGWPrzLXRiFoBZYnus648zXEE9r6l+dKP1M8NX5caVQlWwxBP/RpugesFHMNN2ZxfMwEBQ9RaAaWOhzW6Ogvq9uWt7tHTHb/wCxlFXMLr9oIdoQ52RMye9thje8Yy5HUzkZnGw03FlJS5X8q+3BSdsuPqzuIYN0/VIqO+C0+8dMInyCDz/AZwuONNYTJF/YPoLHc1t3M6fTy7x9XGGzV
+sidebar_class_name: "post api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get machines list"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/v1/machines/list"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get machines paginated list
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Query Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"allParams","in":"query","description":"allParams - pageNo, pageSize, sortBy, sortDirection, etc.","required":true,"schema":{"type":"object","additionalProperties":{"type":"string"}}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3><span
+          style={{"opacity":"0.6"}}
+        >
+           array
+        </span><strong
+          className={"openapi-schema__required"}
+        >
+          required
+        </strong>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        <div
+          style={{"marginTop":"1rem","marginBottom":"1rem"}}
+        >
+          
+          
+          The request body containing tag's key value to search
+          
+          
+        </div>
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <li>
+          <div
+            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+          >
+            Array [
+          </div>
+        </li><SchemaItem
+          name={"property name*"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+          collapsible={false}
+          discriminator={false}
+        >
+          
+        </SchemaItem><li>
+          <div
+            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+          >
+            ]
+          </div>
+        </li>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get machines list example"}
+                  value={"Get machines list example"}
+                >
+                  <Markdown>
+                     Get machines list response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Machines fetched successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": {\n    \"content\": [\n      {\n        \"machineId\": \"xxb63e2aaedx-xxxx-123\",\n        \"name\": \"Test machine\",\n        \"displayIconMediaPath\": \"http://example.com\",\n        \"alias\": \"test-alias\",\n        \"tags\": [\n          {\n            \"key\": \"test\",\n            \"value\": \"testValue\"\n          }\n        ],\n        \"telemetry\": {\n          \"status\": 0,\n          \"isMetricsEnabled\": true,\n          \"isLogsEnabled\": true\n        },\n        \"lastActiveAt\": \"2024-06-07T07:56:57.244Z\",\n        \"networking\": {\n          \"fullDNSName\": \"test.test-network.mec.sh\",\n          \"ipv4Address\": \"100.64.0.1\",\n          \"networkIpSubnet\": \"100.64.0.0/24\",\n          \"networkId\": \"xxxx3e2aaed8-xxxx-123\",\n          \"nodeId\": \"cf7db4ff-4ce6-4e4c-b752-16602067c354\",\n          \"networkName\": \"test-network\"\n        },\n        \"sysInfo\": {\n          \"hostname\": \"12343c771234\",\n          \"osName\": \"linux\",\n          \"osVersion\": \"5.15.98-fly\",\n          \"osBuild\": \"string\",\n          \"platform\": \"string\",\n          \"platformRelease\": \"5.15.98-fly\",\n          \"arch\": \"x86-64\",\n          \"agentVersion\": \"1.0.0\",\n          \"agentName\": \"mecha-agent\",\n          \"updatedAt\": \"2024-06-07T07:56:57.244Z\"\n        }\n      }\n    ],\n    \"totalPages\": 2,\n    \"totalRecordCount\": 2,\n    \"pageSize\": 1\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

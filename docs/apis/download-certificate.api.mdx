@@ -1,0 +1,173 @@
+---
+id: download-certificate
+title: "Download certificate"
+description: "Download active machine certificates with given machineId or machine alias"
+sidebar_label: "Download certificate"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVV1z6jYQ/SuafWpnDJhmps34qQY71PfG5BIgNDfhQZGFLa4tOZKM+Rj/946MSVygfWl5gVntnj37cZYDaBwrcF4gwyRhnHYIlZqtGMGawtKCiCoiWa6Z4OCAJ0qeChwhTDTbUNQEoVaQQiXTCYrZhvLTexAhIT+cccqwAgtETiU2wEEEDkQN9LCV34IcS5xRTaXheACOMwoOfMA+SLcBY4ZejnUC55xnCW3x6KCCs/eCIhYhsUL689E6EkOdC6KSvhdM0ggcLQtqgSIJzTA4B9C73PBRWjIeQ1UtjbPKBVdUmfdfbNt8/Z3QtCCEKoVOnmABEVxTrmtIutW9PMWmoMNlKvG2pkSbzkjTP82OiaiUQoZUKRzTa8TOmzKtcdFKSKQ05hGWEaox0Cd/CzTTqYGZNi6PzZtvPKGygG5xlqdHCh+70VoG1DjUpRRZhuWuvUVtz1Pej5B/3L1r+BZscFoYrp1OpzPwR8EYDf3HWXAXDN2Zb4ydVx4Ggffrfjh09UPslsHAjYP5n8Ht3XYj5zf37oM9zWa38/udvY/Iw2+k9CbPX76K70GyIWN34t+/8sHELb96fhYOJyO3P/fdsoxmi6c1Hvnx/CbdR6MnTXYDbzIdTOe2H8/XfrywH++eUrv8IyHjVx6uJ2W4dm9Cb74P98F2kZBxuP5hbP2jbb5drF0RTp/LL+6z9zSZeN6gP/6+GIvn6WCGut1u95XXFflj76JKqOqPBRnViTDKimm9L0YbDvRwznqbfq/ZcdU7nIup6rUa3DvJEixQVG5OQixkCg4kWudOr5cKgtNEKO3c2rf2xeBGlBuh0wgdEZAJNlJhfCXqZW3WLKQkwYikooiQ+y1QF0humopSoQxzHDMeo+wywCgJk1pJzbFwvwVoWuS5kKYNNMOspk7T/Pc6vquEWWVT2jFLv2t3bWPKhdIZ5i2sazt4zvLwqeb/9142mm4diMo6DuLQTPcFcM6MFvpgnY6kiXSuHMyzCk5jXlpgJmmwDoc3rOhcplVlzO8FNep9WRqtSYbfzMxeDhAxZX5H4Kxwqui/dOOnx+aQ/oz++1G+2o3GiPmudRHAgh90d+1vo1pWFiQUR1TWpRzdXEJorlsA7RzLlrBG/gyq6i/9JH2l
+sidebar_class_name: "get api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download certificate"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/machines/{machineIdOrAlias}/certificate/download"}
+>
+  
+</MethodEndpoint>
+
+
+
+Download active machine certificates with given machineId or machine alias
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"machineIdOrAlias","in":"path","description":"The machineId - unique id of the machine, alias - machine alias","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"text/plain"}
+              value={"text/plain"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Download certificate example"}
+                  value={"Download certificate example"}
+                >
+                  <Markdown>
+                     Download certificate response example
+                  </Markdown><ResponseSamples
+                    responseExample={"----BEGIN CERTIFICATE-----\nMIID6zCCAtOgAwIBAgIUXI8FxvrU3LAO0SmT8ULy0zdcO7cwDQYJKoZIhvcNAQEL\nBQAwKDEmMCQGA1UEAwwdTWVjaGEgU3lzdGVtcyBDQSBSU0EgUjEgW0RFVl0wHhcN\nMjQwMjA3MDUzMzIxWhcNMjkwMjA1MDUzMzUxWjAoMSYwJAYDVQQDDB1NZWNoYSBT ....\n-----END CERTIFICATE-----"}
+                    language={"shell"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

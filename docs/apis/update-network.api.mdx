@@ -1,0 +1,254 @@
+---
+id: update-network
+title: "Update network"
+description: "Update network in account"
+sidebar_label: "Update network"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu4zYQ/RVinlpAiZ1sUSz01HS7KIJFtkGcPHn9MBbHNnclkuElsSHo34uhKMuXNEWByi8WOZzLmTmHaiHg2kM5B03h1bgfsChAkq+cskEZDSU8WYmBRN4XSgusKhN1gAKMJYdsdyuhhJgsv2ZHBVh02FAgxwFa0NgQlEOgWwkFKA5gMWzgNOrjZh/yVooLEbV6jiSUFGYlwrgJBTh6jsqRhDK4SAX4akMNQtlC2FmO6INTeg1dt+iNyYffjdyxxXnQbCCWRu5EZXRApZVep5hDJCEpoKq9CEbEI3igAD5DOrB3tLZWVQJo8t1ziPY8O7P8ThWDaR3DGRR53lV2Fpeawht1FAOGXxOib+xL7f9xT/k/aIWxPvS8NKYm1NB1p32YpXTFyrjzSoMKNe0nJPfdP/QAPrLnjh0e9ycteGu07+u8nk7PGzGLVUXei8Hy/4OVnDPujrzH9VvwvFe/D6glOimSDzFWMSIxyyYPee8zWzLotMXG1n0KJ4QaZimbpGJi06DbnZNvsB1i7w/9C2lPYxTwgnXMsRLUA3maARrI/cxtlyIbrmJd76AAHzBEDyX89WX/9slIgvJ6Oi16nPt34P24TFgkJWAeWtzVBiVnMApCCdvt8tcPdI1IcnthV6vq4ur6Q9/EFyXJsVwMf4sDjsDV9DL9Jte/wMH8QyAfLqT2/eIsrlZqCyU0VF16Vp0jJiVrOKJIj4ryGY0vtLtDjev9NOeHgQsbwyXYmKaORa2ECVo1ebma5DB+0u6r7RgWci+DPEZXQwmbEGw5mdSmwnpjfCg/Tj9Oz9r7J2kWXu5K8iD4MMPKdHgYJe7zOFMHWOVhPy1+vzyit186QYRlRK9MIlAe/TuqNiiq2kQpbu5v/VnON3VtXr1oGD4W1Ob8QJLbKnE8XxY397diFq01jkGlBlUCiWr7Wzp/6Q3Ti0Hso1zxEPCSNT40qA98PZ3q11F+7agw7155WTACbcPE1qg0B0u9a3PT54BWMcWuRoi5unIc9EUB3Fy2bdslenpyddfx8nMkJv58wRR1CpcM7rwFqTz/l1CusPb0TvI/PWS9/Vn8h0v0zbLyIurdqBjM5h+0O7rIu0VXwIYwEXTe5v1PfUoX6SYYz5+pd1cMJ26qimx413ZxwLT7p0coYJmv8qYXG4ev/E2Ar1DCN/gG6SuFHSTtTest1KjXsZe53i0/fwPrGSUR
+sidebar_class_name: "put api-method"
+info_path: docs/apis/mecha-cloud-apis
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update network"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/v1/networks/{networkId}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update network in account
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"networkId","in":"path","description":"The networkId - unique id of the network","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3><strong
+          className={"openapi-schema__required"}
+        >
+          required
+        </strong>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        <div
+          style={{"marginTop":"1rem","marginBottom":"1rem"}}
+        >
+          
+          
+          The request body containing the required details to update network
+          
+          
+        </div>
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"ipSubnet"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"networkName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"dnsName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"isDefault"}
+          required={false}
+          schemaName={"boolean"}
+          qualifierMessage={undefined}
+          schema={{"type":"boolean"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Update network details example"}
+                  value={"Update network details example"}
+                >
+                  <Markdown>
+                     Update network details response example
+                  </Markdown><ResponseSamples
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"Network updated successfully\",\n  \"status\": \"OK\",\n  \"statusCode\": 200,\n  \"errorCode\": \"\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": {\n    \"networkId\": \"xxb63e2aaedx-pffc-123\",\n    \"provider\": \"provider\",\n    \"ipSubnet\": \"10.0.0.0/24\",\n    \"dnsName\": \"test-dns\",\n    \"dnsSuffix\": \"mec.sh\",\n    \"networkName\": \"test\",\n    \"isDefault\": true,\n    \"isNetworkKeyManaged\": true\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
