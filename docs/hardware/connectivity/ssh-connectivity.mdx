@@ -2,95 +2,123 @@
 sidebar_position: 1
 ---
 
+import CustomLinkCard from "@site/src/components/Shared/CustomLinkCards";
+import CustomGrid from "@site/src/components/Shared/CustomGrid";
+
+
 # Connecting via SSH
 
 Follow the quick instructions below to connect to your Comet-M via SSH.
 
 - Ensure your Comet-M device is connected to your local network via Wireless or Ethernet.
 - The default hostname for the Comet-M device is `mecha-comet-m.local`
-    
-    **MacOS / Linux / Windows**
-    
-    - Launch the default Terminal application for your operating system.
 
-    
-    ```bash
-    $ ssh mecha@mecha-comet-m.local
-    ```
-    
-    **PuTTY on Windows**
-    
-    - [Connecting via SSH using PuTTY on Windows](https://www.notion.so/Using-PuTTY-on-Windows-3fba4ed0345f4bff98e6a2ac741c1fb0?pvs=21)
-- When prompted for the password, you can enter `mecha` as the default password
 
-> 💡 You will be prompted to set a new password on your first connection to SSH, set a stronger password for better security.
-> 
+**MacOS / Linux / Windows**
+- <p>Launch the default Terminal application for your operating system.</p>
 
-That’s it, you are now connected to SSH! 🎉
+   ```sh
+   $ ssh mecha@mecha-comet-m.local
+   ```
+
+**PuTTY on Windows**
+- <a target="_blank" href="/docs/hardware/connectivity/putty-connectivity">Connecting via SSH using PuTTY on Windows</a>
+    
+- <p>When prompted for the password, you can enter `mecha` as the default password</p>
+
+{/* :::danger NOTE
+ You will be prompted to set a new password on your first connection to SSH, set a stronger password for better security.
+::: */}
+
+
+:::mec-warn NOTE
+ You will be prompted to set a new password on your first connection to SSH, set a stronger password for better security.
+:::
+
+That&apos;s it, you are now connected to SSH! 🎉
+
+<hr class="openapi__divider" />
 
 ## Troubleshooting
 
-### Connection taking too long or timed out?
+### 1. Connection taking too long or timed out?
 
 - In case the SSH connection takes too long or gets timed out locating the host then it may be failing hostname resolution in that case you may need to locate your device’s IP address.
 - First check if you can ping your Comet-M on its default hostname
     
-    ```bash
-    $ ping mecha-comet-m.local
-    PING mecha-comet-m.local (192.168.29.101): 56 data bytes
-    64 bytes from 192.168.29.101: icmp_seq=0 ttl=64 time=3.839 ms
-    64 bytes from 192.168.29.101: icmp_seq=1 ttl=64 time=41.731 ms
-    ```
-    
+  ```sh
+  $ ping mecha-comet-m.local
+  ```
+  
+- The output includes information about your IP Address.
+  ```sh
+  PING mecha-comet-m.local (192.168.29.101): 56 data bytes
+  64 bytes from 192.168.29.101: icmp_seq=0 ttl=64 time=3.839 ms
+  64 bytes from 192.168.29.101: icmp_seq=1 ttl=64 time=41.731 ms
+  ``` 
+  
 - This implies `192.168.29.101` is your IP address, try to connect directly via the IP address.
-    
-    ```bash
-    $ ssh mecha@192.168.29.101
-    ```
-    
-- If you are **NOT** able to ping the device and the ping timed out, you will need to locate the IP address using the Terminal App on the Homescreen or use the [**Serial Console**](https://www.notion.so/Comet-M-Hardware-81c50a19f2e44bee987643328030b63c?pvs=21)
+
+  ```sh
+  $ ssh mecha@192.168.29.101
+  ```
+
+- If you are **NOT** able to ping the device and the ping timed out, you will need to locate the IP address using the Terminal App on the Homescreen or use the <a target="_blank" href="/docs/hardware/connectivity/serial-console">Serial Console</a>
 - On the Terminal App or Serial Console, run the following command to locate the IP Address
-    - If you are connected via Wireless
+- If you are connected via Wireless
+          
+  ```sh
+  $ ifconfig | grep -A 5 wlan0
+  wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+  inet **10.211.55.12**  netmask 255.255.255.0  broadcast 10.211.55.255
+  inet6 fdb2:2c26:f4e4:0:2060:514b:6cc7:26e7  prefixlen 64  scopeid 0x0<global>
+  inet6 fdb2:2c26:f4e4:0:9aeb:e8d9:4619:abc3  prefixlen 64  scopeid 0x0<global>
+  inet6 fe80::b971:ee23:27d0:833  prefixlen 64  scopeid 0x20<link>
+  ether 00:1c:42:e1:26:ac  txqueuelen 1000  (Ethernet)
+  ```
+  
         
-        ```bash
-        $ ifconfig | grep -A 5 wlan0
-        wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-                inet **10.211.55.12**  netmask 255.255.255.0  broadcast 10.211.55.255
-                inet6 fdb2:2c26:f4e4:0:2060:514b:6cc7:26e7  prefixlen 64  scopeid 0x0<global>
-                inet6 fdb2:2c26:f4e4:0:9aeb:e8d9:4619:abc3  prefixlen 64  scopeid 0x0<global>
-                inet6 fe80::b971:ee23:27d0:833  prefixlen 64  scopeid 0x20<link>
-                ether 00:1c:42:e1:26:ac  txqueuelen 1000  (Ethernet)
-        ```
+- If you are connected via Ethernet
         
-    - If you are connected via Ethernet
-        
-        ```bash
-        $ ifconfig | grep -A 5 eth0
-        eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-                inet **10.211.55.12**  netmask 255.255.255.0  broadcast 10.211.55.255
-                inet6 fdb2:2c26:f4e4:0:2060:514b:6cc7:26e7  prefixlen 64  scopeid 0x0<global>
-                inet6 fdb2:2c26:f4e4:0:9aeb:e8d9:4619:abc3  prefixlen 64  scopeid 0x0<global>
-                inet6 fe80::b971:ee23:27d0:833  prefixlen 64  scopeid 0x20<link>
-                ether 00:1c:42:e1:26:ac  txqueuelen 1000  (Ethernet)
-        ```
+  ```sh
+  $ ifconfig | grep -A 5 eth0
+  eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+  inet **10.211.55.12**  netmask 255.255.255.0  broadcast 10.211.55.255
+  inet6 fdb2:2c26:f4e4:0:2060:514b:6cc7:26e7  prefixlen 64  scopeid 0x0<global>
+  inet6 fdb2:2c26:f4e4:0:9aeb:e8d9:4619:abc3  prefixlen 64  scopeid 0x0<global>
+  inet6 fe80::b971:ee23:27d0:833  prefixlen 64  scopeid 0x20<link>
+  ether 00:1c:42:e1:26:ac  txqueuelen 1000  (Ethernet)
+  ```
+
         
 - The IP address of your Comet-M is as highlighted above.
 - If there is no IP address displayed you will need to check the network connectivity for your Comet-M.
-    - [Connecting to a wireless network](https://www.notion.so/Comet-M-Hardware-81c50a19f2e44bee987643328030b63c?pvs=21)
-    - [Connecting to a wired network](https://www.notion.so/Comet-M-Hardware-81c50a19f2e44bee987643328030b63c?pvs=21)
+- [Connecting to a wireless network](https://www.notion.so/Comet-M-Hardware-81c50a19f2e44bee987643328030b63c?pvs=21)
+- [Connecting to a wired network](https://www.notion.so/Comet-M-Hardware-81c50a19f2e44bee987643328030b63c?pvs=21)
 
-### Debugging SSH connection
+
+
+
+
+### 2. Debugging SSH connection
 
 - To find out more on why the SSH connection failed you can use the below command to debug further.
-    
-    ```bash
-    $ ssh -vvv mecha@mecha-comet-m.local
-    ```
+
+  ```sh
+  $ ssh -vvv mecha@mecha-comet-m.local
+  ```
     
 - Review the logs for more information on why the connection failed.
 
-## More Tutorials
 
-- [Connecting via SSH using PuTTY on Windows](https://www.notion.so/Using-PuTTY-on-Windows-3fba4ed0345f4bff98e6a2ac741c1fb0?pvs=21)
-- Setting a public-key authentication for SSH
-- Connecting to Serial Console via Debug UART
+<hr class="openapi__divider" />
+
+
+
+### Continue Reading
+
+<CustomGrid columns={2}>
+<CustomLinkCard url={"/docs/hardware/connectivity/putty-connectivity"} icon={"info"} title={"Connecting via SSH using PuTTY on Windows"} />
+<CustomLinkCard url={"/docs/hardware/connectivity/public-key-auth"} icon={"info"} title={"Setting a public-key authentication for SSH"} />
+<CustomLinkCard url={"/docs/hardware/connectivity/serial-console"} icon={"info"} title={"Connecting to Serial Console via Debug UART"} />
+</CustomGrid>

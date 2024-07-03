@@ -5,7 +5,7 @@ description: "Set given network as default"
 sidebar_label: "Set default network"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVVMlu20AM/ZUBTy2gREpOgU412qIwirRBlpPhAy3R1iSjmcksTgxB/15QGi+13Rb1RZb4yMflkR0EXHkoZ6ApvBn3AvMMavKVkzZIo6GEBwpiJdekRYII9KKmJUYVIANjySFDpzWU4Cn8GFET/2WHseiwpUCOmTrQ2BKUW8ZpDRlIZrIYGjimf2xI7JDiQkQtXyMJWQuzFGFvhAwcvUbpqIYyuEgZ+KqhFqHsIGwsM/rgpF5B388Z7K3Rnjzbr4uCH0eFx6oi78UWCRlURgfSgbForZLVUHn+7NmhOyU0i2eqhg447lOQIx05Z9wteY8rOpfeyQiGuGJpnPABdY2uFkMMsa8igyCD4jAPCXKfbF8ZCX0G9I6tVWMKPNU0xN1ck32oJLYtuk0a/zFwy7rzOKeZP0XPYI0qJpahw9t5tduOQNKQ8BQO1CYSfhmV2kAGPmCIHkr4+X339tnUBOV1UWRjl8d3YHtcDJ0YNMgKsLhRBpNa+vHHSYTGsJRtHKUbGighRyvz9VWeivF5t9Nkn3sKF/uF8OTWW6VHp6CEJgRb5rkyFarG+FDeFDfFSc++keZNolqMEQQ7c55SL82gkjTfW6oaFJUysRaTu6k/iTRRyrx50aLGldQr0Z46sJCxGoSctnFyNxUP0VrjuAhqUQ6pk7KfBv9Lb1hDXNrIcnVZXBb8yRofWtQHsc6M/zjJbr9L/7owaTsCvYfcKpSaSYfOdmk8M0ArWVhXkG3PCldZHp6YwynNM+BBsGfXLdDTk1N9z59fI7HsZ3OWqZO44JbPOqil5/81lEtUnv5SzYf7dIY+iv+4XWeLTB9Rb/Zbw1J+oc1v97Of9xk0hDW5IdnRPqkqsuHA8+Rksbp2er97eoS+/wXK8htK
+api: eJyVVW1v2zYQ/ivEfdoA2nLSb8IwzNuKIgi6BU0LFDD84SydLTaUyJCUE0HQfx9Oomz5JW2XD45N3tvz3HPHFgLuPKQrqCi8GPcEawk5+cwpG5SpIIVHCmKn9lSJaCLQi5y2WOsAEowlh2x6l0MKnsI/g9XS/32wseiwpECOM7VQYUmQjhnvcpCgOJPFUMB5+s8FiYOlmIm6Us81CZULsxXheAkSHD3XylEOaXA1SfBZQSVC2kJoLGf0walqB123ZmNvTeXJ8/3tYsH/zoDXWUbei9ESJGSmClQFtkVrtcp65Mk3zw7tZUKz+UZZz4BjnoIa0vkh8sRwY4wmrKCTUJL3uKMrZUvwAUPtv3P1l8mnnqoKtCMHErbGlRiGo3e37EDOGXdmPwlXb96zwTQZOocNNytQ6S9Rdh13utEG82vIugthBaxydPmBYPHi0FpV7QSK6DYlP6igaeL3KV79eeSOXrG0eiCZdRtlelBuvB96UJbomijwc8NDSaPHtal4K7qEPeqaTjo9KPLQW4hTIjyFyTyJaL+ttWamx37Dv/dw2uLbxeKkhQAnPVu1rPFDNzh7N/xJ8JTVToWmn0W06p4ant3VWsZfj5Q5CnzCQUoKheHZtvUwy6GAFBK0KtnfJBG7T9rDkHaJpzA7bghPbj+Ofu00pFCEYH2aJJk2dT5Dq+Yeq3xjXuclZQXON7XSeXLB+QeqeNdQLoaQgqNxiSOiR56/ofunSI4S7o9Bjjvo62xp1eyemlk0jauoIMzJsaSOBP1EkOMuGwN0/Htreu+o34+MUfTYxfLhzl/gXGptXrwoscIdT0N56cCLCLMeWSxi+XAnHmtrjWMQA88ggUpUPeWk7R8Du94wLq0y4rlKx6bwIfdpqOFmvpgv+MgaH0qsJpmuSP8cQnvclD96PyKngV5DYjWqfo77itqotRUTzkN1w5RHvYGEdPqATCW3llAYzwKGtt2gpy9Odx0fP9fEI89S36NTuOGGrFrIlefvOaRb1J6+g+aXT/GR+VX8j5fpKshRTVVz3BjcsidqTl7Hbt3JUU9c7HC/zDKyYeJ58SCdDO/Dl88gAWsmdCrkp17I8QtHv1rVmcKHCvizk294/MZ6vKfm94P5cPOmQwQ4WjNF667r/gMuGPPQ
 sidebar_class_name: "put api-method"
 info_path: docs/apis/mecha-cloud-apis
 custom_edit_url: null
@@ -129,11 +129,65 @@ Set given network as default
                     >
                       <SchemaItem
                         collapsible={false}
-                        name={"errorMessage"}
+                        name={"success"}
+                        required={false}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"boolean"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
                         required={false}
                         schemaName={"string"}
                         qualifierMessage={undefined}
                         schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"statusCode"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","format":"int32"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"subErrors"}
+                        required={false}
+                        schemaName={"object[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"object"}}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"payload"}
+                        required={false}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"boolean"}}
                       >
                         
                       </SchemaItem>
@@ -144,7 +198,7 @@ Set given network as default
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"string\",\n  \"status\": \"string\",\n  \"statusCode\": 0,\n  \"errorCode\": \"string\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": true\n}"}
                     language={"json"}
                   >
                     

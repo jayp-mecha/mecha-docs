@@ -5,7 +5,7 @@ description: "Remove machine with given machineId or machine alias"
 sidebar_label: "Remove machine"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVMFu2zAM/RWBpw1wa7enwqcFXTAEW9Ci6U5BDozNxOpkSZXktIHhfx8oO0kbFxuw+WJbpB4fyUe2EHDrIV9CjUUlNXlYJVCSL5y0QRoNOTxQbXYkBgfxIkMltnJH+nA0K4VxRzsqiR4SMJYcMsSshBxcBJn3PpCARYc1BXIcvAWNNUEOR8A7NxlgJFOwGCo45/VY0RsGF6LR8rkhIUthNiKcjElPSVyMKDp6bqSjEvLgGkrAFxXVCHkLYW+Zjw9O6i103YqdvTXak2f7dZbx6z2hRVMU5L04eEIChdGBdGBftFbJIlYkffJ8oR0HNOsnKgLXx3H9guzDkXPGzcl73NJH9M5Ls4i4YmOc8AF1ia4UEUOcskggyKAYZjG4PAy2KXtClwC9Ym1VT+FMBYMpJtHUNbr9WCmHWEfnvyjr5LZD1QzYsaSHBtWHEsD8GIMhSjE4bhql9pCADxgaDzncfT/+3ZqSIL/OsqSvZ/8PbG/WMeeoRe61xb0yOOii6x+OHirDYi5JUehVHCrIIUUr091VepihtGeVtud67jgYud1B9o1TkEMVgs3TVJkCVWV8yG+ym2xUrG+keaA414gg+DKTlXpjoiiGds6pqFAUyjSlmNzP/AhpopR58aJGjVupt6IeX2DdYhF1O4zm5H4mFo21xrE8qUYZqZOyX+L9S29YMpxaH+XqMrvM+MgaH2rUb7De9/2cX3uamn/dPcN8BHoNqVUoNfOIxW6Hni0BrWSlXUFy2n3JsKcggXy0i1YJcHf4btuu0dNPp7qOj58bYv0vV6xcJ3HNfVi2UErP3yXkG1Se/pDnp4dhFX0W/7/WPsx+OES9P80Xa/8X7T9avN2qS6AiLMnFVHq3SVGQDW8ARkuNBXmck6/TH9PHKXTdbyp5Nmo=
+api: eJylVd+P2zYM/lcEPm2AEueub8YwLFsPRXA9tLh0wIAgD4zNxGplSyfJuTMM/+8D/SNx4rQbtnvIJRJJffz4kawh4MFDvIEck0wV5GErISWfOGWDMgXE8Ey5OZLoDcSrCpk4qCMVw9EqFcad7lEr9CDBWHLIIVYpxODaIE+dDUiw6DCnQI4fr6HAnCCGU8BPbtmHUQzBYsjgGteXjEYIZqIs1EtJQqXC7EU4X8oOkphNIDp6KZWjFOLgSpLgk4xyhLiGUFnG44NTxQGaZsvG3prCk+f7+8WC/10CWpdJQt6LwRIkJKYIVAS2RWu1SlpGoq+eHerpg2b3lZLA/DjmL6juOd9FHhnujNGEBTQScvIeD3QDtgQfMJT+B1d/mHTsqYpAB3IgYW9cjqE7enfPDuSccVf2o3Dl7oENxo+hc1hxDQPlfppl07AOKm0wvZVZc13wdcAiRZeeCBavDq1VxUGg6N3G5AcVNI38nvur38/c0RvmVnckX+m8v+roz3N01bQXTkAG43/onbPZEXVJF6XtJHgqJjyd3uAQqegN96XWzOlQWfj0CJfFvF8sLooFcFGdTc1qPvHOzzbdnwRPSelUqNqeRKseqeLu3Wxl/2tNiaPAJxwkp5AZ7u6UNIWurUMGMURoVXS8i4ahEnVJRPV1gzeMjdxxmAOl0xBDFoL1cRQl2pTpDK2aeyzSnXmb55RkON+VSqfRhOwPVPDIYa7akIKjMc4hrTW3W1fsy3TOim2PQQ4D6a/Z0qrZI1Wz3rQfSBlhSo4VdGbpXwRZpdcBGv69N613L9cnzlG0uYvl55Wf5LnU2rx6kWOBBxZ/PnXguYNJm1kPYvl5JdaltcZxEh3PIIFyVC3lpO1vHbvecF5aJcRtFA9F4UOuU4fhbr6YL/jIGh9yLEYvXWr+Gn19non/dbP0NAd6C5HVqNpObkHWvQA3XAPusjuQ580m+y0EEuLJptlKyIxnaUNd79DTn043DR+/lMS9z01wRKdwx1Xa1JAqz99TiPeoPf0gz5+e+0Xzs/j/S+tm9oPyiuo8W7i836i6tVabbSMHCXIqndkySciGUYDJyrpo+vcPHx++PIAELJnzsfy/tfLvv/ADN/Fd9UUHgj8b+R2PX1jFj1T9ejLvbr7r0Oc4WDNZ26Zp/gbtSQ7/
 sidebar_class_name: "delete api-method"
 info_path: docs/apis/mecha-cloud-apis
 custom_edit_url: null
@@ -129,11 +129,65 @@ Remove machine with given machineId or machine alias
                     >
                       <SchemaItem
                         collapsible={false}
-                        name={"errorMessage"}
+                        name={"success"}
+                        required={false}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"boolean"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
                         required={false}
                         schemaName={"string"}
                         qualifierMessage={undefined}
                         schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"statusCode"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","format":"int32"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"subErrors"}
+                        required={false}
+                        schemaName={"object[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"object"}}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"payload"}
+                        required={false}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"boolean"}}
                       >
                         
                       </SchemaItem>
@@ -144,7 +198,7 @@ Remove machine with given machineId or machine alias
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"string\",\n  \"status\": \"string\",\n  \"statusCode\": 0,\n  \"errorCode\": \"string\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": true\n}"}
                     language={"json"}
                   >
                     

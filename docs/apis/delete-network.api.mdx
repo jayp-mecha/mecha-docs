@@ -5,7 +5,7 @@ description: "Delete network with given networkId"
 sidebar_label: "Delete network"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVVE1v2zAM/SsCTxvg1WlPhU8L1mAItm5F052KHBibidXKkirJaQPD/32grMRtUuzDF9si+R4/nthBwI2H4h40hWfjHmGZQUW+dNIGaTQUcEWKAolkF88y1GIjt6T3R/MKMjCWHHLEvIICqhjzI0FmYNFhQ4EcU3WgsSEo4HW8ZCqLoYZj/ruaRibxSbRaPrUkZCXMWoTRCBk4emqlowqK4FrKwJc1NQhFB2FnmdEHJ/UG+n7Jzt4a7cmz/WIy4ddb5kVbluS92HtCBqXRgXRgX7RWyTLWnD94DuhOCc3qgcrAHXDcoSAHOnLOuGvyHjf0XnrHPVhEXLE2TviAukJXiYghxioyCDIohlkkl9tkm7En9BnQCzZWDSkcjTWZYhFt06DbnY5+z3Vw/otURrctqjZhx5buB9TsWwBJK2JQTiWS47pVagcZ+ICh9VDAz2+Hvy+mIiguJpNs6OfwD2xvV7HmqDaetcWdMph00Q8Ps4fajHKNOg01FJCjlfn2PE+F+Lw7CLBneHLbvZRbp6CAOgRb5LkyJara+FBcTi4nJ+35SpovCVcXEQQHc3pSr02UQRrgNZU1ilKZthLTm7k/QZoqZZ69aFDjRuqNaE4DWKlYRqWm6za9mYtFa61xLEhqUMbUSdnPMf7MGxYJlzawnJ9NziZ8ZI0PDepXWG8nfZxfN96Tf1wf6QIEegm5VSg108bedmko94BWspTOIdtvDq6zGGGWGXDz2bfrVujpl1N9z8dPLbGg75csRSdxxW2+76CSnr8rKNaoPP2hjA+3abd8FP+xkN4tKx2i3o03g1X7SLs3S7Ff9hnUhBW5mOxgn5Yl2fAq8mQPsaIO0r6afZ/dzaDvfwNTXw1N
+api: eJyVVV1v2zYU/SvEfdoA2XLSN2EY6q7BEKTbiroDChh+uJauLTaUyJCUE0HQfx+uRFmSnX4sD47N+33uOWQDHo8Oki2U5J+1fYRdBBm51ErjpS4hgfekyJMIdvEsfS6O8kTlcHSfQQTakEWOuM8ggayL+TukjMCgxYI8WS7VQIkFQQLTeMmlDPocLut/zmmsJBaiKuVTRUJmQh+EH40QgaWnSlrKIPG2oghcmlOBkDTga8MVnbeyPELb7tjZGV06cmy/Xa3437zypkpTck4MnhBBqktPpWdfNEbJtJs5/uo4oLkuqPdfKfWMgGWEvOzLuT7zxHGvtSIsoY2gIOfwSK+0HYHz6Cv3HdMfOptGytLTkSxEcNC2QN8fvbnlALJW2wv/Sbpqf8cO02JoLda8LE+Fu56ybXnTtdKYvTZZe7nZjccyQ5udARbPFo2R5VGgCGFT8L30iiZxn4Lp3YgdvWBhVA/yBXGDqYe/KNDW1+Q+NzI4/0AMo9sJVUWz1fYUPC8TghpEr41MBMdDpRRjOmwW/nmA+TJvV6vZsgBm29k2zOYz7ly27f8icJRWVvq6Ux0a+UA163O7i8KvDaWWPJ9wkoJ8rkf9dsL1OSQQo5Hx6SYOc7u4OSuy5W7IngZtV1ZBArn3xiVxnCpdZQs0cumwzPb6ZVlQmuNyX0mVxVfw/kklXyOMTpdScDbubBhkwwLr1zsfYORodwzRcMl8WayNXDxQvQiu4a7JCTOyzJkRl59IMl5WQ4KWfx90Fx0I+hfPKLrZxfrjvbuac62UfnaiwBKPTPfiOoBvGky7yUIT64/3YlMZoy0P0eMMEVCBsoOclHnbo+s0z6VkSiycZFgKH/Ke+h5ulqvlio+Mdr7AclJpzvLL7pvxFvzJxyGg6unFx0ah7KTa9dQEhm0ZcpbRDYMeWAYRJGOaXQS5dsxVaJo9OvrXqrbl46eKWMzM6hNaiXtewraBTDr+nkFyQOXoO2P88im8HL+K//HcvDrWwKCyHm8FXtMj1bMnr9210cAhbra3r9OUjJ9EXr0yM52+v/tw9/kOIsCKUZzy97Hjb/jCBV5t7ILYfRP82UbfiPiNafhA9e9n997yzYAw4+DNKO3atv0Pwbvl0w==
 sidebar_class_name: "delete api-method"
 info_path: docs/apis/mecha-cloud-apis
 custom_edit_url: null
@@ -129,11 +129,65 @@ Delete network with given networkId
                     >
                       <SchemaItem
                         collapsible={false}
-                        name={"errorMessage"}
+                        name={"success"}
+                        required={false}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"boolean"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
                         required={false}
                         schemaName={"string"}
                         qualifierMessage={undefined}
                         schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"statusCode"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","format":"int32"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"subErrors"}
+                        required={false}
+                        schemaName={"object[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"object"}}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"payload"}
+                        required={false}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"boolean"}}
                       >
                         
                       </SchemaItem>
@@ -144,7 +198,7 @@ Delete network with given networkId
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"string\",\n  \"status\": \"string\",\n  \"statusCode\": 0,\n  \"errorCode\": \"string\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": true\n}"}
                     language={"json"}
                   >
                     

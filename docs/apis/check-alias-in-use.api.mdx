@@ -5,7 +5,7 @@ description: "Check given alias is already in used or available to use"
 sidebar_label: "Check alias is already used or not"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVMFO4zAQ/RVrTrtSIIETymkrhFC1QosonFAPU2doDI5tbKdLFeXfV+MkbaEVl+2lij3z5o3fm+kg4jpA+QwNyloZCrDMoKIgvXJRWQMlXNck38RabcgI1AqDUEGg9oTVVigj2kCVsF7gBpXGlSYRLR9CBtaRR4aZV1CCZKAZI8zNU7p36LGhSJ4pdGCwISghFYEMFFd/b8lv4Sunx5pGLmdiZC6mNE/vrfJUQRl9SxkEWVODUHYQt47xQ/TKrKHvlxwcnDWBAt9fFgX/fS61aKWkEMQUCRlIayKZyLHonFYy9Zi/Bk7ojgva1SvJyP16fpGohnLkvfV3FAKu6RS9r00vEq54sV6EiKZCX4mEIfZdZBBV1AyzGEMexrsbjoQ+A/rAxumBwqDtqGqSUozXqZG2adBvdx74FDfV3CWc9s1J7Aw2qNuxRnreSaxmeg64O5R1by7IIESMbYAS/vzefV3biqC8LIpseNbhG/i+XaXWk8VYcodbbXG0Rz/8uHCsLbt0TUkpjDWUkKNT+eYin6YjTx4+S5zOlBlcHshvJgu3XkMJdYyuzHNtJerahlheFVfF0QPdkuHxoEoMCIKTmaEyLzYZYpTyjmSNQmrbVmJ2Pw9HSDOt7d8gGjS4VmYtmuME9izK5NlxzGb3c7FonbOeG6YGVaJO2v1K+efBsl24taHKxXlxXvCRsyE2aA6wPmm93w7TajA2fuXc7afofzbMODORPmLuNCrD/JII3ajhM6BT7LgLyPZbLoNjJZcZsFic0nUrDPTkdd/z8bCEWN9KBSZQQfmCOtA3Tf14GPfQT/HdtjrZwBttD/bgOCuQvLFBr9IclM/LPoOasCKfqA1JMynJxYOsow3FKDu33948Qt//A0AREnw=
+api: eJylVW2L2zgQ/itiPt2BEme330w5LldKCUu50rRQWPJhYs/G6sqSKsnpGuP/XsYviZ2ky8Hlw2Yzmrdn5pmZBiIeAqSPUGJWKEMBdhJyCplXLiprIIV3BWXP4qCOZARqhUGoIFB7wrwWyogqUC6sF3hEpXGvSUTLQpBgHXlkN5scUsjY0Zo9bMzX7t2hx5IieU6hAYMlQQpdEJCgOPqPinwNlzl9KWjIZSGGzMVo5ulHpTzlkEZfkYSQFVQipA3E2rH/EL0yB2jbHSsHZ02gwO/3qxV/zUNtqyyjEMSoCRIyayKZyLronFZZhzH5HtiguQ5o998pi4zXc0Wi6sOF3vNEcW+tJjTQSigpBDzQjbQlhIixCq88vbP51FKZSAfyIOHJ+hJjL3pzzwbkvfUX+hN31f49K0yDoffIHVGRynCNsm25r7W2mN9C1l62chvR5OjzU4HFT4/OKXMQKAazafGjipomdp+Hp3/OtaMXLJ3ui9yzd+BtR1YxPPctKEv09YnlM71TQqPB7cm46VvCEXVFszb3dDw1Fj5OiXseHzg3GP59gHlP71erWc8AZk16bJjUp/JzxLb/SAiUVV7Fuhs1dOqBah7Lx50cfm0p8xRZwk5KioXlsT1QR12MBaSQoFPJ8S4Z10XSDfWig7BQph/7QP44znTlNaRQxOhCmiSZtlW+QKeWAU2+ty/LkrICl/tK6Ty5KvAHMrxAKBe9S8HeOLkRy5ZHrW/0HMOZrZ0Y5Lhcvi3WTi0eqF4MqsOeKQhz8syec2n+g5NNfumg5d9PtrMeqPqRMYoOu1h/2oQrnGut7c8gSjR4YOKX1wa8czDrkA1JrD9txLZyznoG0dcZJFCJqis5afd3X91gGZdWGfEIpWNTWMh96nO4W66WKxY5G2KJZhJpxvPz7h8Xv7HxElFz3pH/534M5Y/0EhOnUXXT3SXfDIR85N7wtN2BPN8wCde03EkobGB6Q9PsMdBXr9uWxf2JYbLmKnACOaRPqAO9AuqPz8OV+VO8dotuAnimenLlhj0BHa+P6FW3A3gI5cgpTq03WmcZuTixuro/s9H98P4LSMCKKzUl83NH5uEf9j4+mXri+4LlfQb8t5W/sXjLnHyg+q+Tev/yW4MB4KjN9dm1bfsLgbrrAg==
 sidebar_class_name: "get api-method"
 info_path: docs/apis/mecha-cloud-apis
 custom_edit_url: null
@@ -129,11 +129,65 @@ Check given alias is already in used or available to use
                     >
                       <SchemaItem
                         collapsible={false}
-                        name={"errorMessage"}
+                        name={"success"}
+                        required={false}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"boolean"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
                         required={false}
                         schemaName={"string"}
                         qualifierMessage={undefined}
                         schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"statusCode"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","format":"int32"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"subErrors"}
+                        required={false}
+                        schemaName={"object[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"object"}}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"payload"}
+                        required={false}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"boolean"}}
                       >
                         
                       </SchemaItem>
@@ -144,7 +198,7 @@ Check given alias is already in used or available to use
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"string\",\n  \"status\": \"string\",\n  \"statusCode\": 0,\n  \"errorCode\": \"string\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": true\n}"}
                     language={"json"}
                   >
                     

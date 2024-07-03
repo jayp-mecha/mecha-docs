@@ -5,7 +5,7 @@ description: "Get machine provision request status"
 sidebar_label: "Get machine provision request status"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVMFu2zAM/RWBpw1wa7e7FD4t2IoiGNoGTXcqcmBsOlYnS6okZw0M//tA2UnTpBiy+WJb4iMfyUd2EHDlIX8C68xaemn0maOXlnyARQIl+cJJG6TRkMMNBdFgUUtNYmcuRnPhA4bWQwLGkkOGTEvIYUVhvr2x6LChQI4jdqCxIchBlpCA5AAvLbkNHIZ9rEnIUpyJVsuXNn6bSoT6AxKQAH9JRyXkwbWUgC9qahDyDsLGxnA60IocJFAZ12AYjr5cQt8vGO6t0Z48Iy6zjF/v6czboiDvxdYSEiiMDqQD26K1ShYx/fTZM6A7pmCWz1QwWeu4WEEO4cg5427Je1zRnrUPTuoV9P1hYebRr6iM4+LrEl0pog/xlkUCQQbFbuajycN4d82W0CdAr9hYNVA4pcViBMTU2qZBtzlRHDteOxf/I7E98BpVO/KITdk2vdkWEW4PnUm9OvRXUShqKsXopGqVYhWOgs7h/sfu75spCfLLLEuGbg3/wPftMlY0SpuVZHGjDJaR3R4WZtd336d3N3sBsn58mHioDY+NNVHNFkMNOaRoZbq+SMfS+PRoWn26mz9Pbr0dsdYpyKEOweZpqkyBqjY+5FfZVfZB7TUPLhciehAM5kykrkzU46ikWypqFIUybSkms6k/8jRRyvz2okGNK653cwzgkcEijsy4BiazqZi31hrHiVODMlInZb9G/Lk3rFZObYhycZ6dZ3zEtWpQ7/k6cVO9Y929jfGp+HFAA72G1CqUmtnEkndj554ArWShXkAC2+4Ng3/Qvzc9LBLgJjG465bo6adTfc/Hw37kvpbS41LxlqtQefpLKp8exoX4WfzbIv0wuV+02W7scfYgSmSNTjIhyJ8WfQI1YUkuMh0Qk6IgG/ZQR3uSvezUP7ufP0Lf/wH5ElE6
+api: eJydVtuO2zYQ/RVinhqAtrzbN6EoajRBYCyaGOstUMDYh7E0tphIIpeknBUE/XsxlGTLl9069YMskXPmembIBjzuHMRrMFbvlVO6nFh6qch5eJaQkkusMl7pEmL4TF4UmGSqJHEQF724cB595UCCNmSRIYsUYtiRXw07Bi0W5MmyxQZKLAhiUClIUGzgpSJbw7nZp4yESsVEVKV6qcK73gqfXXECJPCbspRC7G1FElySUYEQN+BrE8yVnnZkQcJW2wJ9t/TrPbTtM8Od0aUjx4j72Yz/Tt1ZVUlCzolBEiQkuvRUepZFY3KVhPCjb44BzaULevONEnbWWE6WV50512keCW60zglLaCUU5BzuaLTpvFXljvf61L+99adO6aYUSCBrtT2TH6mrNp9YYGwMrUWumvJUuMso25YLX+ca0xtScM3ddwJ9p5jnNFqFKoittv9J4kNtRTAjwSufs7m/OuBywD12sI7gjz3oiTFX7HssU7TpUfkPi8aocidQ3K746MygcNj+Ceck0CsWJu+Sfktfix7Q8bQo0NY3ToRjvIOK/zNXRuA95hWd9EvX6YcOGcp0VMZJPtO3JZ9klIpeybbKcybxwDD4+gCn3XM/m510B8BJO6wbHh8joo+xsPz05ePiy+eRgVnb/yQ4SiqrfB2GIhr1QDWPzvWz7L9WlFjyvMI2CvKZ5tFqdJh4Bn0GMURoVLS/i/pMuuhiorvoMKMd2f0whiubQwyZ98bFUZTkukonaNTUYZlu9Ou0oCTD6aZSeRpdqV3J054TGVQK1sZeDkGFtut4dhrMcX6EZZDDefDPZG7U5IHqSS/anw4ZYUqWyXvM0Q1KFum5gpa/tzqgh8bmGEWIXcyXC3cR5zzP9Q8nCixxx2wqLgF8CmASIuudmC8XYlUZoy0H0eUZJFCBKqSccvNHl12nOa5cJcQnSjwUhRe5Tp0Pd9PZdMZLXPgCy5GlG4/mk5ia47l1K75PtqdXH5kcVTiZgqtNT8M1V4Kb9A4kDFTsxvwZGY+98CwhYyrHa2iaDTr62+Zty8vdhYBJmiqHm5yP9S3mjt4J5ZfH/gbwQfzczeFqcN+pHq4o/dyBQO89WsUOhaaUA7XY0w4xTxIyfoS6uBictPLy6+oJJGDFORyT+nsgdf/C6oetsh4pP2N75wI/W/kG4jfm5gPVvx/Eu503AX2Eh4xwAG3b/gvjaZD/
 sidebar_class_name: "post api-method"
 info_path: docs/apis/mecha-cloud-apis
 custom_edit_url: null
@@ -129,13 +129,114 @@ Get machine provision request status
                     >
                       <SchemaItem
                         collapsible={false}
-                        name={"errorMessage"}
+                        name={"success"}
+                        required={false}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"boolean"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
                         required={false}
                         schemaName={"string"}
                         qualifierMessage={undefined}
                         schema={{"type":"string"}}
                       >
                         
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"statusCode"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","format":"int32"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"subErrors"}
+                        required={false}
+                        schemaName={"object[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"object"}}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                payload
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                            >
+                              
+                              
+                              Schema for machine provision request status response type
+                              
+                              
+                            </div><SchemaItem
+                              collapsible={false}
+                              name={"statusCode"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={false}
+                              schemaName={"int32"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"integer","format":"int32"}}
+                            >
+                              
+                            </SchemaItem>
+                          </div>
+                        </details>
                       </SchemaItem>
                     </ul>
                   </details>
@@ -144,7 +245,7 @@ Get machine provision request status
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"errorMessage\": \"string\"\n}"}
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"string\",\n  \"status\": \"string\",\n  \"statusCode\": 0,\n  \"errorCode\": \"string\",\n  \"subErrors\": [\n    {}\n  ],\n  \"payload\": {\n    \"statusCode\": \"string\",\n    \"status\": 0\n  }\n}"}
                     language={"json"}
                   >
                     
