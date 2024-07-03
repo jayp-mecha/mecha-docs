@@ -4,66 +4,48 @@ info:
   description: Allows managing mecha cloud APIs
   contact:
     name: API Support
+    url: ''
     email: help@mecha.so
+  license:
+    url: ''
   version: 1.0.0
 servers:
-- url: http://localhost:8080
+- url: https://cloud-api.sandbox.mecha.build/
   description: Generated server url
 tags:
-- name: users
-  description: Users related APIs
-  x-displayName: Users
-- name: provision-request
-  description: Machine provisioning related APIs
-  x-displayName: Machine provision request
-- name: authentication
-  description: Authentication related APIs
-  x-displayName: Authentication
-- name: machine-tags
-  description: Machine-tags related APIs
-  x-displayName: Machine tags
-- name: ping
-  description: Ping controller
-  x-displayName: Ping API
-- name: api-keys
-  description: API keys related APIs
-  x-displayName: API keys
-- name: network
-  description: Networking related APIs
-  x-displayName: Networking
 - name: accounts
   description: Accounts related APIs
   x-displayName: Accounts
-- name: machine-certificate
-  description: Machine certificates related APIs
-  x-displayName: Machine certificates
+- name: api-keys
+  description: API keys related APIs
+  x-displayName: API keys
+- name: authentication
+  description: Authentication related APIs
+  x-displayName: Authentication
 - name: machines
   description: Machines related APIs
   x-displayName: Machines
+- name: machine-certificate
+  description: Machine certificates related APIs
+  x-displayName: Machine certificates
+- name: machine-tags
+  description: Machine-tags related APIs
+  x-displayName: Machine Tags
+- name: provision-request
+  description: Machine provisioning related APIs
+  x-displayName: Machine provision requests
+- name: ping
+  description: Ping controller
+  x-displayName: Ping API
+- name: network
+  description: Networking related APIs
+  x-displayName: Networking
 - name: SSH
   description: SSH certificate related APIs
-  x-displayName: SSH Connection
-x-tagGroups:
-  - name: Machines
-    tags:
-      - provision-request
-      - machines
-      - machine-tags
-      - machine-certificate
-  - name: User Management
-    tags:
-      - accounts
-      - users
-  - name: Networking
-    tags:
-      - network 
-  - name: Authentication
-    tags:
-      - authentication
-      - api-keys
-  - name: Ping
-    tags:
-      - ping
+  x-displayName: SSH
+- name: users
+  description: Users related APIs
+  x-displayName: Users
 paths:
   "/api/v1/networks/{networkId}":
     get:
@@ -85,7 +67,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseNetworks"
               examples:
                 Network details example:
                   summary: Network details response example
@@ -107,6 +89,9 @@ paths:
                       networkName: test
                       isDefault: true
                       isNetworkKeyManaged: true
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
     put:
       tags:
       - network
@@ -133,7 +118,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseNetworks"
               examples:
                 Update network details example:
                   summary: Update network details response example
@@ -155,6 +140,9 @@ paths:
                       networkName: test
                       isDefault: true
                       isNetworkKeyManaged: true
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
     delete:
       tags:
       - network
@@ -174,7 +162,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseBoolean"
               examples:
                 Delete network example:
                   summary: Delete network response example
@@ -188,6 +176,9 @@ paths:
                     subErrors:
                     - {}
                     payload: true
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/networks/{networkId}/set-default":
     put:
       tags:
@@ -208,7 +199,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseBoolean"
               examples:
                 Set default network example:
                   summary: Set default network response example
@@ -222,6 +213,9 @@ paths:
                     subErrors:
                     - {}
                     payload: true
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/{machineIdOrAlias}/update":
     put:
       tags:
@@ -251,7 +245,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseBoolean"
               examples:
                 Update machine details example:
                   summary: Update machine details response example
@@ -265,77 +259,9 @@ paths:
                     subErrors:
                     - {}
                     payload: true
-  "/api/v1/accounts/me/profile":
-    put:
-      tags:
-      - accounts
-      summary: Update profile information
-      description: Update profile information of logged in user
-      operationId: updateProfileInfo
-      requestBody:
-        description: The request body containing the required details to update profile
-          information
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/UpdateProfileInformationRequestType"
-        required: true
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Update profile information example:
-                  summary: Update profile information response example
-                  description: Update profile information example
-                  value:
-                    success: true
-                    message: Profile information updated successfully
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload: 
-  "/api/v1/accounts/me/display-picture":
-    put:
-      tags:
-      - accounts
-      summary: Update profile picture
-      description: Update profile picture of logged in user
-      operationId: uploadDisplayPicture
-      requestBody:
-        description: The request body containing the required details to update profile
-          picture
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/UploadDisplayPictureRequestType"
-        required: true
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Update profile picture example:
-                  summary: Update profile picture response example
-                  description: Update profile picture example
-                  value:
-                    success: true
-                    message: Display picture uploaded successfully
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload:
-                      displayPictureMediaPath: http://example.com
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/users/{machineIdOrAlias}/ssh/certificate":
     post:
       tags:
@@ -365,7 +291,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseIssueSSHCertificateResponseType"
               examples:
                 Issue SSH certificate example:
                   summary: Issue SSH certificate response example
@@ -381,6 +307,9 @@ paths:
                     payload:
                       signedKey: ssh-rsa-cert-v01@openssh.com AAAAHHNzaC1y...
                       serialNumber: a34b3660efeb55b
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/networks":
     get:
       tags:
@@ -403,7 +332,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponsePaginatedResponseNetworks"
               examples:
                 Fetch networks list example:
                   summary: Fetch networks list response example
@@ -429,6 +358,9 @@ paths:
                       totalPages: 2
                       totalRecordCount: 2
                       pageSize: 1
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
     post:
       tags:
       - network
@@ -448,7 +380,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseNetworks"
               examples:
                 Create network details example:
                   summary: Create network details response example
@@ -470,6 +402,9 @@ paths:
                       networkName: test
                       isDefault: true
                       isNetworkKeyManaged: true
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/{machineIdOrAlias}/telemetry":
     post:
       tags:
@@ -499,7 +434,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseBoolean"
               examples:
                 Add or update machine telemetry example:
                   summary: Add or update machine telemetry response example
@@ -513,6 +448,9 @@ paths:
                     subErrors:
                     - {}
                     payload: true
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/{machineIdOrAlias}/logs/streams":
     post:
       tags:
@@ -542,7 +480,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseTelemetryLogsStreamsResponseType"
               examples:
                 Get machine logs stream example:
                   summary: Get machine logs stream response example
@@ -559,6 +497,9 @@ paths:
                       status: success
                       data:
                       - log_stream
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/{machineIdOrAlias}/logs/query":
     post:
       tags:
@@ -588,7 +529,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseTelemetryLogsDataResponseType"
               examples:
                 Get machine logs data example:
                   summary: Get machine logs data response example
@@ -615,6 +556,9 @@ paths:
                             - '{"body":"metrics sent successfully","severity":"INFO","attributes":{"func":"export","package":"grpc-server"},"resources":{"service.name":"mecha-agent-service"},"instrumentation_scope":{"name":"opentelemetry-appender-tracing","version":"0.2.0"}}'
                           - - '1717750055474976269'
                             - '{"body":"status message published!","severity":"INFO","attributes":{"func":"send_status","package":"status"},"resources":{"service.name":"mecha-agent-service"},"instrumentation_scope":{"name":"opentelemetry-appender-tracing","version":"0.2.0"}}'
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/{machineIdOrAlias}/logs/export":
     post:
       tags:
@@ -644,7 +588,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseFileExportResponseType"
               examples:
                 Export machine logs example:
                   summary: Export machine logs response example
@@ -659,6 +603,9 @@ paths:
                     - {}
                     payload:
                       filePath: http://example.com
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/{machineIdOrAlias}/certificate/re-provision":
     post:
       tags:
@@ -680,7 +627,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseMachineCertificates"
               examples:
                 Re-Provision certificate example:
                   summary: Re-Provision certificate response example
@@ -713,6 +660,9 @@ paths:
                       rootCaCommonName: string
                       rootCaExpiresAt: '2024-06-07T06:22:58.118Z'
                       isRevoked: false
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/provision-requests/status":
     post:
       tags:
@@ -734,7 +684,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseMachineProvisionRequestStatusResponseType"
               examples:
                 Get machine provision request status example:
                   summary: Get machine provision request status response example
@@ -750,6 +700,9 @@ paths:
                     payload:
                       statusCode: PENDING
                       status: 0
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/provision-requests/new":
     post:
       tags:
@@ -771,7 +724,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseAddMachineProvisionRequestResponseType"
               examples:
                 Add machine provision request example:
                   summary: Add machine provision request response example
@@ -787,6 +740,9 @@ paths:
                     payload:
                       requestId: 1
                       machineId: xxb63e2aaedx-xxxx-123
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/networks/enable":
     post:
       tags:
@@ -807,7 +763,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseNetworkNodesResponseType"
               examples:
                 Enable network example:
                   summary: Enable network response example
@@ -841,6 +797,9 @@ paths:
                         alias: test-alias
                         name: Test machine
                         lastActiveAt: '2024-06-06T05:42:20.278Z'
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/metrics":
     post:
       tags:
@@ -863,7 +822,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseTelemetryDataResponseType"
               examples:
                 Get machine metrics data example:
                   summary: Get machine metrics data response example
@@ -892,6 +851,9 @@ paths:
                             - '7'
                           - - 1717747620
                             - '8'
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/list":
     post:
       tags:
@@ -925,7 +887,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponsePaginatedResponseMachines"
               examples:
                 Get machines list example:
                   summary: Get machines list response example
@@ -973,6 +935,9 @@ paths:
                       totalPages: 2
                       totalRecordCount: 2
                       pageSize: 1
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/certificate/re-issue/{machineIdOrAlias}":
     post:
       tags:
@@ -993,7 +958,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseBoolean"
               examples:
                 Re-Issue certificate example:
                   summary: Re-Issue certificate response example
@@ -1007,259 +972,9 @@ paths:
                     subErrors:
                     - {}
                     payload: true
-  "/api/v1/internal/machines/provision-requests/{machineId}/complete":
-    post:
-      tags:
-      - provision-request
-      summary: Complete machine provision request
-      description: Complete machine provision request
-      operationId: completeMachineProvisionRequest
-      parameters:
-      - name: machineId
-        in: path
-        description: The machineId - unique id of the machine
-        required: true
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Complete machine provision request example:
-                  summary: Complete machine provision request response example
-                  description: Complete machine provision request example
-                  value:
-                    success: true
-                    message: Machine provisioning request updated successfully
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload: true
-  "/api/v1/auth/webhook":
-    post:
-      tags:
-      - authentication
-      summary: Webhook on given events
-      description: Webhook allows to integrate with other systems by sending HTTP
-        requests to a specified URL when certain events
-      operationId: webhookProvider
-      parameters:
-      - name: token
-        in: header
-        description: token - auth provider secret
-        required: true
-        schema:
-          type: string
-      - name: provider
-        in: query
-        description: provider - auth provider name
-        required: true
-        schema:
-          type: string
-      - name: event
-        in: query
-        description: event - webhook event
-        required: true
-        schema:
-          type: string
-      requestBody:
-        description: The request body containing the required details for webhook
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/OryWebhookRequestType"
-        required: true
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Webhook example:
-                  summary: Webhook response example
-                  description: Webhook example
-                  value:
-                    success: true
-                    messages:
-                    - instance_ptr: string
-                      messages:
-                      - id: 1
-                        text: string
-                        type: string
-                        context:
-                          value: string
-  "/api/v1/auth/request-email-verification":
-    post:
-      tags:
-      - authentication
-      summary: Request email verification
-      description: Initiating an email verification flow for a user's email address
-      operationId: requestEmailVerification
-      requestBody:
-        description: The request body containing the required details for request
-          email verification
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/EmailVerificationRequest"
-        required: true
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Request email verification example:
-                  summary: Request email verification response example
-                  description: Request email verification example
-                  value:
-                    success: true
-                    message: An email containing a verification link has been sent
-                      to the email address you provided
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload: user@example.com
-  "/api/v1/auth/grafana/sso":
-    post:
-      tags:
-      - authentication
-      summary: Get SSO token
-      description: Get SSO token for grafana login, also get explore URL depending
-        on given dataSource
-      operationId: getSsoToken
-      requestBody:
-        description: The request body containing the required details to get SSO token
-          and explore URL
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/GetSSOTokenRequestType"
-        required: true
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Get SSO token example:
-                  summary: Get SSO token response example
-                  description: Get SSO token example
-                  value:
-                    success: true
-                    message: JWT token generated successfully
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload:
-                      url: https://grafana.sandbox.mecha.build
-                      token: eyJhbGciOiJSUzI1NiJ9.eyJuYW1lIjoibmV3dXNlcjEiLCJlbWFpbCI6InRlc3RhdXRvQG1lY2hhc3lzdGVtcy5jb20iLCJzdWIiOiI4MT....
-                      exploreUrl: "/d/xxi43y9itdxxxx/machine-metrics"
-  "/api/v1/accounts/api-keys/create":
-    post:
-      tags:
-      - api-keys
-      summary: Create API key
-      description: Create API key for authentication purpose
-      operationId: createApiKey
-      requestBody:
-        description: The request body containing the required details to create API
-          key
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/CreateApiKeyInputType"
-        required: true
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Create API key example:
-                  summary: Create API key response example
-                  description: Create API key example
-                  value:
-                    success: true
-                    message: API key created successfully
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload:
-                      accessKeyId: 5755ef684c5a4c0ba61a44a93a8b5590
-                      accessKeySecret: mec.2f7ee8fc51f75ac99c5ef240adbc9c9c8d426d318ef4cec2e3ee47a7dcb4e642
-  "/ping":
-    get:
-      tags:
-      - ping
-      summary: Ping API
-      description: To check if REST endpoint is up
-      operationId: ping
-      responses:
-        "200":
-          description: OK
-          content:
-            "*/*":
-              schema:
-                type: string
-  "/api/v1/users/profile":
-    get:
-      tags:
-      - users
-      summary: Get user's profile details
-      description: Get user's profile details
-      operationId: getMyProfile
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Fetch user profile details example:
-                  summary: Fetch user profile details response example
-                  description: Fetch user profile details example
-                  value:
-                    success: true
-                    message: My profile fetched successfully
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload:
-                      userAccount:
-                        name: johndoe
-                        displayName: johndoe
-                        displayPictureMediaPath: http://example.com
-                        websiteUrl: string
-                        emailAddress: user@example.com
-                        bio: string
-                        githubProfileUrl: string
-                        twitterProfileUrl: string
-                        companyName: string
-                        location: string
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/networks/{networkId}/nodes":
     get:
       tags:
@@ -1288,7 +1003,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponsePaginatedResponseNetworkNodes"
               examples:
                 Network nodes list example:
                   summary: Network nodes list response example
@@ -1326,6 +1041,9 @@ paths:
                       totalPages: 2
                       totalRecordCount: 2
                       pageSize: 1
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/networks/nodes/{nodeId}":
     get:
       tags:
@@ -1346,7 +1064,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseNetworkNodesResponseType"
               examples:
                 Network node details example:
                   summary: Network node details response example
@@ -1380,6 +1098,9 @@ paths:
                         alias: test-alias
                         name: Test machine
                         lastActiveAt: '2024-06-06T05:42:20.278Z'
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
     delete:
       tags:
       - network
@@ -1399,7 +1120,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseBoolean"
               examples:
                 Delete network node example:
                   summary: Delete network node response example
@@ -1413,11 +1134,14 @@ paths:
                     subErrors:
                     - {}
                     payload: true
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/networks/nodes/check-dns-name-inuse":
     get:
       tags:
       - network
-      summary: Check DNS name
+      summary: Check DNS name in use for network nodes
       description: Check DNS name is available or already used within a network node
       operationId: checkNetworksNodeDnsName
       parameters:
@@ -1439,7 +1163,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseString"
               examples:
                 Check DNS name in use example:
                   summary: Check DNS name in use response example
@@ -1453,6 +1177,9 @@ paths:
                     subErrors:
                     - {}
                     payload: 
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/networks/generate-ipv4":
     get:
       tags:
@@ -1476,7 +1203,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseGenerateIpv4AddressResponseType"
               examples:
                 Generate IPV4 address example:
                   summary: Generate IPV4 address response example
@@ -1491,11 +1218,14 @@ paths:
                     - {}
                     payload:
                       ipv4Address: 100.64.0.1
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/networks/check-dns-name-inuse":
     get:
       tags:
       - network
-      summary: Check DNS name
+      summary: Check DNS name in use for networks
       description: Check DNS name is available or already used within a network
       operationId: checkNetworksDnsName
       parameters:
@@ -1511,7 +1241,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseString"
               examples:
                 Check DNS name in use example:
                   summary: Check DNS name in use response example
@@ -1525,6 +1255,9 @@ paths:
                     subErrors:
                     - {}
                     payload: 
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/{machineIdOrAlias}":
     get:
       tags:
@@ -1546,7 +1279,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseMachinesModelMapper"
               examples:
                 Get machine details example:
                   summary: Get machine details response example
@@ -1590,6 +1323,9 @@ paths:
                         agentVersion: 1.0.0
                         agentName: mecha-agent
                         updatedAt: '2024-06-07T07:56:57.244Z'
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/{machineIdOrAlias}/revoked/certificate":
     get:
       tags:
@@ -1611,7 +1347,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseMachineCertificatesList"
               examples:
                 Get previously signed certificates example:
                   summary: Get previously signed certificates response example
@@ -1644,6 +1380,9 @@ paths:
                       rootCaCommonName: string
                       rootCaExpiresAt: '2024-06-07T06:22:58.118Z'
                       isRevoked: true
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/{machineIdOrAlias}/certificate":
     get:
       tags:
@@ -1665,7 +1404,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseMachineCertificates"
               examples:
                 Get active certificate details example:
                   summary: Get active certificate details response example
@@ -1698,6 +1437,9 @@ paths:
                       rootCaCommonName: string
                       rootCaExpiresAt: '2024-06-07T06:22:58.118Z'
                       isRevoked: false
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/{machineIdOrAlias}/certificate/download":
     get:
       tags:
@@ -1719,17 +1461,18 @@ paths:
           content:
             text/plain:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                type: string
               examples:
                 Download certificate example:
                   summary: Download certificate response example
                   description: Download certificate example
-                  value: |-
+                  value: |
                     ----BEGIN CERTIFICATE-----
-                    MIID6zCCAtOgAwIBAgIUXI8FxvrU3LAO0SmT8ULy0zdcO7cwDQYJKoZIhvcNAQEL
-                    BQAwKDEmMCQGA1UEAwwdTWVjaGEgU3lzdGVtcyBDQSBSU0EgUjEgW0RFVl0wHhcN
-                    MjQwMjA3MDUzMzIxWhcNMjkwMjA1MDUzMzUxWjAoMSYwJAYDVQQDDB1NZWNoYSBT ....
+                    certificate data....
                     -----END CERTIFICATE-----
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/{machineIdOrAlias}/certificate/ca-bundle/download":
     get:
       tags:
@@ -1750,22 +1493,21 @@ paths:
           content:
             text/plain:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                type: string
               examples:
                 Download CA-Bundle certificates:
                   summary: Download CA-Bundle certificates response example
                   description: Download CA-Bundle certificates
-                  value: |-
+                  value: |
                     ----BEGIN CERTIFICATE-----
-                    MIID6zCCAtOgAwIBAgIUXI8FxvrU3LAO0SmT8ULy0zdcO7cwDQYJKoZIhvcNAQEL
-                    BQAwKDEmMCQGA1UEAwwdTWVjaGEgU3lzdGVtcyBDQSBSU0EgUjEgW0RFVl0wHhcN
-                    MjQwMjA3MDUzMzIxWhcNMjkwMjA1MDUzMzUxWjAoMSYwJAYDVQQDDB1NZWNoYSBT ....
+                    certificate data....
                     -----END CERTIFICATE-----
                     ----BEGIN CERTIFICATE-----
-                    MIIDQTCCAimgAwIBAgIUTcOOLQ/L1VVvDFEcgtL4hJyA0IEwDQYJKoZIhvcNAQEL
-                    BQAwKDEmMCQGA1UEAwwdTWVjaGEgU3lzdGVtcyBDQSBSU0EgUjEgW0RFVl0wHhcN
-                    MjQwMjA2MTQyMTE2WhcNMzQwMjAzMTQyMTQ1WjAoMSYwJAYDVQQDDB1NZWNoYSBT ....
+                    certificate data....
                     -----END CERTIFICATE-----
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/check-alias-inuse":
     get:
       tags:
@@ -1786,7 +1528,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseBoolean"
               examples:
                 Check alias in use example:
                   summary: Check alias in use response example
@@ -1800,121 +1542,9 @@ paths:
                     subErrors:
                     - {}
                     payload: true
-  "/api/v1/machine-tags":
-    get:
-      tags:
-      - machine-tags
-      summary: Get machine tags list
-      description: Get machine tags list
-      operationId: getMachineTags
-      parameters:
-      - name: allParams
-        in: query
-        description: allParams - pageNo, pageSize, sortBy, sortDirection, key, value
-          etc.
-        required: true
-        schema:
-          type: object
-          additionalProperties:
-            type: string
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Get machine tags list example:
-                  summary: Get machine tags list response example
-                  description: Get machine tags list example
-                  value:
-                    success: true
-                    message: Machine tags fetched successfully
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload:
-                      content:
-                      - machineId: xxb63e2aaedx-xxxx-123
-                        key: test
-                        value: testValue
-                      totalPages: 2
-                      totalRecordCount: 2
-                      pageSize: 1
-  "/api/v1/auth/whoami":
-    get:
-      tags:
-      - authentication
-      summary: Fetch users information
-      description: Fetch information about the currently authenticated user
-      operationId: getLoggedInUser
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Fetch users information example:
-                  summary: Fetch users information response example
-                  description: Fetch users information example
-                  value:
-                    success: true
-                    message: Current session received successfully
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload:
-                      emailAddress: user@example.com
-                      bio: string
-                      accounts:
-                        name: johndoe
-                        displayName: johndoe
-                        displayPictureMediaPath: http://example.com
-                        websiteUrl: string
-                      githubProfileUrl: https://github.com/user/repo.git
-                      twitterProfileUrl: http://twitter.com/johnndoe
-                      companyName: string
-                      location: string
-                      sessionStartAt: '2024-06-07T05:18:42.640Z'
-                      channel: string
-  "/api/v1/accounts/api-keys":
-    get:
-      tags:
-      - api-keys
-      summary: Get API key list
-      description: Get API keys list
-      operationId: getAllApiKeys
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Get API keys list example:
-                  summary: Get API keys list response example
-                  description: Get API keys list example
-                  value:
-                    success: true
-                    message: API key fetched successfully
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload:
-                    - keyName: test-key
-                      accessKeyId: 5755ef684c5a4c0ba61a44a93a8b5590
-                      description: string
-                      expiryDate: '2024-06-06T14:00:57.844Z'
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
   "/api/v1/machines/remove/{machineIdOrAlias}":
     delete:
       tags:
@@ -1935,7 +1565,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/StandardResponseError"
+                $ref: "#/components/schemas/StandardResponseBoolean"
               examples:
                 Remove machine example:
                   summary: Remove machine response example
@@ -1949,75 +1579,52 @@ paths:
                     subErrors:
                     - {}
                     payload: true
-  "/api/v1/auth/account/me":
-    delete:
-      tags:
-      - authentication
-      summary: Delete an account
-      description: Soft delete an account
-      operationId: deleteAccount
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Delete an account example:
-                  summary: Delete an account response example
-                  description: Delete an account example
-                  value:
-                    success: true
-                    message: Account deleted successfully
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload: true
-  "/api/v1/accounts/api-keys/{accessKeyId}":
-    delete:
-      tags:
-      - api-keys
-      summary: Delete API key
-      description: Delete API key with given accessKeyId
-      operationId: deleteApiKey
-      parameters:
-      - name: accessKeyId
-        in: path
-        description: The accessKeyId - unique access key id of the api key
-        required: true
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Success response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/StandardResponseError"
-              examples:
-                Delete API key example:
-                  summary: Delete API key response example
-                  description: Delete API key example
-                  value:
-                    success: true
-                    message: API key deleted successfully
-                    status: OK
-                    statusCode: 200
-                    errorCode: ''
-                    subErrors:
-                    - {}
-                    payload: true
+      security:
+      - apiKeyId: []
+        apiKeySecret: []
 components:
   schemas:
-    StandardResponseError:
+    Networks:
       type: object
       properties:
-        errorMessage:
+        networkId:
           type: string
-      description: Schema for standard error responses
+        provider:
+          type: string
+        ipSubnet:
+          type: string
+        dnsName:
+          type: string
+        dnsSuffix:
+          type: string
+        networkName:
+          type: string
+        isDefault:
+          type: boolean
+        isNetworkKeyManaged:
+          type: boolean
+      description: Networks schema
+    StandardResponseNetworks:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/Networks"
+      description: Standard response wrapping a Network
     UpdateNetworksRequestType:
       type: object
       properties:
@@ -2030,6 +1637,27 @@ components:
         isDefault:
           type: boolean
       description: Schema for update network
+    StandardResponseBoolean:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          type: boolean
+      description: Standard response wrapping a boolean response
     MachineTagsRequestType:
       type: object
       properties:
@@ -2054,33 +1682,39 @@ components:
         pictureBase64:
           type: string
       description: Schema for update machines
-    UpdateProfileInformationRequestType:
+    IssueSSHCertificateResponseType:
       type: object
       properties:
-        name:
+        signedKey:
           type: string
-        websiteUrl:
+        serialNumber:
           type: string
-        bio:
-          type: string
-        githubProfileUrl:
-          type: string
-        twitterProfileUrl:
-          type: string
-        companyName:
-          type: string
-        location:
-          type: string
-        emailSubscribed:
+      description: Schema for issue SSH certificate response
+    StandardResponseIssueSSHCertificateResponseType:
+      type: object
+      properties:
+        success:
           type: boolean
-      description: Schema for update profile information
-    UploadDisplayPictureRequestType:
-      type: object
-      properties:
-        displayPictureBase64:
+        message:
           type: string
-      description: Schema for update profile picture
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/IssueSSHCertificateResponseType"
+      description: Standard response wrapping a IssueSSHCertificateResponseType
     IssueSSHCertificateRequestType:
+      required:
+      - principals
+      - publicKey
       type: object
       properties:
         principals:
@@ -2091,10 +1725,15 @@ components:
           type: string
       description: Schema for issue SSH certificate
     AddNetworkRequestType:
+      required:
+      - dnsName
+      - ipSubnet
+      - networkName
       type: object
       properties:
         ipSubnet:
           type: string
+          description: Allowed with CIDR /24
         networkName:
           type: string
         dnsName:
@@ -2114,54 +1753,368 @@ components:
         isLogsEnabled:
           type: boolean
       description: Schema for add or update machine telemetry request type
+    StandardResponseTelemetryLogsStreamsResponseType:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/TelemetryLogsStreamsResponseType"
+      description: Standard response wrapping a TelemetryLogsStreamsResponseType
+    TelemetryLogsStreamsResponseType:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          type: array
+          items:
+            type: string
+      description: Schema for machine logs stream response
     MachineLogsStreamsRequestType:
       type: object
       properties:
         start:
           type: integer
+          description: Timestamp in epoch nanoseconds
           format: int64
         end:
           type: integer
+          description: Timestamp in epoch nanoseconds
           format: int64
       description: Schema for machine logs stream request type
+    LogsData:
+      type: object
+      properties:
+        resultType:
+          type: string
+        result:
+          type: array
+          items:
+            $ref: "#/components/schemas/LogsResult"
+      description: Schema for telemetry machine logs data
+    LogsResult:
+      type: object
+      properties:
+        stream:
+          $ref: "#/components/schemas/Stream"
+        values:
+          type: array
+          items:
+            type: array
+            items:
+              type: object
+      description: Schema for telemetry machine logs result
+    StandardResponseTelemetryLogsDataResponseType:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/TelemetryLogsDataResponseType"
+      description: Standard response wrapping a TelemetryLogsDataResponseType
+    Stream:
+      type: object
+      properties:
+        exporter:
+          type: string
+        machine_id:
+          type: string
+        stream_name:
+          type: string
+      description: Schema for telemetry machine logs stream
+    TelemetryLogsDataResponseType:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          $ref: "#/components/schemas/LogsData"
+      description: Schema for machine logs response
     MachineLogsRequestType:
+      required:
+      - stream
       type: object
       properties:
         search:
           type: string
         start:
           type: integer
+          description: Timestamp in epoch nanoseconds
           format: int64
         end:
           type: integer
+          description: Timestamp in epoch nanoseconds
           format: int64
         stream:
           type: string
         limit:
+          maximum: 100
           type: integer
           format: int32
       description: Schema for machine logs request type
+    FileExportResponseType:
+      type: object
+      properties:
+        filePath:
+          type: string
+      description: Schema for file export response
+    StandardResponseFileExportResponseType:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/FileExportResponseType"
+      description: Standard response wrapping a TelemetryLogsStreamsResponseType
     MachineLogsExportRequestType:
+      required:
+      - stream
       type: object
       properties:
         search:
           type: string
         start:
           type: integer
+          description: Timestamp in epoch nanoseconds
           format: int64
         end:
           type: integer
+          description: Timestamp in epoch nanoseconds
           format: int64
         stream:
           type: string
       description: Schema for machine logs export request type
+    MachineCertificates:
+      type: object
+      properties:
+        machineId:
+          type: string
+        privateKeyAlgo:
+          type: string
+        privateKeySize:
+          type: string
+        pubSignAlgo:
+          type: string
+        certSerialNumber:
+          type: string
+        certFingerprint:
+          type: string
+        certPkiName:
+          type: string
+        certCreatedAt:
+          type: string
+          format: date-time
+        certExpiresAt:
+          type: string
+          format: date-time
+        certCommonName:
+          type: string
+        certIssuingUrl:
+          type: string
+        certCrlUrl:
+          type: string
+        issuingCaSerialNumber:
+          type: string
+        issuingCaCommonName:
+          type: string
+        issuingCaExpiresAt:
+          type: string
+          format: date-time
+        rootCaCommonName:
+          type: string
+        rootCaExpiresAt:
+          type: string
+          format: date-time
+        isRevoked:
+          type: boolean
+      description: Machine certificates schema
+    StandardResponseMachineCertificates:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/MachineCertificates"
+      description: Standard response wrapping a MachineCertificate
+    MachineProvisionRequestStatusResponseType:
+      type: object
+      properties:
+        statusCode:
+          type: string
+        status:
+          type: integer
+          format: int32
+      description: Schema for machine provision request status response type
+    StandardResponseMachineProvisionRequestStatusResponseType:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/MachineProvisionRequestStatusResponseType"
+      description: Standard response wrapping a MachineProvisionRequestStatusResponseType
+    AddMachineProvisionRequestResponseType:
+      type: object
+      properties:
+        requestId:
+          type: integer
+          format: int32
+        machineId:
+          type: string
+      description: Schema for add machine provision request response
+    StandardResponseAddMachineProvisionRequestResponseType:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/AddMachineProvisionRequestResponseType"
+      description: Standard response wrapping a AddMachineProvisionRequestResponseType
     AddMachineProvisionRequestType:
       type: object
       properties:
         provisionCode:
+          maxLength: 6
+          minLength: 0
           type: string
       description: Schema for add machine provision request
+    MachineData:
+      type: object
+      properties:
+        machineId:
+          type: string
+        displayIconMediaPath:
+          type: string
+        alias:
+          type: string
+        name:
+          type: string
+        lastActiveAt:
+          type: string
+          format: date-time
+      description: Schema for machine data in network node response
+    NetworkNodesResponseType:
+      type: object
+      properties:
+        nodeId:
+          type: string
+        dnsName:
+          type: string
+        ipv4Address:
+          type: string
+        ipv6Address:
+          type: string
+        networkId:
+          type: string
+        networks:
+          $ref: "#/components/schemas/Networks"
+        machineData:
+          $ref: "#/components/schemas/MachineData"
+      description: Schema for network node response
+    StandardResponseNetworkNodesResponseType:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/NetworkNodesResponseType"
+      description: Standard response wrapping a NetworkNodesResponseType
     EnableNetworkingRequestType:
+      required:
+      - dnsName
+      - machineId
       type: object
       properties:
         machineId:
@@ -2175,7 +2128,78 @@ components:
         networkKey:
           type: string
       description: Schema for enable networking
+    Data:
+      type: object
+      properties:
+        resultType:
+          type: string
+        result:
+          type: array
+          items:
+            $ref: "#/components/schemas/Result"
+      description: Schema for telemetry data
+    Metric:
+      type: object
+      properties:
+        state:
+          type: string
+        device:
+          type: string
+        machine_id:
+          type: string
+        direction:
+          type: string
+        type:
+          type: string
+      description: Schema for telemetry data metrics
+    Result:
+      type: object
+      properties:
+        metric:
+          $ref: "#/components/schemas/Metric"
+        values:
+          type: array
+          items:
+            type: array
+            items:
+              type: object
+      description: Schema for telemetry data result
+    StandardResponseTelemetryDataResponseType:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/TelemetryDataResponseType"
+      description: Standard response wrapping a TelemetryDataResponseType
+    TelemetryDataResponseType:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          $ref: "#/components/schemas/Data"
+      description: Schema for telemetry data response type
     MachineMetricsRequestType:
+      required:
+      - end
+      - machineIdOrAlias
+      - metricsLabel
+      - start
+      - timeInterval
       type: object
       properties:
         metricsLabel:
@@ -2189,200 +2213,336 @@ components:
           - SYSTEM_FILESYSTEMS_USAGE
         start:
           type: integer
+          description: Timestamp in epoch seconds
           format: int64
         end:
           type: integer
+          description: Timestamp in epoch seconds
           format: int64
         machineIdOrAlias:
           type: string
         timeInterval:
           type: string
       description: Schema for machine metrics request type
-    Credentials:
+    MachinesModelMapper:
       type: object
       properties:
-        password:
-          $ref: "#/components/schemas/Password"
-        totp:
-          $ref: "#/components/schemas/Totp"
-      description: Schema for Ory identity credentials
-    OryIdentityRecoveryAddressType:
-      type: object
-      properties:
-        id:
+        machineId:
           type: string
-        value:
+        name:
           type: string
-        via:
+        displayIconMediaPath:
           type: string
-        created_at:
+        alias:
           type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
-      description: Schema for Ory identity recovery address
-    OryIdentityTraitsType:
-      type: object
-      properties:
-        email:
-          type: string
-        username:
-          type: string
-        profile_avtar:
-          type: string
-        profile_url:
-          type: string
-        site_verify_token:
-          type: string
-      description: Schema for Ory identity traits
-    OryIdentityType:
-      type: object
-      properties:
-        id:
-          type: string
-        schema_id:
-          type: string
-        schema_url:
-          type: string
-        state:
-          type: string
-        state_changed_at:
-          type: string
-          format: date-time
-        traits:
-          $ref: "#/components/schemas/OryIdentityTraitsType"
-        credentials:
-          $ref: "#/components/schemas/Credentials"
-        verifiable_addresses:
+        tags:
           type: array
           items:
-            $ref: "#/components/schemas/OryIdentityVerifiableAddressType"
-        recovery_addresses:
-          type: array
-          items:
-            $ref: "#/components/schemas/OryIdentityRecoveryAddressType"
-        metadata_public:
-          type: object
-          properties:
-            empty:
-              type: boolean
-          additionalProperties:
-            type: object
-        created_at:
+            $ref: "#/components/schemas/TagsModelMapper"
+        telemetry:
+          $ref: "#/components/schemas/TelemetryData"
+        lastActiveAt:
           type: string
           format: date-time
-        updated_at:
-          type: string
-          format: date-time
-      description: Schema for Ory identity type
-    OryIdentityVerifiableAddressType:
+        networking:
+          $ref: "#/components/schemas/NodeData"
+        sysInfo:
+          $ref: "#/components/schemas/SystemInfoData"
+      description: Schema for machines response type
+    NodeData:
       type: object
       properties:
-        id:
+        fullDNSName:
           type: string
-        value:
+        ipv4Address:
           type: string
-        verified:
+        networkIpSubnet:
+          type: string
+        networkId:
+          type: string
+        nodeId:
+          type: string
+        networkName:
+          type: string
+      description: Schema for networking in machines response type
+    PaginatedResponseListMachinesModelMapper:
+      type: object
+      properties:
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/MachinesModelMapper"
+        totalPages:
+          type: integer
+          format: int32
+        totalRecordCount:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int32
+      description: Schema for paginated response
+    StandardResponsePaginatedResponseMachines:
+      type: object
+      properties:
+        success:
           type: boolean
-        via:
+        message:
           type: string
         status:
           type: string
-        verified_at:
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
           type: string
-          format: date-time
-        created_at:
-          type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
-      description: Schema for Ory identity verifiable address
-    OryWebhookRequestType:
-      type: object
-      properties:
-        user_id:
-          type: string
-        identity:
-          $ref: "#/components/schemas/OryIdentityType"
-      description: Schema for webhook request
-    Password:
-      type: object
-      properties:
-        type:
-          type: string
-        identifiers:
+        subErrors:
           type: array
           items:
-            type: string
-        version:
-          type: integer
-          format: int32
-        created_at:
-          type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
-      description: Schema for Ory identity password
-    Totp:
+            type: object
+        payload:
+          $ref: "#/components/schemas/PaginatedResponseListMachinesModelMapper"
+      description: Standard response wrapping a PaginatedResponse for machines
+    SystemInfoData:
       type: object
       properties:
-        type:
+        hostname:
           type: string
-        identifiers:
+        osName:
+          type: string
+        osVersion:
+          type: string
+        osBuild:
+          type: string
+        platform:
+          type: string
+        platformRelease:
+          type: string
+        arch:
+          type: string
+        agentVersion:
+          type: string
+        agentName:
+          type: string
+        updatedAt:
+          type: string
+          format: date-time
+      description: Schema for sysinfo in machines response type
+    TagsModelMapper:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+      description: Schema for tags in machines response type
+    TelemetryData:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+        isMetricsEnabled:
+          type: boolean
+        isLogsEnabled:
+          type: boolean
+      description: Schema for telemetry in machines response type
+    PaginatedResponseListNetworks:
+      type: object
+      properties:
+        content:
           type: array
           items:
-            type: string
-        version:
+            $ref: "#/components/schemas/Networks"
+        totalPages:
           type: integer
           format: int32
-        created_at:
-          type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
-      description: Schema for Ory identity totp
-    EmailVerificationRequest:
-      type: object
-      properties:
-        identifier:
-          type: string
-        token:
-          type: string
-      description: Schema for email verification request
-    GetSSOTokenRequestType:
-      type: object
-      properties:
-        dataSource:
-          type: string
-        machineIdOrAlias:
-          type: string
-        startTime:
+        totalRecordCount:
           type: integer
           format: int64
-        endTime:
-          type: integer
-          format: int64
-        timeInterval:
-          type: string
-        logStream:
-          type: string
-        logLimit:
+        pageSize:
           type: integer
           format: int32
-        logSearch:
-          type: string
-      description: Schema for get SSO token request
-    CreateApiKeyInputType:
+      description: Schema for paginated response
+    StandardResponsePaginatedResponseNetworks:
       type: object
       properties:
-        name:
+        success:
+          type: boolean
+        message:
           type: string
-        description:
+        status:
           type: string
-        expiryDate:
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
           type: string
-      description: Schema for creating API key
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/PaginatedResponseListNetworks"
+      description: Standard response wrapping a PaginatedResponse for networks
+    PaginatedResponseListNetworkNodesResponseType:
+      type: object
+      properties:
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/NetworkNodesResponseType"
+        totalPages:
+          type: integer
+          format: int32
+        totalRecordCount:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int32
+      description: Schema for paginated response
+    StandardResponsePaginatedResponseNetworkNodes:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/PaginatedResponseListNetworkNodesResponseType"
+      description: Standard response wrapping a PaginatedResponse for network nodes
+    StandardResponseString:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          type: string
+      description: Standard response wrapping a string response
+    GenerateIpv4AddressResponseType:
+      type: object
+      properties:
+        ipv4Address:
+          type: string
+      description: Schema to get IPV4 address
+    StandardResponseGenerateIpv4AddressResponseType:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/GenerateIpv4AddressResponseType"
+      description: Standard response wrapping a GenerateIpv4AddressResponseType
+    StandardResponseMachinesModelMapper:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          $ref: "#/components/schemas/MachinesModelMapper"
+      description: Standard response wrapping a machines response
+    StandardResponseMachineCertificatesList:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        status:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        errorCode:
+          type: string
+        subErrors:
+          type: array
+          items:
+            type: object
+        payload:
+          type: array
+          items:
+            $ref: "#/components/schemas/MachineCertificates"
+      description: Standard response wrapping MachineCertificates list
+  securitySchemes:
+    apiKeySecret:
+      type: apiKey
+      name: X-Api-Key-Secret
+      in: header
+    apiKeyId:
+      type: apiKey
+      name: X-Api-Key-Id
+      in: header
+x-tagGroups:
+- name: Authentication
+  tags:
+  - authentication
+  - api-keys
+- name: Machines
+  tags:
+  - provision-request
+  - machines
+  - machine-tags
+  - machine-certificate
+- name: User Management
+  tags:
+  - accounts
+  - users
+- name: Networking
+  tags:
+  - network
+  - SSH
+- name: Ping
+  tags:
+  - ping

@@ -1,10 +1,6 @@
-import React, { Fragment, useEffect, useState } from "react";
-import Icon from "./Icons/Icons";
-import { cn } from "../utils/tailwindHelper";
-
-
-
-
+import { cn } from "@site/src/utils/tailwindHelper";
+import React from "react";
+import Icon from "../Icons/Icons";
 
 const socialas = [
   {
@@ -178,10 +174,8 @@ const footerMobile = [
 ];
 
 const Footer = () => {
-
-
   return (
-    <div className="mt-[75px] lg:mt-[150px] lg:grid lg:grid-cols-6 md:mb-[40px]">
+    <div className="mt-[75px] lg:mt-[150px] lg:grid lg:grid-cols-6 md:mb-[40px] __mec-footer">
       <div className="md:flex flex-col gap-3 hidden cursor-pointer">
         {/* <LogoLottie /> */}
         <Icon name="mecha_logo" height="80px" width="80px" />
@@ -208,9 +202,7 @@ const Footer = () => {
                     </CustomLink>
                   );
                 } else {
-                  return (
-                    <CustomLink href={link.href} > {link.name}</CustomLink>
-                  );
+                  return <CustomLink href={link.href}> {link.name}</CustomLink>;
                 }
               })}
             </div>
@@ -260,23 +252,21 @@ const Footer = () => {
                     },
                     {
                       "hover:bg-[#1C2321] hover:text-white": link.name === "x",
-                    },
+                    }
                   )}
                   rel="noreferrer"
                 >
-                  <Icon name={link.icon} height="15px" width="15px"/>
+                  <Icon name={link.icon} height="15px" width="15px" />
                 </a>
               );
             })}
             {/* Theme changing button */}
-            
           </div>
           <div>
             <p className="text-sm md:text-base dark:text-custom-50 custom-410">
               &copy; 2023 Mecha Systems, Inc.
             </p>
           </div>
-         
         </div>
       </div>
     </div>
@@ -285,19 +275,20 @@ const Footer = () => {
 
 export default Footer;
 
-
-
 const CustomLink = ({ href, children }) => {
   const linkStyles = {
-    textDecoration: 'none',
-    fontSize: '16px',
-    fontWeight: "500"    
+    textDecoration: "none",
+    fontSize: "16px",
+    fontWeight: "500",
   };
 
   return (
-    <a href={href} style={linkStyles} className="text-[#15171D] dark:text-white hover:text-[#3283E8FF]">
+    <a
+      href={href}
+      style={linkStyles}
+      className="text-[#15171D] dark:text-white hover:text-[#3283E8FF]"
+    >
       {children}
     </a>
   );
 };
-

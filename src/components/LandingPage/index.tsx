@@ -1,43 +1,59 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CometM from "../CometM";
-import Footer from "../Footer";
 import Layout from "../Layout/Layout";
 import MechaCloud from "../MechaCloud";
-import { useHistory } from "@docusaurus/router";
+import { useHistory, useLocation } from "@docusaurus/router";
+import CustomButton from "../Shared/CustomButton";
+import Footer from "../Layout/Footer";
+import CustomLinkCard from "../Shared/CustomLinkCards";
 
-
-export default function LandingPage({slug} : {slug: string}): JSX.Element {
+export default function LandingPage({ slug }: { slug: string }): JSX.Element {
   const [currentInstance, setCurrentInstance] = useState(slug);
-
+  
   const history = useHistory();
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = location.pathname;
+    if (path.includes("hardware")) {
+      setCurrentInstance("comet-m");
+    } else if (path.includes("mecha-cloud")) {
+      setCurrentInstance("mecha-cloud");
+    }
+  }, [location.pathname]);
 
   const handleNavigation = (path, instance) => {
     history.push(path);
-    setCurrentInstance(instance);
   };
-  
+
   return (
     <div>
       <Layout>
-        <div className="border-b py-2 border-[#202431] flex flex-col gap-5 md:flex-row justify-between md:items-center">
-          <p className="text-lg font-medium">Documentation</p>
+        <div className="border-b py-2 border-[#fafbfc] dark:border-[#202431] flex flex-col gap-5 md:flex-row justify-between md:items-center">
+          <p className="text-lg font-medium mb-0">Documentation</p>
           <div className="flex flex-row gap-5 items-center">
-            <button
+            <CustomButton
               onClick={() => handleNavigation("/hardware", "comet-m")}
-              className={`px-[11px] py-2 rounded-md text-white font-medium ${
-                currentInstance === "comet-m" ? "bg-[#22252C]/80" : ""
-              }`}
+              backgroundColor={
+                currentInstance === "comet-m"
+                  ? "rgba(34, 37, 44, 0.8)"
+                  : "transparent"
+              }
+              fontColor="white"
             >
               Comet-M
-            </button>
-            <button
+            </CustomButton>
+            <CustomButton
               onClick={() => handleNavigation("/mecha-cloud", "mecha-cloud")}
-              className={`px-[11px] py-2 rounded-md text-white font-medium ${
-                currentInstance === "mecha-cloud" ? "bg-[#22252C]/80" : ""
-              }`}
+              backgroundColor={
+                currentInstance === "mecha-cloud"
+                  ? "rgba(34, 37, 44, 0.8)"
+                  : "transparent"
+              }
+              fontColor="white"
             >
               Mecha Cloud
-            </button>
+            </CustomButton>
           </div>
         </div>
         {currentInstance === "comet-m" ? <CometM /> : <MechaCloud />}
