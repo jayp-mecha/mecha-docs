@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import { NAVBAR_GITHUB_COMPONENT } from "./src/utils/constants";
 
 const config: Config = {
   title: "Mecha Docs",
@@ -21,138 +22,112 @@ const config: Config = {
       "docusaurus-plugin-openapi-docs",
       {
         id: "console-api",
-        docsPluginId: "console-api",
+        docsPluginId: "default",
         config: {
           mechaConsole: {
             specPath: "static/examples/mechaApis.yaml",
             outputDir: "docs/apis",
             sidebarOptions: {
-              groupPathsBy: "tag"
+              groupPathsBy: "tag",
             },
           },
         },
       },
     ],
   ],
-
-  url: "https://your-docusaurus-site.example.com",
+  url: 'https://docs.v1.dev.mecha.build',
   baseUrl: "/",
-
   organizationName: "mecha",
   projectName: "mecha-docs",
-
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-
-  themes: ["docusaurus-theme-openapi-docs"],
+  themes: [
+    ["docusaurus-theme-openapi-docs", {}],
+    "@docusaurus/theme-mermaid",
+  ],
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   presets: [
     [
       "classic",
-     ( {
+      {
         docs: {
           sidebarCollapsible: true,
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          // docLayoutComponent: "@theme/DocPage",
-          docItemComponent: "@theme/ApiItem" // add @theme/ApiItem here
+          sidebarCollapsed: false,
+          sidebarPath: "./sidebars.ts",
+          docItemComponent: "@theme/ApiItem",
+          admonitions: {
+            keywords: ['mec-info', 'mec-warn', 'mec-danger',],
+            extendDefaults: true,
+          },
         },
         blog: {
           showReadingTime: true,
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css")
-        }
-      })
+          customCss: "./src/css/custom.css",
+        },
+      },
     ],
   ],
   themeConfig: {
+    algolia: {
+      apiKey: 'YOUR_API_KEY',
+      indexName: 'YOUR_INDEX_NAME',
+      appId: 'YOUR_APP_ID',
+    },
     image: "img/docusaurus-social-card.jpg",
     navbar: {
       title: "",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "Mecha Logo",
+        src: "img/dark-logo.svg",
+        srcDark: "img/logo.svg",
       },
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "hardwareSidebar", 
           position: "left",
-          label: "Docs",
+          label: "Comet-M",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "apiSidebar",
+          position: "left",
+          label: "API",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
-          label: "GitHub",
+          type: 'search',
+          position: 'right',
+        },
+        {
+          type: "html",
           position: "right",
+          value: `${NAVBAR_GITHUB_COMPONENT}`,
         },
       ],
     },
     prism: {
-      theme: prismThemes.vsLight,
-      darkTheme: prismThemes.palenight,
+      theme: prismThemes.github,
+      darkTheme: prismThemes.jettwaveDark,
       additionalLanguages: ["powershell"],
     },
-    // footer: {
-    //   style: "dark",
-    //   links: [
-    //     {
-    //       title: "Docs",
-    //       items: [
-    //         {
-    //           label: "Tutorial",
-    //           to: "/docs/intro",
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: "Community",
-    //       items: [
-    //         {
-    //           label: "Stack Overflow",
-    //           href: "https://stackoverflow.com/questions/tagged/docusaurus",
-    //         },
-    //         {
-    //           label: "Discord",
-    //           href: "https://discordapp.com/invite/docusaurus",
-    //         },
-    //         {
-    //           label: "Twitter",
-    //           href: "https://twitter.com/docusaurus",
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: "More",
-    //       items: [
-    //         {
-    //           label: "Blog",
-    //           to: "/blog",
-    //         },
-    //         {
-    //           label: "GitHub",
-    //           href: "https://github.com/facebook/docusaurus",
-    //         },
-    //       ],
-    //     },
-    //   ],
-    //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-    // },
   } satisfies Preset.ThemeConfig,
   stylesheets: [
     {
-      href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap',
-      type: 'text/css',
+      href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap",
+      type: "text/css",
     },
   ],
+  markdown: {
+    mermaid: true,
+  },
 };
 
 export default config;
