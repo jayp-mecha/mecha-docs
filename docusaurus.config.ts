@@ -1,7 +1,12 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
-import { NAVBAR_GITHUB_COMPONENT } from "./src/utils/constants";
+import {
+  ALGOLIA_API_KEY,
+  ALGOLIA_APP_ID,
+  ALGOLIA_INDEX_NAME,
+  NAVBAR_GITHUB_COMPONENT,
+} from "./src/utils/constants";
 
 const config: Config = {
   title: "Mecha Docs",
@@ -68,9 +73,9 @@ const config: Config = {
   ],
   themeConfig: {
     algolia: {
-      apiKey: "YOUR_API_KEY",
-      indexName: "YOUR_INDEX_NAME",
-      appId: "YOUR_APP_ID",
+      apiKey: ALGOLIA_API_KEY,
+      indexName: ALGOLIA_INDEX_NAME,
+      appId: ALGOLIA_APP_ID,
     },
     image: "img/logo.svg",
     navbar: {
