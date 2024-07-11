@@ -25,7 +25,7 @@ const config: Config = {
         docsPluginId: "default",
         config: {
           mechaConsole: {
-            specPath: "static/examples/mechaApis.yaml",
+            specPath: "static/apis/mechaApis.yaml",
             outputDir: "docs/apis",
             sidebarOptions: {
               groupPathsBy: "tag",
@@ -35,16 +35,13 @@ const config: Config = {
       },
     ],
   ],
-  url: 'https://docs.sandbox.dev.mecha.build',
+  url: "https://docs.sandbox.dev.mecha.build",
   baseUrl: "/",
   organizationName: "mecha",
   projectName: "mecha-docs",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  themes: [
-    ["docusaurus-theme-openapi-docs", {}],
-    "@docusaurus/theme-mermaid",
-  ],
+  themes: [["docusaurus-theme-openapi-docs", {}], "@docusaurus/theme-mermaid"],
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -59,14 +56,9 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           docItemComponent: "@theme/ApiItem",
           admonitions: {
-            keywords: ['mec-info', 'mec-warn', 'mec-danger',],
+            keywords: ["mec-info", "mec-warn", "mec-danger"],
             extendDefaults: true,
           },
-        },
-        blog: {
-          showReadingTime: true,
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -76,11 +68,11 @@ const config: Config = {
   ],
   themeConfig: {
     algolia: {
-      apiKey: 'YOUR_API_KEY',
-      indexName: 'YOUR_INDEX_NAME',
-      appId: 'YOUR_APP_ID',
+      apiKey: "YOUR_API_KEY",
+      indexName: "YOUR_INDEX_NAME",
+      appId: "YOUR_APP_ID",
     },
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/logo.svg",
     navbar: {
       title: "",
       logo: {
@@ -91,7 +83,7 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "hardwareSidebar", 
+          sidebarId: "hardwareSidebar",
           position: "left",
           label: "Comet-M",
         },
@@ -101,10 +93,9 @@ const config: Config = {
           position: "left",
           label: "API",
         },
-        { to: "/blog", label: "Blog", position: "left" },
         {
-          type: 'search',
-          position: 'right',
+          type: "search",
+          position: "right",
         },
         {
           type: "html",

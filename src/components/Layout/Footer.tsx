@@ -105,7 +105,7 @@ const footer: footeras[] = [
       },
       {
         name: "Blogs",
-        href: "/blog",
+        href: "https://website.sandbox.mecha.build/blog",
       },
       {
         name: "Newsroom",
