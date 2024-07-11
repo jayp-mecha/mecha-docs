@@ -2,10 +2,10 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
 const sidebar: SidebarsConfig = {
   apisidebar: [
-    {
-      type: "doc",
-      id: "apis/mecha-cloud-apis",
-    },
+    // {
+    //   type: "doc",
+    //   id: "apis/mecha-cloud-apis",
+    // },
     {
       type: "category",
       label: "Machines",
