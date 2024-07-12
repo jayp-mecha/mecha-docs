@@ -40,7 +40,7 @@ const config: Config = {
       },
     ],
   ],
-  url: "https://docs.sandbox.dev.mecha.build",
+  url: "https://mecha-docs.pages.dev",
   baseUrl: "/",
   organizationName: "mecha",
   projectName: "mecha-docs",
