@@ -10,7 +10,7 @@ info:
     url: ''
   version: 1.0.0
 servers:
-- url: http://cloud-api.sandbox.mecha.build/
+- url: http://cloud-api.sandbox.mecha.build
   description: Generated server url
 tags:
 - name: accounts
@@ -1632,8 +1632,6 @@ components:
     UpdateNetworksRequestType:
       type: object
       properties:
-        ipSubnet:
-          type: string
         networkName:
           type: string
         dnsName:
