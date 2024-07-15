@@ -10,7 +10,7 @@ info:
     url: ''
   version: 1.0.0
 servers:
-- url: http://cloud-api.sandbox.mecha.build
+- url: https://cloud-api.sandbox.mecha.build
   description: Generated server url
 tags:
 - name: accounts
