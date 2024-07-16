@@ -94,17 +94,59 @@ p {
   .__mec-container {
     max-width: 640px;
   }
+  .DocSearch-Button {
+    border: none !important;
+  }
+
 }
 
 @media (min-width: 768px) {
   .__mec-container {
     max-width: 768px;
   }
+  .DocSearch-Button {
+    width: 300px;
+    border-radius: 8px !important; 
+    border: 2px solid var(--ifm-custom-card-background-active) !important;
+    padding: 12px !important;
+    font-family: var(--ifm-font-family-base) !important;
+    background-color: transparent !important;
+  }
 }
 
 @media (min-width: 1024px) {
   .__mec-container {
     max-width: 1024px;
+  }
+  .navbar__inner a[href="/docs/hardware/get-started"] {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    position: relative;
+    color: var(--ifm-menu-color);
+  }
+  
+  .navbar__inner a[href="/docs/hardware/get-started"]:hover {
+    color: var(--ifm-color-primary);
+  }
+  
+  .navbar__inner a[href="/docs/hardware/get-started"]::before {
+    content: "";
+    display: inline-block;
+    background-image: url('/img/outlined-machine.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin-left: 10px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbar__logo {
+    height: 3rem;
   }
 }
 
@@ -198,36 +240,7 @@ p {
   height: auto;
 }
 
-.navbar__logo {
-  height: 3rem;
-}
 
-.navbar__inner a[href="/docs/hardware/get-started"] {
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
-  position: relative;
-  color: var(--ifm-menu-color);
-}
-
-.navbar__inner a[href="/docs/hardware/get-started"]:hover {
-  color: var(--ifm-color-primary);
-}
-
-.navbar__inner a[href="/docs/hardware/get-started"]::before {
-  content: "";
-  display: inline-block;
-  background-image: url('/img/outlined-machine.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  margin-left: 10px;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 
 .navbar__item {
@@ -241,11 +254,6 @@ p {
 }
 
 .DocSearch-Button {
-  width: 300px;
-  border-radius: 8px !important; 
-  border: 2px solid var(--ifm-custom-card-background-active) !important;
-  padding: 12px !important;
-  font-family: var(--ifm-font-family-base) !important;
   background-color: transparent !important;
 }
 
