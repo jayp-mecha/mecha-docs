@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start -p 3001 & local-ssl-proxy --key docs.v1.dev.mecha.build-key.pem --cert docs.v1.dev.mecha.build.pem --source 3000 --target 3001",
+    "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
